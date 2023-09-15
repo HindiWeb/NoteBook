@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari&display=swap" rel="stylesheet">
+	<title>Note Book - HindiWeb</title>
+	<script src="hindiweb.github.io/dep/snowFall.js"></script>
+    <style>
+        body {
+            background-color: #8b896d!important;
+        }
+        .centered  {
+            position: fixed;
+            color:white;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            padding: 5px;
+            font-family:tahoma;
+        }
+        .ck {
+            font-family: cursive;
+        }
+        .centered p {
+            padding: 5px;
+            border: solid grey ;
+            border-radius: 5px;
+            max-width: 120px ;
+            margin-right: auto; 
+            margin-left: auto;
+        }
+    </style>
+
+</head>
+<body>
+<div class="centered">
+    <div><strong style="color: aquamarine;">Welcome!</strong><br>
+       <em>(this page is under Construction. This will be updated soon.)<br> See you again. Bye!</em> </div>
+    
+    <p>Width: <span class="ck width">a</span> </p>
+    <p>Height: <span class="ck height">b</span> </p>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded',function name(params) {
+    $('.width').text(window.innerWidth);
+    $('.height').text(window.innerHeight);
+    window.addEventListener('resize',function(){
+        $('.width').text(window.innerWidth);
+        $('.height').text(window.innerHeight);
+        $('.ck').css('color','aqua');
+    });
+});
+    
+</script>
+</body>
+</html>
