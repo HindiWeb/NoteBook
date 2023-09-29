@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+	<meta charset="UTF-8">
+	<title>#Write Title (HEADING) here. </title><style>	@media (min-width:1000px){body { max-width:1000px; margin:auto!important; }}
+body { margin:10px 10px 10px 10px;}h1 { text-align:center; font-family:algerian;background:rgb(194, 195, 2); border:2px solid rgb(41, 30, 0); border-radius:5px;} h3 { color:indigo;} .h3div { padding:7px 7px 7px 7px;} p {text-indent: 40px;} 
+</style>	<link rel="stylesheet" href="dep/text_note.css" type="text/css">
+</head>
+<body>
+   <div id="container" >
+
+	<div id='header'> </div>
+
+	<h1>#Write Title (HEADING) here. </h1>
+	<p></p>
+	<p></p>
+	<p>'''''''''''''''</p>
+	<p>WRITE</p>
+	<p>TEXT</p>
+	<p>HERE</p>
+	<p>'''''''''''''''</p>
+	<p>कहानी उत्तम पुरुष शैली में लिखी गई है। आख्यानकर्ता है अजमल।</p>
+	<p>मेरा नाम अजमल है। मैं पेशावर के एक छोटे से कस्बे में रहता हूँ। तंग गलियाँ और दिनभर चलते-फिरते लोग। मेन सड़क से कुछ दूर मौहम्मद आजम का मकान है। मैं वहीं रहता हूँ। कस्बे में दोमंजिला मकान किसी का नहीं है सिवाय हमारे। अब्बा कहते हैं उन्होंने काबुल से यहाँ बसकर खूब पैसा, शोहरत कमाया है।</p>
+	<p></p>
+	<p>अजमल आठवीं कक्षा में बढ़ता है। उसे उपन्यास पढ़ना पसंद है। उसकी एक बहन है - अमीना। उसकी माँ की मृत्यु कैसे हो गई वह नहीं जानता। उसके पिताजी कभी-कभी काबुल के बारे में बातें करते हैं। अमीना की सहेली है सना। सना को पतंग उड़ाना पसंद है।</p>
+	<p>पेशावर में आर्मी स्कूल के ऊपर हुए हमले की खबरें अभी सुर्खियाँ बनी हुई हैं। कुछ लोगों को गिरफ्तार किया है। कुछ पर शक है।</p>
+	<p></p>
+	<p>उस दिन मैं छत पर खेल रहा था। अब्बा को रहमान ने सबसे पहले सूचना दी। रहमान को बाबू कसाई ने बताया होगा। वह पूरे पेशावर शहर की खबर रखता है।</p>
+	<p></p>
+	<p></p>
+	<p></p>
+   </div>
+	<div id='footer'> 
+<a href="Hindi_Notes\__web__HOME.html"><span style="font-weight:bold;width: 200px;display:block;margin:auto;margin-bottom:10px;text-align: center;font-family: algerian; background: #FFF59D;border: 1px solid rgb(41, 30, 0);border-radius: 5px;color: BLACK;">Home</span></a>
+</div>
+
+</body>
+<script src="dep/web.js" type="text/javascript"></script></html>
