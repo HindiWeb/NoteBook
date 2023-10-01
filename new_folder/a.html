@@ -1,0 +1,41 @@
+from github import Github
+import os
+
+try:
+    input('want to append to github?')
+    print('✓')
+    print()
+    # Replace these with your own values
+    github_token = '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'
+    repository_name = 'NoteBook'
+
+    file_path = "C:\\Users\\Dev\\AppData\\Local\\Programs\\Python\\Python311-32\\Scripts\\GitHub\\NoteBook.html"  # Replace with the full path to your file
+    file_name = os.path.basename(file_path)
+    file_name = 'index.html'
+    # Read the file content from the specified file
+    with open(file_path, 'r', encoding='utf-8') as file:
+        file_content = file.read()
+
+    # Create a PyGitHub instance using your token
+    g = Github(github_token)
+
+    # Get the repository
+    repo = g.get_user().get_repo(repository_name)
+
+    # Define a commit message
+    commit_message = f'Added via Python'
+
+    # Create a new folder in the repository if it doesn't exist
+    folder_name = 'new_folder'
+    folder_name =''
+    try:
+        repo.create_file(f'{folder_name}/{file_name}', commit_message, file_content)
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+    print('file appended')
+    
+    
+except Exception as e:
+    print(e)
+input('DONE!')
