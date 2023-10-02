@@ -59,12 +59,12 @@
         <div class="brown">Enter  6-digit access PIN:</div>
        <bR>
            <!--<input type="text" id="page_name" name="page_name" placeholder="Page Name" required>-->
-           <input type="password" id="pin" name="pin" placeholder="PIN (6 digits)" maxlength="6" required autocomplete="off">
+           <input type="password" id="pin" name="pin" placeholder="PIN (6 digits)" minlength="6" maxlength="6" required autocomplete="off">
            <br><br>
            <input type="submit" value="Access">
        </form>
        <div id="result-message"></div>
-       <div id="secret-content-container"></div>
+       <div id="secret-content-container" class="bg-brown"></div>
 </div>
     <div class="bg-brown">
     <p>Width: <span class="ck width">a</span> </p>
