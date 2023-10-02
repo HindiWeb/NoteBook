@@ -85,51 +85,6 @@ window.addEventListener('DOMContentLoaded',function name(params) {
 });
     
 </script>
-<script>
-    const form = document.getElementById('access-form');
-    
-    const pageNameInput = document.getElementById('page_name');
-    const pinInput = document.getElementById('pin');
-    const resultMessage = document.getElementById('result-message');
-    const secretContentContainer = document.getElementById('secret-content-container');
 
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        form.parentNode.removeChild(form);
-        resultMessage.textContent = '';
-        //const pageName = pageNameInput.value;
-        const pageName = 'one';
-        const pin = pinInput.value;
-
-        fetch('https://neetiindia.org/wp-content/plugins/HindiWeb/Demo/validate_pin.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: `page_name=${pageName}&pin=${pin}`,
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                // Load secret content dynamically
-                fetch(data.secret_file_url)
-                    .then(response => response.text())
-                    .then(secretContent => {
-                        // Display the secret content
-                        secretContentContainer.innerHTML = secretContent;
-                    })
-                    .catch(error => {
-                        console.error('Error loading secret content:', error);
-                    });
-            } else {
-                // Display an error message
-                resultMessage.textContent = data.message;
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-    });
-</script>
 </body>
 </html>
