@@ -3,26 +3,32 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://neetiindia.org/wp-content/plugins/HindiWeb/basic.css">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari&display=swap" rel="stylesheet">
-	<title>Note Book - HindiWeb</title>
+	<title>Note Book 2.0 - HindiWeb returns indexes buttons customized.</title>
+    <link rel="icon" href="dep/favicon.ico">
 	<!--<script src="hhttps://hindiweb.github.io/dep/snowFall.js"></script>-->
     <style>
         body {
-            margin: 0;padding: 0;
+            margin: 0;padding: 50px;
             background-color: rgb(88, 0, 0);
         }
         .centered  {
-            position: fixed;
+            position: absolute;
+            max-height: 500px;
             color:white;
             top:50%;
             left:50%;
             transform: translate(-50%,-50%);
             text-align: center; 
             padding: 15px;            
-            background-image: linear-gradient(180deg, #676221, #fdffc0) ;
+            background-image: linear-gradient(180deg, #8b830b, #9ea061) ;
             border-radius: 5px; 
 
             font-family:tahoma;
+        }
+        #secret-content-container {
+            position: initial;
         }
         .ck {
             font-family: cursive;
@@ -41,38 +47,48 @@
         .brown {
             color: brown;
         }
-        .bg-brown {
-            background-color: rgb(88, 0, 0);
-            font-size:x-small;
-			border-radius:inherit;
-
+        .end-note {
+            transition: all 2s linear;
+            position: absolute;
+            bottom: 1px;
+            font-weight: 400;
+            color:gray;
+            right:5px;
+            font-size: x-small;
+            text-align: end;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         } 
+
     </style>
 
 </head>
+<!--User will ENTER A VALId pin. 
+    will be taken to indexes.
+    indexs wll have all facility.-->
 <body>
 <div class="centered">
-    <div><strong style="color: aquamarine;">Welcome to NoteBook!</strong><br>
+    <div><strong style="color: aquamarine;">Welcome to Note Book 2.0!</strong><br>
         <h2>Dear User,</h2>
        <div class="align-left">HindiWeb's NoteBook feature is password Protected. 🔒 </div><br></div>
        
        <form id="access-form">
         <div class="brown">Enter  6-digit access PIN:</div>
-       <bR>
+       <br>
            <!--<input type="text" id="page_name" name="page_name" placeholder="Page Name" required>-->
-           <input type="password" id="pin" name="pin" placeholder="PIN (6 digits)" minlength="6" maxlength="6" required autocomplete="off">
+           <input type="password" id="pin" name="pin" placeholder="PIN (6 digits)" maxlength="6" required autocomplete="off">
            <br><br>
            <input type="submit" value="Access">
        </form>
        <div id="result-message"></div>
-       <div id="secret-content-container" class="bg-brown"></div>
+</div>       
+<div id="secret-content-container" ></div>
+<div class="end-note">
+    <span>© Deva Ram/HindiWeb.github.io </span><br>
+    <span>All Rights Reserved.</span><br>
+    <sapn>[Width: <span class="ck width">a</span>px</span>
+    <apan>Height: <span class="ck height">b</span>px] </apan>
 </div>
-    <div class="bg-brown">
-    <p>Width: <span class="ck width">a</span> </p>
-    <p>Height: <span class="ck height">b</span> </p>
-    </div>
 
-</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script>
 window.addEventListener('DOMContentLoaded',function () {
@@ -86,49 +102,38 @@ window.addEventListener('DOMContentLoaded',function () {
 });
     
 </script>
+
+
 <script>
-    const form = document.getElementById('access-form');
-    
-    const pageNameInput = document.getElementById('page_name');
-    const pinInput = document.getElementById('pin');
-    const resultMessage = document.getElementById('result-message');
-    const secretContentContainer = document.getElementById('secret-content-container');
+    $(document).ready(function () {
+        $("#access-form").submit(function (event) {
+            event.preventDefault(); // Prevent the form from submitting via the browser
 
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        form.parentNode.removeChild(form);
-        resultMessage.textContent = '';
-        //const pageName = pageNameInput.value;
-        const pageName = 'one';
-        const pin = pinInput.value;
+            // Get the PIN from the input field
+            var pin = $("#pin").val();
 
-        fetch('https://neetiindia.org/wp-content/plugins/HindiWeb/Demo/validate_pin.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: `page_name=${pageName}&pin=${pin}`,
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                // Load secret content dynamically
-                fetch(data.secret_file_url)
-                    .then(response => response.text())
-                    .then(secretContent => {
-                        // Display the secret content
-                        secretContentContainer.innerHTML = secretContent;
-                    })
-                    .catch(error => {
-                        console.error('Error loading secret content:', error);
-                    });
-            } else {
-                // Display an error message
-                resultMessage.textContent = data.message;
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
+            // Make an AJAX request to the PHP server
+            $.ajax({
+                type: "POST",
+                url: "https://neetiindia.org/wp-content/plugins/HindiWeb/validate_pin.php?index",
+                data: { pin: pin }, // Send PIN as data
+                dataType: "json", // Expect JSON response
+                success: function (response) {
+                    if (response.success) {
+                        // Display success message and secret content
+                        $("#result-message").text(response.message);
+                        $('body').html(response.secret_file_url);
+                    } else {
+                        // Display error message
+                        $("#result-message").text(response.message);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.log("Ajax error: " + error);
+                
+                    $("#result-message").text("An error occurred while processing your request.");
+                }
+            });
         });
     });
 </script>
