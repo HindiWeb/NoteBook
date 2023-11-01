@@ -13,7 +13,7 @@
     <style>
         body {
             margin: 0;padding: 50px;
-            background-color: rgb(255, 253, 216);
+            background-color: rgb(43, 2, 2);
         }
         .centered  {
             position: absolute;
@@ -23,12 +23,13 @@
             left:50%;
             transform: translate(-50%,-50%);
             text-align: center; 
-            padding: 15px;            
-            background-image: linear-gradient(180deg, rgb(88,0,0), #a06161) ;
+            padding: 20px;            
+            background-image: linear-gradient(180deg, rgb(88,0,0), #b61a82) ;
             border-radius: 5px; 
-            box-shadow: 0px 0px 10px -3px rgba(0, 255, 34, 0.7);
-
-            font-family:tahoma;
+            box-shadow: 0px 0px 12px -3px rgba(255, 255, 255, 0.7);
+            font-family:tahoma; 
+            border:2px solid grey; 
+            width: 300px;
         }
         #secret-content-container {
             position: initial;
@@ -40,7 +41,6 @@
             padding: 5px;
             border: solid grey ;
             border-radius: 5px;
-            max-width: 120px ;
             margin-right: auto; 
             margin-left: auto;
         }
@@ -71,20 +71,22 @@
     indexs wll have all facility.-->
 <body>
 <div class="centered">
-    <div><strong style="color: aquamarine;">Welcome to Note Book 2.0!</strong><br>
-        <h2>Dear User,</h2>
-       <div class="align-left">HindiWeb's Note Book feature is password Protected. 🔒 </div><br></div>
+    <div><strong style="color: aquamarine;">Welcome to Note Book 2.0!</strong>
+        <h2>Dear user</h2>
+       <div class="align-left">HindiWeb's Note Book feature is password Protected. 🔒 </div> 
+    </div><br> 
        
        <form id="access-form">
         <div style="color:darkblue">Enter  6-digit access PIN:</div>
        <br>
            <!--<input type="text" id="page_name" name="page_name" placeholder="Page Name" required>-->
-           <input type="password" id="pin" name="pin" placeholder="PIN (6 digits)" maxlength="6" required autocomplete="off">
+           <input type="password" id="pin" name="pin" placeholder="PIN (6 digits)" maxlength="6" minlength="6" required autocomplete="off">
            <br><br>
            <input type="submit" value="Access" style="padding: 3px;">
        </form>
        <div id="result-message"></div>
-</div>       
+       <div class="ui" id="deb" style="position: absolute;right:10px;bottom: 5px;"><a href="https://t.me/devravi" style="color: grey;font-style:italic ;text-decoration: none;">-DEB</a></div>
+</div>        
 <div id="secret-content-container" ></div>
 <div class="end-note">
     <span>© Deva Ram/HindiWeb.github.io </span><br>
