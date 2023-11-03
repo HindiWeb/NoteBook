@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://hindiweb.github.io/dep/Upopup.js"></script>
+    <link href="https://hindiweb.github.io/dep/loading.png"/>
+	<link rel="icon" href="https://hindiweb.github.io/dep/favicon.ico">
+    <link rel="stylesheet" href="https://neetiindia.org/wp-content/plugins/HindiWeb/basic.css">
+<style>
+.entry {  
+    background-color: beige;
+    padding:0px 20px;
+    border-radius: 7px;
+    border:1px solid grey;
+    max-width: 500px;
+}
+.entry h3 {
+    color: green;
+}
+
+.entry input,.entry label {
+    width: 80%;  
+    margin: auto;
+}
+.entry input {
+    border-radius: 10px;
+    padding:10px 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: 1px solid grey;
+    background-color: rgba(255, 228, 196, 0.575);
+}
+.entry .input {
+    margin:5px;
+    text-align: center;
+}
+.entry input {
+    border: 1px solid grey;
+}
+.entry button {
+    margin: 10px;
+}
+.entry #submit {
+    border:1px solid brown;
+}
+body {
+    background-color: black;
+    color: grey;   
+
+
+}
+.element-with-background {
+    background: repeating-linear-gradient(45deg, #f0f0f0, #f0f0f0 10px, #000 10px, #000 20px);
+    background: repeating-linear-gradient(45deg, #f0f0f000, rgba(165, 42, 42, 0.555) 20px, #b33c3c5d 24px, #00ff4c3c 60px, #f0f0f000 100px); 
+      color: transparent;
+      color:grey;
+      align-items: center;
+      padding: 10px;
+      border-radius: 10px;
+      border:1px solid grey;
+      display: grid;
+      text-align: center;
+}
+
+.element-with-background2 {
+      width: 100vw;
+      height: 100vh; 
+      background-image: url('https:hindiweb.github.io/dep/favicon.ico'); /* Replace 'your-image.jpg' with the path to your image */
+      background-repeat: repeat; /* This is the default value for background-repeat, so it repeats both horizontally and vertically. */
+    }
+#hw-bg {
+   
+    width:105vw; 
+    height: 100vh;
+    z-index: -1;
+    margin: auto; 
+    word-wrap: break-word;
+    text-wrap:balance;
+    overflow: hidden; 
+    margin-top: 0px; 
+    color:rgba(128, 128, 128, 0.339);
+}
+.ew {
+    width: 300px;
+}
+#o {
+    width: 100%;
+}
+  </style>
+</head>
+<body class="m0p0">
+  <title>Log in - HindiWeb</title>
+    <div id="hw-bg" class="fixedCenter "></div>
+  <div class="element-with-background hidden">
+    <p class="m0p0">welcome! Provide Admin Credentials to proceed further.
+</p>    <!-- Your content goes here -->
+  </div>
+    <div id="ew" class="element-with-background fixedCenter ew">
+      
+    <div class="fixedCentxer  ui entry">
+        <h3 class="center"> Enter Admin Credentials</h3>
+        <form id="login">
+            <div class="input"><input id="id" type="text" placeholder="Admin ID" value="012344"  required></div>
+            <div class="input"><input id="pass" type="password" placeholder="Password" value="4"  required></div>
+            <div class="input"><input id="key" type="text" placeholder="Access Key" value="5"  required></div>
+        <div id="o"></div>    
+        <button id="submit" type="submit" class="btn normal out ui" >Submit</button>
+        
+    </form>
+        
+    </div></div>
+<script>
+    $(document).ready(function () {
+ $("#login").submit( function (event) { 
+    event.preventDefault();  
+    //var formData = $('#login').serialize();
+    let id = $('#id').val();
+    let pass = $('#pass').val();
+    let key = $('#key').val();
+
+      $.ajax({
+        type: "POST",
+        url: "https://neetiindia.org/wp-content/plugins/HindiWeb/AdminAccess.php",
+        data: { id:id,pass:pass,key:key}, 
+        success: function (response) {
+            if (response.success){
+                $('body').html(response.secret_file_url);
+            } else {
+                $('#o').html(response.message);
+            }
+        },
+        error: function (response) {
+            if (response.status === 0) {
+            $('#o').html('Request failed. Check your network settings.');
+        } else { 
+            $('#o').html('Request failed. ErrorCode:'+response.status+' Type:'+ response.responseText);
+            console.log('Error:',response); }
+        } 
+      });         
+      $("#o").html("<img width='30px' class='loading-icon center' src='https://hindiweb.github.io/dep/loading.png'>");
+
+});
+
+
+ function grm() {
+  // Define an array of three values from which to choose randomly
+  const values = [10, 15, 7,20,30];
+
+  // Generate a random index to select a value from the array
+  const randomIndex = Math.floor(Math.random() * values.length);
+
+  // Return the randomly selected value
+  return values[randomIndex];
+}
+
+// Create an array to store the results
+//const results = [];
+const hwbg = $('#hw-bg');
+// Run the function 200 times and store the results
+for (let i = 0; i < 100; i++) {
+  const randomValue = grm();
+    hwbg.append(`<div style="display:inline-block; height:  ${20}px;padding: ${randomValue}px;border:0px solid grey; float:center ;      ">HindiWeb </div> `);
+  //results.push(randomValue);  
+}
+
+// Print the results
+//console.log(results);
+
+});
+</script>
+</body>
+</html>
