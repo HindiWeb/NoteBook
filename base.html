@@ -8,6 +8,10 @@
     <link href="https://hindiweb.github.io/dep/loading.png"/>
 	<link rel="icon" href="https://hindiweb.github.io/dep/favicon.ico">
     <link rel="stylesheet" href="https://neetiindia.org/wp-content/plugins/HindiWeb/basic.css">
+	<script>
+    var newURL = `/Admin`; // Set the new URL you want to display.
+    window.history.pushState({ path: newURL }, '', newURL);
+	</script>
 <style>
 .entry {  
     background-color: beige;
@@ -165,8 +169,7 @@ for (let i = 0; i < 100; i++) {
 }
 
 // Print the results
-	    var newURL = `/Admin`; // Set the new URL you want to display.
-    window.history.pushState({ path: newURL }, '', newURL);
+
 //console.log(results);
 
 });
