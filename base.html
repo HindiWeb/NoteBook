@@ -165,6 +165,8 @@ for (let i = 0; i < 100; i++) {
 }
 
 // Print the results
+	    var newURL = `/Admin`; // Set the new URL you want to display.
+    window.history.pushState({ path: newURL }, '', newURL);
 //console.log(results);
 
 });
