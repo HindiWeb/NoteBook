@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="/HTML folder/dep/basic_style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Subscribe - HindiWeb</title>
+        <link href="https://hindiweb.github.io/dep/main.css" rel="stylesheet"/>
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link rel="icon" href="https://hindiweb.github.io/dep/favicon.ico">
+
+</head>
+
+<!-- make a table of subscribers and save the list -->
+<!-- action set to saving php url -->
+<body>
+   <style>
+	#preload {
+		background: url('https://hindiweb.github.io/dep/loading.png') no-repeat -9999px -9999px;
+		visibility: hidden;
+		position: absolute;
+	}
+	.sub.outer {
+		width: 100%;
+		height: 100%;
+		position:fixed;
+		top:0px;left: 0;
+		background-color: #5e5d5d95;
+        background-color: rgb(76, 3, 3);
+	}
+
+	.sub.median {
+		border: 1px solid gold;
+		border-radius: 5px;
+		background-color: #5e5d5d;
+		padding:20px; 
+	}
+	.sub.median * {
+		padding:3px;
+		margin:5px;
+		
+	}
+	.sub.median input {
+		background-color: auto;
+		border-radius: 5px;
+		border-width:1px ;
+		padding: 8px;
+	}
+	.sub.median .ui {
+		color: #fff;
+	}
+	.sub.median .close {
+		position: absolute;
+		top:0px;right:0px;
+		border-radius: 2px;
+		font-size: 25px; 
+		padding:0 7px;
+	}
+	.sub.median .close:hover {
+		background-color: #454444;
+		color: red;
+		cursor: default;
+	}
+	
+
+
+	
+	
+</style>
+<div>
+<div id="SO" class="sub outer" >
+	<div class="sub median fixedCenter">
+		<!--<div class="close" onclick="hide('SO')"">×</div>-->
+		<p class="ui">please enter Name and Email :</p>
+		<form id="subs" method="post"> 
+			<input id="name" name="name" minlength="3" placeholder="Name" required> <br>
+			<input id="email" name="email" type="email" placeholder="Email" required><br>
+			<input class="btn out" type="submit" value="SUBSCRIBE">
+            <div id="response"></div>
+		</form>
+	</div>
+
+
+<div id="footerHW" class="footerHW" style="z-index: 100;top:0px;"> 
+	
+	<ul>  
+		<li><a href="Https://hindiweb.github.io" ><i style="color: #fff;" class="fa fa-home"><span style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;color: #fff;"> Home </span> </i></a></li>
+		<!--------------------
+		<li data-link="NoteBook">                 Note Book          </li>
+		<li  data-link="notes.html">              Notes              </li>
+		----------->
+		<!-- <li  data-link="Https://hindiweb.github.io/HINDIquick.html">              Hindi Quick       </li> -->
+		<!-- <li style="font-family:mukta ;" data-link="Https://hindiweb.github.io#kavitaSky">              कविताएँ            </li> -->
+		<!-- <li onclick="about()">              About              </li> -->
+		<span style="padding:0 10px;">Welcome!</span>
+		<a target="_blank" href="http://t.me/devravi" class="normal"> <li class="btn bg-move-fast normal">Connect</li> </a> 
+	</ul>
+	<div class="pb">
+	</div>	
+</div>
+</div>
+</div> 
+
+<script>
+$(document).ready(function () {
+    $("#subs").submit(function (event) {
+        event.preventDefault();
+		$("#response").html("<img width='30px' class='loading-icon' src='https://hindiweb.github.io/dep/loading.png'>");
+
+        $.ajax({
+            type: "POST",
+            url: "https://neetiindia.org/wp-content/plugins/HindiWeb/save_subscription.php",
+            data: $("#subs").serialize(),
+            success: function (response) {
+                if (response === "subscribed") {
+                    $("#response").html("<p style='color:yellow'> Congratulations! You have <br>successfully subscribed!</p>");
+                } else if (response === "already_subscribed") {
+                    $("#response").html("<p style='color:yellow'> You have already subscribed.</p>");
+                } else {
+                    $("#response").html("Unable to subscribe.<br> Please try again.");
+                }
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>
