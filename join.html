@@ -121,21 +121,21 @@ $(document).ready(function () {
 					new HwAlert({
 						title : response,
 						message : 'Congratulations!<br> You have successfully subscribed!',
-						overlay : [on]
+						overlay : ['on']
 					}).open();
                 } else if (response === "already_subscribed") {
                     $("#response").html("<p style='color:yellow'> You have already subscribed.</p>");
 					new HwAlert({
 						title : response,
 						message : 'Thanks!<br> You have already subscribed us!',
-						overlay : [on]
+						overlay : ['on']
 					}).open();
                 } else {
                     $("#response").html("Unable to subscribe.<br> Please try again.");
 					new HwAlert({
 						title : 'Error',
 						message : 'Unable to subscribe.<br> Please try again.',
-						overlay : [on]
+						overlay : ['on']
 					}).open();
                 }
             }
