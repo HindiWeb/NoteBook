@@ -7,10 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Subscribe - HindiWeb</title>
         <link href="https://hindiweb.github.io/dep/main.css" rel="stylesheet"/>
-        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
+        <script src="../HindiWeb.github.io/dep/Upopup.js"></script>
         <link rel="icon" href="https://hindiweb.github.io/dep/favicon.ico">
 
 </head>
@@ -107,6 +106,7 @@
 
 <script>
 $(document).ready(function () {
+
     $("#subs").submit(function (event) {
         event.preventDefault();
 		$("#response").html("<img width='30px' class='loading-icon' src='https://hindiweb.github.io/dep/loading.png'>");
@@ -118,10 +118,25 @@ $(document).ready(function () {
             success: function (response) {
                 if (response === "subscribed") {
                     $("#response").html("<p style='color:yellow'> Congratulations! You have <br>successfully subscribed!</p>");
+					new HwAlert({
+						title : response,
+						message : 'Congratulations!<br> You have successfully subscribed!',
+						overlay : [on]
+					}).open();
                 } else if (response === "already_subscribed") {
                     $("#response").html("<p style='color:yellow'> You have already subscribed.</p>");
+					new HwAlert({
+						title : response,
+						message : 'Thanks!<br> You have already subscribed us!',
+						overlay : [on]
+					}).open();
                 } else {
                     $("#response").html("Unable to subscribe.<br> Please try again.");
+					new HwAlert({
+						title : 'Error',
+						message : 'Unable to subscribe.<br> Please try again.',
+						overlay : [on]
+					}).open();
                 }
             }
         });
