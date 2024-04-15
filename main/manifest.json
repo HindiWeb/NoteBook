@@ -1,7 +1,7 @@
 {
     "name": "Hindi Quick",
     "short_name": "Quick",
-    "start_url": "/main/",
+    "start_url": "./",
     "display": "standalone",
     "icons": [
         {
