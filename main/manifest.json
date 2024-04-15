@@ -1,0 +1,14 @@
+{
+    "name": "Hindi Quick",
+    "short_name": "Quick",
+    "start_url": "/main/",
+    "display": "standalone",
+    "icons": [
+        {
+        "src": "dep/logo.png",
+        "sizes": "199x199",
+        "type": "image/png"
+        }
+    ],
+    "form_factor": "none"
+}
