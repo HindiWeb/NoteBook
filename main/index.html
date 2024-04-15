@@ -1,0 +1,2179 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+  <title>HINDI Quick</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+  <script src="/Ex/jquery-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src='https://hindiweb.github.io/lib/Upopup/2.2/popup.min.js'></script>
+  <!-- <script src="/Ex/Upopup-2.2.3.min.js"></script> -->
+  <link rel="stylesheet" href="/Ex/css/all.min.css">
+  
+  <!-- <script src="/GitHub/dep/Upopup.js"></script> -->
+
+  <meta name="description" content="Read Hindi literature Quick notes. Important for UGC-NET.
+   Developed By- DEV (https://t.me/devravi)"/>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+  <style>
+    body {background:beige;}
+    body * {
+      box-sizing: border-box;
+    }
+
+    body {
+      width:100%;margin:auto;
+      scroll-behavior:smooth;
+      transition:all 0.2s ease-in-out;
+    }
+    h1, .s4, h2, #sidebar, #button {
+          -webkit-user-select:none;
+          user-select:none;}
+    #main { padding:10px 10px 10px 10px;
+            text-align:center; }
+    p { font-size:1.2em;}
+
+    #mainbody {
+      max-width:1000px;
+      margin:auto;
+    }
+    #sidebar { position:fixed;
+      cursor:pointer;
+      z-index:99;
+      font-family:cursive;
+      font-family:mukta;
+      text-align:center;
+      width:192px;
+      height:100%;
+      overflow:auto;
+      border: 2px inset white;
+      transition:all 0.3s ease-in-out;
+      background: rgba(236, 275, 180, 0.9);
+      background: lightyellow;
+      padding-right:2px;padding-left:1px;
+
+    }
+
+    #sidebar p:hover{border:2px inset yellow;}
+
+    #sidebar p {
+      background: rgba(236, 175, 80, 0.6);
+      background-image: linear-gradient( to bottom,rgb(255,255,0,0.4),
+                                                  rgba(236, 275, 180, 0.4),
+                                                  rgba(236, 175, 80, 0.6)) ;
+      transition:all 1s;
+      border:2px outset rgba(236, 275, 180, 0.6);
+      border-radius:3px;margin-block-start: 20px;
+      margin-block-end: 2px;
+      }
+
+    #sidebar p:active {
+      border: 2px outset brown;
+    }
+    #sidebar #dateBox {
+      overflow:hidden;
+      height:60px;
+      color:grey;
+      font-size:20px; font-family:mukta;
+      margin-top:50px;
+      left:30px;
+      }
+    #antisidebar {
+      left:200px;cursor:pointer;
+      position:fixed;z-index:-1;
+      width:100%;height:100%;
+      }
+    .s4 {
+      background:rgb(230,190,123);
+      text-align:center!important;
+      border:2px groove lightblue;
+      line-height:1.0;
+      text-shadow: 2px 2px 5px white;
+      width:100%; max-width:400px;
+      font-weight:700;
+      margin:auto;
+      margin-bottom:20px;
+      overflow:hidden;
+      background-image: linear-gradient( 170deg,lightyellow, lightblue,hotpink,violet, pink, lightyellow);
+      border-radius:7px;
+    }
+
+    .w3-col.s4:hover{
+      background:lightyellow ;
+      color:darkpurple;
+      border:2px double ;
+      cursor:pointer;
+      background-image:linear-gradient( 0deg,lightyellow, lightblue,hotpink,violet, pink, lightyellow);
+      text-shadow: 2px 2px 10px white;
+    }
+    #anim {
+      top:-50px;left:-50px;
+      position:fixed;z-index:-1;
+      height:50px;border:1px inset lightblue;
+      border-radius:50%;width:50px;
+      animation:myy2 5s 2;
+      animation-delay:3s;animation-direction:alternate;
+    }
+    .w3-section{margin:auto;width:60%;}
+
+    h1{text-align:center;
+      font-family:cursive;
+      text-shadow: 1px 1px 10px white;
+    }
+    h2
+      {
+      background:pink;
+      animation: myfirst 20s infinite;
+      font-size:1.6em;
+      color:purple;
+      border: 2px groove white;
+      text-align:center;
+      font-weight:600;
+      font-family:"Times New Roman",serif;
+      clear:both;
+      top:20px;
+      border-radius:5px;
+      margin:20px 20px 20px 20px;
+    }
+
+    #AGV { border: 1px solid purple; border-radius:5px;
+      padding:10px 10px 10px 10px; max-width:700px; margin:auto;}
+
+    #button{
+      animation: myfirst 5s infinite;
+      line-height:0.4;
+      cursor:pointer;
+      border:1px solid black;
+      border-radius:5px;
+      padding: 1px +5px +20px +5px;
+      background:lightblue;
+      margin-left:5px;
+    }
+    #button:hover{font-weight: 700;
+              animation:none;
+              border:1.5px groove green;background:lightblue;
+              background-image: linear-gradient( 45deg,yellow, lightblue, 	        	hotpink,white,violet,lightblue, yellow);
+              border-radius:7px;}
+
+    a {transition: all 1s;
+      text-decoration:underline;}
+    a {transition: font 0s;}
+    a:hover {text-decoration:underline 12%;
+            background:yellow;
+            }
+
+    #pin:hover, #nightmode:hover  {
+      border-left:1px solid green;}
+
+    @keyframes myfirst {
+      0%   {background: lightpink;  }
+      25%   {background: yellow;  }
+      50%  {background: lightblue; }
+      75%  {background: white;  }
+      100% {background: lightgreen;  }
+    }
+    @keyframes myy2 {
+      0%   { background:green; top:5px; }
+      20%   { background:yellow;top: 100%;}
+      50%  {  background:red; top: 75%;}
+      75%  { background:blue; top: 95%; }
+      100% { background:lightyellow; left:120%; top:105%}
+    }
+
+    @media (max-width:600px)
+        {.w3-col.s4 {font-weight:bold;border-radius:10px;overflow:hidden;}}
+    @media (min-width:800px){
+        h1 { font-size: 8vw; float:left; width: 4vw;position:fixed;
+           z-index:5; padding-left:4% ; }
+        #header { margin-top: 5%;}
+    } 
+    @media (max-width:382px) {
+      body {
+        background-color: rgb(38, 38, 22);
+      }
+    }
+    .p-home:hover {
+      background-image: linear-gradient( to bottom, lightgreen,violet, hotpink) !important;
+    }
+    .p-home:active {
+      background-image: linear-gradient(  rgba(99, 24, 9, 0.852),violet, rgba(159, 1, 80, 0.779)) !important; ;
+    }
+    .iframe{
+      display: none;
+    }
+    .iframe.i {
+      display: block;
+      position: fixed;
+      top:0;
+      right: 0;
+      width: 65vw;height: 100vh;
+    }
+    body {
+      background-color: khaki;
+    }
+    #mainbody.i {
+      width: 35%;
+      margin-left:0%;
+      padding: 6px;
+      height: 100vh;
+      overflow: auto;
+      position: relative;
+    }
+    .bbbar {
+      display: none;
+    }
+
+    #mainbody.i p,#sidebar p { font-size: 1em;}
+     
+
+  </style>
+  <style>
+    .wiki-search {
+      display: flex;
+      position: fixed;
+      bottom: 10px;
+      right: 50px;
+    }
+    .wiki-search * {
+      padding: 7px;
+      margin:7px;
+      background-color: antiquewhite;
+    }
+    .wiki-search button {
+      background-color: lightskyblue;
+    }
+    .wiki-tBtn {
+      position: fixed;
+      width: 30px;
+      height: 30px;
+      bottom: 10px;
+      right: 10px;
+      display: grid;
+      align-content: center;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .wiki-tBtn:hover {
+      background-color: rgba(222, 184, 135, 0.834);
+    }
+  .wiki-w {
+      display: flex;
+      flex-direction: column;
+      height: 99vh;
+  }
+      
+    .wiki-d {
+      flex:1;
+    }
+    .z9 {
+      z-index: 9;
+    }
+
+  </style>
+</head>
+<body>
+<picture id="pic" style="width:100%;top: 0px;left: 0px;position:fixed;z-index:-5;">
+  <source media="(min-aspect-ratio: 4/3)" srcset="dep/Pink_flowers.jpg">
+  <source media="(min-aspect-ratio: 1/1)" srcset="dep/fool_and_sky.jpg"> 
+  <img src="dep/fool.jpg" style="width: 100%;">
+</picture>
+<div id="anim" ></div>
+<div id="antisidebar" onclick="antisidebar()" ></div>
+<div class="w3-container">
+  <h1 id="h1" ><span lang="hi" > हिंदी झटपट </span></h1>
+<!--  <p>Using images to indicate how many slides there are in the slideshow, and highlight the image the user is currently viewing.</p>-->
+</div>
+
+  <div id="sidebar"  class="w3-row-padding w3-section" style="left:-200px;" >
+  <input id="readCheck" title="Reading progress" type="checkbox" style="position: absolute;right:0px;top:25px;cursor:pointer;" hidden>
+    <img id="pin" onclick="pin()" src="https://img.icons8.com/?size=2x&id=AfpSfD7cu5Sq&format=png"
+           style="width:19px;position:absolute;right:2px;" >
+
+    <div  onclick="homepage()"><p class="p-home"  style="text-align:center;cursor:pointer;
+           border:1px inset hotpink;margin:auto;margin-top:30px;width:fit-content;padding:2px 5px;
+            background-image: linear-gradient( to top, lightgreen,violet, hotpink);
+           /*width:40px;background-image: linear-gradient( to top, lightyellow, white,lightblue, skyblue);*/
+           ">Home</p>
+    <!--<img  id="home" style="cursor:pointer;">-->
+    </div>
+    <div  onclick="currentDiv(1)">
+      <p   style="cursor:pointer;" >
+      Keys</p>
+    </div>
+    <div  onclick="currentDiv(2)">
+      <p  style="cursor:pointer" >
+      &#2358;&#2366;&#2360;&#2381;&#2340;&#2381;&#2352;</p>
+    </div>
+    <div  onclick="currentDiv(3)">
+      <p  style="cursor:pointer">
+      &#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351;&#2375;&#2340;&#2367;&#2361;&#2366;&#2360;</p>
+    </div>
+    <div  onclick="currentDiv(4)">
+      <p  style="cursor:pointer">
+      &#2344;&#2366;&#2335;&#2325;</p>
+    </div>
+    <div  onclick="currentDiv(5)">
+      <p  style="cursor:pointer" >
+      &#2325;&#2361;&#2366;&#2344;&#2368;</p>
+    </div>
+    <div  onclick="currentDiv(6)">
+      <p  style="cursor:pointer" >
+      &#2325;&#2357;&#2367;&#2340;&#2366;</p>
+    </div>
+     
+    <div id="dateBox" onclick="nightmode2()"></div>
+
+  </div>
+<div class="w3-content" id="mainbody" style="border-bottom:2px solid green;border-radius:5px;"> <!--style="max-width:1200px;"-->
+  <div class="bbbar" style="position: absolute;top:0;left:0;width: 100%;height: 3px;background-color:aliceblue;"></div>
+
+  <img onclick="nightmode()" id="nightmode" src="https://img.icons8.com/?size=151&id=sx3VmTOVeYFg&format=png"
+         style="position:fixed;right:5px;top:5px;z-index:999;width:25px">
+
+  <div id="header" class="w3-row-padding w3-section"   >
+    <div class="w3-col s4" onclick="currentDiv(1)">
+      <p class="demo w3-opacity w3-hover-opacity-off"  style="cursor:pointer;" >
+      Keys </p>
+    </div>
+    <div class="w3-col s4" onclick="currentDiv(2)">
+      <p class="demo w3-opacity w3-hover-opacity-off"  style="cursor:pointer" >
+      &#2358;&#2366;&#2360;&#2381;&#2340;&#2381;&#2352;</p>
+    </div>
+    <div class="w3-col s4" onclick="currentDiv(3)">
+      <p class="demo w3-opacity w3-hover-opacity-off"  style="width:100%;cursor:pointer">
+      &#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351;&#2375;&#2340;&#2367;&#2361;&#2366;&#2360;</p>
+    </div>
+    <div class="w3-col s4" onclick="currentDiv(4)">
+      <p class="demo w3-opacity w3-hover-opacity-off"  style="width:100%;cursor:pointer">
+      &#2344;&#2366;&#2335;&#2325;</p>
+    </div>
+    <div class="w3-col s4" onclick="currentDiv(5)">
+      <p class="demo w3-opacity w3-hover-opacity-off"  style="width:100%;cursor:pointer" >
+      &#2325;&#2361;&#2366;&#2344;&#2368;</p>
+    </div>
+    <div class="w3-col s4" onclick="currentDiv(6)">
+      <p class="demo w3-opacity w3-hover-opacity-off"  style="width:100%;cursor:pointer" >
+      &#2325;&#2357;&#2367;&#2340;&#2366;</p>
+    </div>
+  </div>
+  <div id="main" style="display:none;">
+  <div class="mySlides" style="width:100%;display:none">
+    <h2 style="margin-top:0px;"   >
+    Keys</h2>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2023/02/22/%e0%a4%a4%e0%a4%be%e0%a4%b0-%e0%a4%b8%e0%a4%aa%e0%a5%8d%e0%a4%a4%e0%a4%95-%e0%a4%95%e0%a4%b5%e0%a4%bf-%e0%a4%94%e0%a4%b0-%e0%a4%95%e0%a4%b5%e0%a4%bf%e0%a4%a4%e0%a4%be%e0%a4%8f%e0%a4%81/"><span
+    lang=HI style='font-family:Hind'>'&#2340;&#2366;&#2352;
+    &#2360;&#2346;&#2381;&#2340;&#2325;' &#2325;&#2357;&#2367; &#2324;&#2352;
+    &#2325;&#2357;&#2367;&#2340;&#2366;&#2319;&#2305;</span></a></p>
+
+
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2023/01/13/%e0%a4%ae%e0%a4%b9%e0%a4%a4%e0%a5%8d%e0%a4%b5%e0%a4%aa%e0%a5%82%e0%a4%b0%e0%a5%8d%e0%a4%a3-%e0%a4%a4%e0%a4%a4%e0%a5%8d%e0%a4%b8%e0%a4%ae-%e0%a4%a4%e0%a4%a6%e0%a5%8d%e0%a4%ad%e0%a4%b5-%e0%a4%b6/"><span
+    lang=HI style='font-family:Hind'>&#2350;&#2361;&#2340;&#2381;&#2357;&#2346;&#2370;&#2352;&#2381;&#2339;
+    &#2340;&#2340;&#2381;&#2360;&#2350; &#2340;&#2342;&#2381;&#2349;&#2357;
+    &#2358;&#2348;&#2381;&#2342;</span></a></p>
+
+
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/21/%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%a4%e0%a5%80%e0%a4%95-symbol/"><span
+    lang=HI style='font-family:Hind'>&#2346;&#2381;&#2352;&#2340;&#2368;&#2325;
+    (Symbol)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/21/%e0%a4%a8%e0%a4%af%e0%a5%80-%e0%a4%b8%e0%a4%ae%e0%a5%80%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a4%be-new-criticism/"><span
+    lang=HI style='font-family:Hind'>&#2344;&#2351;&#2368;
+    &#2360;&#2350;&#2368;&#2325;&#2381;&#2359;&#2366; (New Criticism)</span></a></p>
+
+        
+    <!-- <p class=MsoNormal ><span style='
+    ;font-family:Hind'>&nbsp;</span></p> -->
+
+	<div id="AGV"  >	
+
+    <p id="hint" style="font-size:15px;text-align:center;max-width:110px;margin:auto;margin-top:0px;border:1px dotted grey;border-radius:10px;color:grey;font-family: 'Utsaah', 'mukta', 'Times New Roman'" ;>अन्य गद्य विधाएँ </p>
+
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/20/%e0%a4%b8%e0%a4%9a%e0%a5%8d%e0%a4%9a%e0%a4%bf%e0%a4%a4%e0%a4%be%e0%a4%a8%e0%a4%82%e0%a4%a6-%e0%a4%b9%e0%a5%80%e0%a4%b0%e0%a4%be%e0%a4%a8%e0%a4%82%e0%a4%a6-%e0%a4%b5%e0%a4%be%e0%a4%a4%e0%a5%8d%e0%a4%b8/"><span
+    lang=HI style='font-family:Hind'>&#2360;&#2330;&#2381;&#2330;&#2367;&#2340;&#2366;&#2344;&#2306;&#2342;
+    &#2361;&#2368;&#2352;&#2366;&#2344;&#2306;&#2342;
+    &#2357;&#2366;&#2340;&#2381;&#2360;&#2381;&#2351;&#2366;&#2351;&#2344;
+    '&#2309;&#2332;&#2381;&#2334;&#2375;&#2351;' : &#2309;&#2352;&#2375;
+    &#2351;&#2366;&#2351;&#2366;&#2357;&#2352; &#2352;&#2361;&#2375;&#2327;&#2366;
+    &#2351;&#2366;&#2342;</span></a></p>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/20/%e0%a4%b0%e0%a4%be%e0%a4%b9%e0%a5%81%e0%a4%b2-%e0%a4%b8%e0%a4%be%e0%a4%82%e0%a4%95%e0%a5%83%e0%a4%a4%e0%a5%8d%e0%a4%af%e0%a4%be%e0%a4%af%e0%a4%a8-%e0%a4%ae%e0%a5%87%e0%a4%b0%e0%a5%80-%e0%a4%a4/"><span
+    lang=HI style='font-family:Hind'>&#2352;&#2366;&#2361;&#2369;&#2354;
+    &#2360;&#2366;&#2306;&#2325;&#2371;&#2340;&#2381;&#2351;&#2366;&#2351;&#2344; :
+    &#2350;&#2375;&#2352;&#2368; &#2340;&#2367;&#2348;&#2381;&#2348;&#2340;
+    &#2351;&#2366;&#2340;&#2381;&#2352;&#2366;</span></a></p>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/20/%e0%a4%97%e0%a4%9c%e0%a4%be%e0%a4%a8%e0%a4%a8-%e0%a4%ae%e0%a4%be%e0%a4%a7%e0%a4%b5-%e0%a4%ae%e0%a5%81%e0%a4%95%e0%a5%8d%e0%a4%a4%e0%a4%bf%e0%a4%ac%e0%a5%8b%e0%a4%a7-%e0%a4%8f%e0%a4%95-%e0%a4%b8/"><span
+    lang=HI style='font-family:Hind'>&#2327;&#2332;&#2366;&#2344;&#2344;
+    &#2350;&#2366;&#2343;&#2357; '&#2350;&#2369;&#2325;&#2381;&#2340;&#2367;&#2348;&#2379;&#2343;'
+    : &#2319;&#2325;
+    &#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351;&#2367;&#2325; &#2325;&#2368;
+    &#2337;&#2366;&#2351;&#2352;&#2368;</span></a></p>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/20/%e0%a4%b0%e0%a4%be%e0%a4%ae%e0%a4%a7%e0%a4%be%e0%a4%b0%e0%a5%80-%e0%a4%b8%e0%a4%bf%e0%a4%82%e0%a4%b9-%e0%a4%a6%e0%a4%bf%e0%a4%a8%e0%a4%95%e0%a4%b0-%e0%a4%b8%e0%a4%82%e0%a4%b8%e0%a5%8d%e0%a4%95/"><span
+    lang=HI style='font-family:Hind'>&#2352;&#2366;&#2350;&#2343;&#2366;&#2352;&#2368;
+    &#2360;&#2367;&#2306;&#2361; '&#2342;&#2367;&#2344;&#2325;&#2352;' :
+    &#2360;&#2306;&#2360;&#2381;&#2325;&#2371;&#2340;&#2367; &#2325;&#2375;
+    &#2330;&#2366;&#2352; &#2309;&#2343;&#2381;&#2351;&#2366;&#2351;</span></a></p>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/20/%e0%a4%95%e0%a5%83%e0%a4%b7%e0%a5%8d%e0%a4%a3-%e0%a4%9a%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a4%b0-%e0%a4%9c%e0%a4%be%e0%a4%ae%e0%a5%81%e0%a4%a8-%e0%a4%95%e0%a4%be-%e0%a4%aa%e0%a5%87%e0%a4%a1%e0%a4%bc/"><span
+    lang=HI style='font-family:Hind'>&#2325;&#2371;&#2359;&#2381;&#2339;
+    &#2330;&#2344;&#2381;&#2342;&#2352; : &#2332;&#2366;&#2350;&#2369;&#2344;
+    &#2325;&#2366; &#2346;&#2375;&#2337;&#2364;</span></a></p>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/20/%e0%a4%b9%e0%a4%b0%e0%a4%bf%e0%a4%b6%e0%a4%82%e0%a4%95%e0%a4%b0-%e0%a4%aa%e0%a4%b0%e0%a4%b8%e0%a4%be%e0%a4%88-%e0%a4%ad%e0%a5%8b%e0%a4%b2%e0%a4%be%e0%a4%b0%e0%a4%be%e0%a4%ae-%e0%a4%95%e0%a4%be/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2352;&#2367;&#2358;&#2306;&#2325;&#2352;
+    &#2346;&#2352;&#2360;&#2366;&#2312; :
+    &#2349;&#2379;&#2354;&#2366;&#2352;&#2366;&#2350; &#2325;&#2366;
+    &#2332;&#2368;&#2357;</span></a></p>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/20/%e0%a4%b0%e0%a4%ae%e0%a4%a3%e0%a4%bf%e0%a4%95%e0%a4%be-%e0%a4%97%e0%a5%81%e0%a4%aa%e0%a5%8d%e0%a4%a4%e0%a4%be-%e0%a4%86%e0%a4%aa%e0%a4%b9%e0%a5%81%e0%a4%a6%e0%a4%b0%e0%a5%80/"><span
+    lang=HI style='font-family:Hind'>&#2352;&#2350;&#2339;&#2367;&#2325;&#2366;
+    &#2327;&#2369;&#2346;&#2381;&#2340;&#2366; :
+    &#2310;&#2346;&#2361;&#2369;&#2342;&#2352;&#2368;</span></a></p>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/20/%e0%a4%b9%e0%a4%b0%e0%a4%bf%e0%a4%b5%e0%a4%82%e0%a4%b6%e0%a4%b0%e0%a4%be%e0%a4%af-%e0%a4%ac%e0%a4%9a%e0%a5%8d%e0%a4%9a%e0%a4%a8-%e0%a4%95%e0%a5%8d%e0%a4%af%e0%a4%be-%e0%a4%ad%e0%a5%82%e0%a4%b2/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2352;&#2367;&#2357;&#2306;&#2358;&#2352;&#2366;&#2351;
+    &#2348;&#2330;&#2381;&#2330;&#2344; : &#2325;&#2381;&#2351;&#2366;
+    &#2349;&#2370;&#2354;&#2370;&#2305; &#2325;&#2381;&#2351;&#2366;
+    &#2351;&#2366;&#2342; &#2325;&#2352;&#2370;&#2305;</span></a></p>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/20/%e0%a4%b5%e0%a4%bf%e0%a4%b7%e0%a5%8d%e0%a4%a3%e0%a5%81-%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%ad%e0%a4%be%e0%a4%95%e0%a4%b0-%e0%a4%86%e0%a4%b5%e0%a4%be%e0%a4%b0%e0%a4%be-%e0%a4%ae%e0%a4%b8%e0%a5%80/"><span
+    lang=HI style='font-family:Hind'>&#2357;&#2367;&#2359;&#2381;&#2339;&#2369;
+    &#2346;&#2381;&#2352;&#2349;&#2366;&#2325;&#2352; :
+    &#2310;&#2357;&#2366;&#2352;&#2366; &#2350;&#2360;&#2368;&#2361;&#2366;</span></a></p>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/18/%e0%a4%ae%e0%a4%a8%e0%a5%8d%e0%a4%a8%e0%a5%82-%e0%a4%ad%e0%a4%82%e0%a4%a1%e0%a4%be%e0%a4%b0%e0%a5%80-%e0%a4%8f%e0%a4%95-%e0%a4%95%e0%a4%b9%e0%a4%be%e0%a4%a8%e0%a5%80-%e0%a4%af%e0%a4%b9-%e0%a4%ad/"><span
+    lang=HI style='font-family:Hind'>&#2350;&#2344;&#2381;&#2344;&#2370;
+    &#2349;&#2306;&#2337;&#2366;&#2352;&#2368; : &#2319;&#2325;
+    &#2325;&#2361;&#2366;&#2344;&#2368; &#2351;&#2361; &#2349;&#2368;</span></a></p>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/18/%e0%a4%b6%e0%a4%bf%e0%a4%b5%e0%a4%b0%e0%a4%be%e0%a4%a8%e0%a5%80-%e0%a4%a6%e0%a5%87%e0%a4%b5%e0%a5%80-%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a5%87%e0%a4%ae%e0%a4%9a%e0%a4%82%e0%a4%a6-%e0%a4%98%e0%a4%b0/"><span
+    lang=HI style='font-family:Hind'>&#2358;&#2367;&#2357;&#2352;&#2366;&#2344;&#2368;
+    &#2342;&#2375;&#2357;&#2368; :
+    &#2346;&#2381;&#2352;&#2375;&#2350;&#2330;&#2306;&#2342; &#2328;&#2352;
+    &#2350;&#2375;&#2306;</span></a></p>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/18/%e0%a4%a4%e0%a5%81%e0%a4%b2%e0%a4%b8%e0%a5%80%e0%a4%b0%e0%a4%be%e0%a4%ae-%e0%a4%ae%e0%a5%81%e0%a4%b0%e0%a5%8d%e0%a4%a6%e0%a4%b9%e0%a4%bf%e0%a4%af%e0%a4%be/"><span
+    lang=HI style='font-family:Hind'>&#2340;&#2369;&#2354;&#2360;&#2368;&#2352;&#2366;&#2350;
+    : &#2350;&#2369;&#2352;&#2381;&#2342;&#2361;&#2367;&#2351;&#2366;</span></a></p>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/18/%e0%a4%ae%e0%a4%b9%e0%a4%be%e0%a4%a6%e0%a5%87%e0%a4%b5%e0%a5%80-%e0%a4%b5%e0%a4%b0%e0%a5%8d%e0%a4%ae%e0%a4%be-%e0%a4%a0%e0%a4%95%e0%a5%81%e0%a4%b0%e0%a5%80-%e0%a4%ac%e0%a4%be%e0%a4%ac%e0%a4%be/"><span
+    lang=HI style='font-family:Hind'>&#2350;&#2361;&#2366;&#2342;&#2375;&#2357;&#2368;
+    &#2357;&#2352;&#2381;&#2350;&#2366; : &#2336;&#2325;&#2369;&#2352;&#2368;
+    &#2348;&#2366;&#2348;&#2366;
+    (&#2360;&#2306;&#2360;&#2381;&#2350;&#2352;&#2339;)</span></a></p>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/18/%e0%a4%b0%e0%a4%be%e0%a4%ae%e0%a4%b5%e0%a5%83%e0%a4%95%e0%a5%8d%e0%a4%b7-%e0%a4%ac%e0%a5%87%e0%a4%a8%e0%a5%80%e0%a4%aa%e0%a5%81%e0%a4%b0%e0%a5%80-%e0%a4%ae%e0%a4%be%e0%a4%9f%e0%a5%80-%e0%a4%95/"><span
+    lang=HI style='font-family:Hind'>&#2352;&#2366;&#2350;&#2357;&#2371;&#2325;&#2381;&#2359;
+    &#2348;&#2375;&#2344;&#2368;&#2346;&#2369;&#2352;&#2368; :
+    &#2350;&#2366;&#2335;&#2368; &#2325;&#2368;
+    &#2350;&#2370;&#2352;&#2340;&#2375;&#2306;
+    (&#2352;&#2375;&#2326;&#2366;&#2330;&#2367;&#2340;&#2381;&#2352;)</span></a></p>
+
+	</div>
+    <br>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/11/08/%e0%a4%b8%e0%a4%b0%e0%a4%b8%e0%a5%8d%e0%a4%b5%e0%a4%a4%e0%a5%80-%e0%a4%aa%e0%a4%a4%e0%a5%8d%e0%a4%b0%e0%a4%bf%e0%a4%95%e0%a4%be/"><span
+    lang=HI style='font-family:Hind'>&#2360;&#2352;&#2360;&#2381;&#2357;&#2340;&#2368;
+    &#2346;&#2340;&#2381;&#2352;&#2367;&#2325;&#2366;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/11/08/%e0%a4%96%e0%a4%a1%e0%a4%bc%e0%a5%80%e0%a4%ac%e0%a5%8b%e0%a4%b2%e0%a5%80-%e0%a4%86%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%8b%e0%a4%b2%e0%a4%a8/"><span
+    lang=HI style='font-family:Hind'>&#2326;&#2337;&#2364;&#2368;&#2348;&#2379;&#2354;&#2368;
+    &#2310;&#2344;&#2381;&#2342;&#2379;&#2354;&#2344;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/11/08/%e0%a4%a8%e0%a4%be%e0%a4%97%e0%a4%b0%e0%a5%80-%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%9a%e0%a4%be%e0%a4%b0%e0%a4%bf%e0%a4%a3%e0%a5%80-%e0%a4%b8%e0%a4%ad%e0%a4%be-%e0%a4%95%e0%a4%be%e0%a4%b6%e0%a5%80/"><span
+    lang=HI style='font-family:Hind'>&#2344;&#2366;&#2327;&#2352;&#2368;
+    &#2346;&#2381;&#2352;&#2330;&#2366;&#2352;&#2367;&#2339;&#2368;
+    &#2360;&#2349;&#2366;(&#2325;&#2366;&#2358;&#2368;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/11/08/%e0%a4%ab%e0%a5%8b%e0%a4%b0%e0%a5%8d%e0%a4%9f-%e0%a4%b5%e0%a4%bf%e0%a4%b2%e0%a4%bf%e0%a4%af%e0%a4%ae-%e0%a4%95%e0%a5%89%e0%a4%b2%e0%a5%87%e0%a4%9c/"><span
+    lang=HI style='font-family:Hind'>&#2347;&#2379;&#2352;&#2381;&#2335;
+    &#2357;&#2367;&#2354;&#2367;&#2351;&#2350; &#2325;&#2377;&#2354;&#2375;&#2332;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/11/08/%e0%a4%b8%e0%a5%8d%e0%a4%a4%e0%a5%8d%e0%a4%b0%e0%a5%80-%e0%a4%b5%e0%a4%bf%e0%a4%ae%e0%a4%b0%e0%a5%8d%e0%a4%b6/"><span
+    lang=HI style='font-family:Hind'>&#2360;&#2381;&#2340;&#2381;&#2352;&#2368;
+    &#2357;&#2367;&#2350;&#2352;&#2381;&#2358;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/11/08/%e0%a4%85%e0%a4%b2%e0%a5%8d%e0%a4%aa%e0%a4%b8%e0%a4%82%e0%a4%96%e0%a5%8d%e0%a4%af%e0%a4%95-%e0%a4%b5%e0%a4%bf%e0%a4%ae%e0%a4%b0%e0%a5%8d%e0%a4%b6-%e0%a4%95%e0%a4%bf%e0%a4%a8%e0%a5%8d%e0%a4%a8/"><span
+    lang=HI style='font-family:Hind'>&#2309;&#2354;&#2381;&#2346;&#2360;&#2306;&#2326;&#2381;&#2351;&#2325;
+    &#2357;&#2367;&#2350;&#2352;&#2381;&#2358; /
+    &#2325;&#2367;&#2344;&#2381;&#2344;&#2352;
+    &#2357;&#2367;&#2350;&#2352;&#2381;&#2358; &nbsp;(Third Gender)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/10/10/%e0%a4%86%e0%a4%a6%e0%a4%bf%e0%a4%b5%e0%a4%be%e0%a4%b8%e0%a5%80-%e0%a4%b5%e0%a4%bf%e0%a4%ae%e0%a4%b0%e0%a5%8d%e0%a4%b6/"><span
+    lang=HI style='font-family:Hind'>&#2310;&#2342;&#2367;&#2357;&#2366;&#2360;&#2368;
+    &#2357;&#2367;&#2350;&#2352;&#2381;&#2358;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/10/10/%e0%a4%a6%e0%a4%b2%e0%a4%bf%e0%a4%a4-%e0%a4%b5%e0%a4%bf%e0%a4%ae%e0%a4%b0%e0%a5%8d%e0%a4%b6/"><span
+    lang=HI style='font-family:Hind'>&#2342;&#2354;&#2367;&#2340;
+    &#2357;&#2367;&#2350;&#2352;&#2381;&#2358;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/10/06/%e0%a4%a1%e0%a5%89-%e0%a4%b0%e0%a4%be%e0%a4%ae-%e0%a4%ae%e0%a4%a8%e0%a5%8b%e0%a4%b9%e0%a4%b0-%e0%a4%b2%e0%a5%8b%e0%a4%b9%e0%a4%bf%e0%a4%af%e0%a4%be/"><span
+    lang=HI style='font-family:Hind'>&#2337;&#2377;
+    &#2352;&#2366;&#2350; &#2350;&#2344;&#2379;&#2361;&#2352;
+    &#2354;&#2379;&#2361;&#2367;&#2351;&#2366;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/10/06/%e0%a4%85%e0%a4%82%e0%a4%ac%e0%a5%87%e0%a4%a1%e0%a4%95%e0%a4%b0/"><span
+    lang=HI style='font-family:Hind'>&#2337;&#2377;.
+    &#2349;&#2368;&#2350;&#2352;&#2366;&#2357;
+    &#2309;&#2306;&#2348;&#2375;&#2337;&#2325;&#2352;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/10/06/%e0%a4%97%e0%a4%be%e0%a4%82%e0%a4%a7%e0%a5%80%e0%a4%a6%e0%a4%b0%e0%a5%8d%e0%a4%b6%e0%a4%a8/"><span
+    lang=HI style='font-family:Hind'>&#2350;&#2379;&#2361;&#2344;&#2342;&#2366;&#2360;
+    &#2325;&#2352;&#2350;&#2330;&#2306;&#2342; &#2327;&#2366;&#2305;&#2343;&#2368;</span></a></p>
+
+
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/11/23/%e0%a4%85%e0%a4%b5%e0%a5%8d%e0%a4%af%e0%a4%af%ef%bf%bc/"><span
+    lang=HI style='font-family:Hind'>&#2309;&#2357;&#2381;&#2351;&#2351;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/11/18/%e0%a4%b9%e0%a4%bf%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%80-%e0%a4%b5%e0%a5%8d%e0%a4%af%e0%a4%be%e0%a4%95%e0%a4%b0%e0%a4%a3-%e0%a4%b8%e0%a4%82%e0%a4%a7%e0%a4%bf/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;
+    &#2357;&#2381;&#2351;&#2366;&#2325;&#2352;&#2339;
+    (&#2360;&#2306;&#2343;&#2367;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/11/16/%e0%a4%b5%e0%a4%b0%e0%a5%8d%e0%a4%a3-%e0%a4%b5%e0%a4%bf%e0%a4%9a%e0%a4%be%e0%a4%b0/"><span
+    lang=HI style='font-family:Hind'>&#2357;&#2352;&#2381;&#2339;
+    &#2357;&#2367;&#2330;&#2366;&#2352;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/11/15/%e0%a4%b8%e0%a4%b0%e0%a5%8d%e0%a4%b5%e0%a4%a8%e0%a4%be%e0%a4%ae-pronoun%ef%bf%bc/"><span
+    lang=HI style='font-family:Hind'>&#2360;&#2352;&#2381;&#2357;&#2344;&#2366;&#2350;
+    (Pronoun)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/11/15/%e0%a4%b8%e0%a4%82%e0%a4%9c%e0%a5%8d%e0%a4%9e%e0%a4%be-noun-%ef%bf%bc/"><span
+    lang=HI style='font-family:Hind'>&#2360;&#2306;&#2332;&#2381;&#2334;&#2366;
+    (Noun) </span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/11/12/%e0%a4%b9%e0%a4%bf%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%80-%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%af-%e0%a4%95%e0%a5%80-%e0%a4%97%e0%a4%a6%e0%a5%8d%e0%a4%af-%e0%a4%b5%e0%a4%bf-5/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;
+    &#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351; &#2325;&#2368;
+    &#2327;&#2342;&#2381;&#2351; &#2357;&#2367;&#2343;&#2366;&#2319;&#2305;:
+    &#2344;&#2366;&#2335;&#2325; (&#2311;&#2325;&#2366;&#2312;- 2)</span></a></p>
+
+        <br>
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/11/09/%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%af-%e0%a4%85%e0%a4%b0%e0%a5%8d%e0%a4%a5-%e0%a4%aa%e0%a4%b0%e0%a4%bf%e0%a4%ad%e0%a4%be%e0%a4%b7%e0%a4%be%e0%a4%8f%e0%a4%81-%e0%a4%b8/"><span
+    lang=HI style='font-family:Hind'>&#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351;:
+    &#2309;&#2352;&#2381;&#2341;, &#2346;&#2352;&#2367;&#2349;&#2366;&#2359;&#2366;&#2319;&#2305;
+    &#2360;&#2381;&#2357;&#2352;&#2369;&#2346; &#2319;&#2357;&#2306;
+    &#2349;&#2375;&#2342;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/11/09/%e0%a4%b8%e0%a4%82%e0%a4%b8%e0%a5%8d%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%95%e0%a5%87-%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%b8%e0%a4%bf%e0%a4%a6%e0%a5%8d%e0%a4%a7-%e0%a4%95%e0%a4%be%e0%a4%b5%e0%a5%8d/"><span
+    lang=HI style='font-family:Hind'>&#2360;&#2306;&#2360;&#2381;&#2325;&#2371;&#2340;
+    &#2325;&#2375; &#2346;&#2381;&#2352;&#2360;&#2367;&#2342;&#2381;&#2343;
+    &#2325;&#2366;&#2357;&#2381;&#2351;&#2358;&#2366;&#2360;&#2381;&#2340;&#2381;&#2352;&#2368;&#2351;
+    &#2327;&#2381;&#2352;&#2306;&#2341; &#2319;&#2357;&#2306;
+    &#2310;&#2330;&#2366;&#2352;&#2381;&#2351; &#2325;&#2366;&#2354;&#2325;&#2381;&#2352;&#2350;&#2366;&#2344;&#2369;&#2360;&#2366;&#2352;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/10/15/%e0%a4%b9%e0%a4%bf%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%80-%e0%a4%95%e0%a4%be-%e0%a4%ad%e0%a4%be%e0%a4%b7%e0%a4%bf%e0%a4%95-%e0%a4%b8%e0%a5%8d%e0%a4%b5%e0%a4%b0%e0%a5%81%e0%a4%aa-%e0%a4%b9%e0%a4%bf/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;
+    &#2325;&#2366; &#2349;&#2366;&#2359;&#2367;&#2325;
+    &#2360;&#2381;&#2357;&#2352;&#2369;&#2346;:
+    &#2361;&#2367;&#2344;&#2381;&#2342;&#2368; &#2325;&#2366;
+    &#2360;&#2381;&#2357;&#2344;&#2367;&#2350; &#2357;&#2381;&#2351;&#2357;&#2360;&#2381;&#2341;&#2366;
+    &#2326;&#2306;&#2337;&#2381;&#2351; &#2324;&#2352;
+    &#2326;&#2306;&#2337;&#2381;&#2351;&#2375;&#2340;&#2352; (&#2311;&#2325;&#2366;&#2312;
+    -1)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/10/12/%e0%a4%b9%e0%a4%bf%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%80-%e0%a4%b5%e0%a5%8d%e0%a4%af%e0%a4%be%e0%a4%95%e0%a4%b0%e0%a4%a3-%e0%a4%b6%e0%a4%ac%e0%a5%8d%e0%a4%a6-%e0%a4%9c%e0%a5%8d%e0%a4%9e%e0%a4%be/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;
+    &#2357;&#2381;&#2351;&#2366;&#2325;&#2352;&#2339; (&#2358;&#2348;&#2381;&#2342;
+    &#2332;&#2381;&#2334;&#2366;&#2344;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/10/12/%e0%a4%85%e0%a4%b2%e0%a4%82%e0%a4%95%e0%a4%be%e0%a4%b0/"><span
+    lang=HI style='font-family:Hind'>&#2309;&#2354;&#2306;&#2325;&#2366;&#2352;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/09/07/%e0%a4%b9%e0%a4%bf%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%80-%e0%a4%89%e0%a4%aa-%e0%a4%ad%e0%a4%be%e0%a4%b7%e0%a4%be%e0%a4%8f%e0%a4%81-%e0%a4%8f%e0%a4%b5%e0%a4%82-%e0%a4%ac%e0%a5%8b%e0%a4%b2%e0%a4%bf/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;:
+    &#2313;&#2346;-&#2349;&#2366;&#2359;&#2366;&#2319;&#2305; &#2319;&#2357;&#2306;
+    &#2348;&#2379;&#2354;&#2367;&#2351;&#2366;&#2305;
+    &#2344;&#2366;&#2350;&#2325;&#2352;&#2339;, &#2313;&#2340;&#2381;&#2340;&#2381;&#2346;&#2340;&#2367;
+    &#2325;&#2381;&#2359;&#2375;&#2340;&#2381;&#2352;,&#2357;&#2367;&#2358;&#2375;&#2359;&#2340;&#2366;&#2319;&#2305;
+    (&#2311;&#2325;&#2366;&#2312; -1)</span></a></p>
+    <br>
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/09/07/%e0%a4%b8%e0%a4%ae%e0%a4%be%e0%a4%b8-compound/"><span
+    lang=HI style='font-family:Hind'>&#2360;&#2350;&#2366;&#2360;
+    (Compound)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/08/17/%e0%a4%aa%e0%a4%be%e0%a4%b6%e0%a5%8d%e0%a4%9a%e0%a4%be%e0%a4%a4%e0%a5%8d%e0%a4%af-%e0%a4%86%e0%a4%b2%e0%a5%8b%e0%a4%9a%e0%a4%95-%e0%a4%94%e0%a4%b0-%e0%a4%89%e0%a4%a8%e0%a4%95%e0%a5%87-%e0%a4%b8/"><span
+    lang=HI style='font-family:Hind'>&#2346;&#2366;&#2358;&#2381;&#2330;&#2366;&#2340;&#2381;&#2351;
+    &#2310;&#2354;&#2379;&#2330;&#2325; &#2324;&#2352; &#2313;&#2344;&#2325;&#2375;
+    &#2360;&#2367;&#2342;&#2381;&#2343;&#2366;&#2306;&#2340;
+    (&#2311;&#2325;&#2366;&#2312;- 3)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/08/17/%e0%a4%b5%e0%a4%bf%e0%a4%b2%e0%a5%8b%e0%a4%ae-%e0%a4%b6%e0%a4%ac%e0%a5%8d%e0%a4%a6-opposite-words/"><span
+    lang=HI style='font-family:Hind'>&#2357;&#2367;&#2354;&#2379;&#2350;
+    &#2358;&#2348;&#2381;&#2342; (Opposite words)</span></a></p>
+
+
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/08/04/%e0%a4%b0%e0%a4%be%e0%a4%9c%e0%a4%ad%e0%a4%be%e0%a4%b7%e0%a4%be-%e0%a4%95%e0%a5%87-%e0%a4%b0%e0%a5%82%e0%a4%aa-%e0%a4%ae%e0%a5%87%e0%a4%82-%e0%a4%b9%e0%a4%bf%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%80/"><span
+    lang=HI style='font-family:Hind'>&#2352;&#2366;&#2332;&#2349;&#2366;&#2359;&#2366;
+    &#2325;&#2375; &#2352;&#2370;&#2346; &#2350;&#2375;&#2306;
+    &#2361;&#2367;&#2344;&#2381;&#2342;&#2368; (&#2311;&#2325;&#2366;&#2312;-1)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/08/01/%e0%a4%ae%e0%a4%b9%e0%a4%a4%e0%a5%8d%e0%a4%b5%e0%a4%aa%e0%a5%82%e0%a4%b0%e0%a5%8d%e0%a4%a3-%e0%a4%aa%e0%a4%a4%e0%a5%8d%e0%a4%b0-%e0%a4%aa%e0%a4%a4%e0%a5%8d%e0%a4%b0%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%8f/"><span
+    lang=HI style='font-family:Hind'>&#2350;&#2361;&#2340;&#2381;&#2357;&#2346;&#2370;&#2352;&#2381;&#2339;
+    &#2346;&#2340;&#2381;&#2352;-&#2346;&#2340;&#2381;&#2352;&#2367;&#2325;&#2366;&#2319;&#2305;
+    : &#2311;&#2325;&#2366;&#2312; ' 2</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/08/01/%e0%a4%ac%e0%a4%bf%e0%a4%b9%e0%a4%be%e0%a4%b0%e0%a5%80-%e0%a4%b8%e0%a4%a4%e0%a4%b8%e0%a4%88-%e0%a4%87%e0%a4%95%e0%a4%be%e0%a4%88-5/"><span
+    lang=HI style='font-family:Hind'>&#2348;&#2367;&#2361;&#2366;&#2352;&#2368;
+    &#2360;&#2340;&#2360;&#2312; : &#2311;&#2325;&#2366;&#2312;'5</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/07/26/%e0%a4%95%e0%a4%be%e0%a4%b5%e0%a5%8d%e0%a4%af%e0%a4%b6%e0%a4%be%e0%a4%b8%e0%a5%8d%e0%a4%a4%e0%a5%8d%e0%a4%b0-%e0%a4%9b%e0%a4%82%e0%a4%a6/"><span
+    lang=HI style='font-family:Hind'>&#2325;&#2366;&#2357;&#2381;&#2351;&#2358;&#2366;&#2360;&#2381;&#2340;&#2381;&#2352;
+    '&#2331;&#2306;&#2342;'</span></a></p>
+
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/07/11/%e0%a4%ae%e0%a5%88%e0%a4%a5%e0%a4%bf%e0%a4%b2%e0%a5%80%e0%a4%b6%e0%a4%b0%e0%a4%a3-%e0%a4%97%e0%a5%81%e0%a4%aa%e0%a5%8d%e0%a4%a4-%e0%a4%b8%e0%a4%be%e0%a4%95%e0%a5%87%e0%a4%a4/"><span
+    lang=HI style='font-family:Hind'>&#2350;&#2376;&#2341;&#2367;&#2354;&#2368;&#2358;&#2352;&#2339;
+    &#2327;&#2369;&#2346;&#2381;&#2340;
+    '&#2360;&#2366;&#2325;&#2375;&#2340;'-'&#2344;&#2357;&#2350;
+    &#2360;&#2352;&#2381;&#2327;'
+    (&#2350;&#2361;&#2366;&#2325;&#2366;&#2357;&#2381;&#2351;- &#2311;&#2325;&#2366;&#2312;-5 )</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/07/11/%e0%a4%9c%e0%a4%af%e0%a4%b6%e0%a4%82%e0%a4%95%e0%a4%b0-%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%b8%e0%a4%be%e0%a4%a6/"><span
+    lang=HI style='font-family:Hind'>&#2332;&#2351;&#2358;&#2306;&#2325;&#2352;
+    &#2346;&#2381;&#2352;&#2360;&#2366;&#2342; &#2332;&#2368;&#2357;&#2344;
+    &#2346;&#2352;&#2367;&#2330;&#2351;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/07/03/%e0%a4%b9%e0%a4%bf%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%80-%e0%a4%95%e0%a5%87-%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%af%e0%a4%95%e0%a4%be%e0%a4%b0%e0%a5%8b%e0%a4%82-%e0%a4%95/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;
+    &#2325;&#2375;
+    &#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351;&#2325;&#2366;&#2352;&#2379;&#2306;
+    &#2325;&#2375; &#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351;&#2367;&#2325;
+    &#2313;&#2346;&#2344;&#2366;&#2350;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/07/03/%e0%a4%b9%e0%a4%b0%e0%a4%bf%e0%a4%b5%e0%a4%82%e0%a4%b6%e0%a4%b0%e0%a4%be%e0%a4%af-%e0%a4%b0%e0%a4%be%e0%a4%af-%e0%a4%ac%e0%a4%9a%e0%a5%8d%e0%a4%9a%e0%a4%a8/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2352;&#2367;&#2357;&#2306;&#2358;&#2352;&#2366;&#2351;
+    &#2352;&#2366;&#2351; '&#2348;&#2330;&#2381;&#2330;&#2344;'</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/07/03/%e0%a4%b9%e0%a4%bf%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%80-%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%af-%e0%a4%95%e0%a5%80-%e0%a4%ae%e0%a4%b9%e0%a4%bf%e0%a4%b2%e0%a4%be/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;
+    &#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351; &#2325;&#2368;
+    '&#2350;&#2361;&#2367;&#2354;&#2366;'
+    &#2325;&#2361;&#2366;&#2344;&#2368;&#2325;&#2366;&#2352;</span></a></p>
+
+
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/06/20/%e0%a4%85%e0%a4%af%e0%a5%8b%e0%a4%a7%e0%a5%8d%e0%a4%af%e0%a4%be-%e0%a4%b8%e0%a4%bf%e0%a4%82%e0%a4%b9-%e0%a4%89%e0%a4%aa%e0%a4%be%e0%a4%a7%e0%a5%8d%e0%a4%af%e0%a4%be%e0%a4%af-%e0%a4%b9/"><span
+    lang=HI style='font-family:Hind'>&#2309;&#2351;&#2379;&#2343;&#2381;&#2351;&#2366;
+    &#2360;&#2367;&#2306;&#2361;
+    &#2313;&#2346;&#2366;&#2343;&#2381;&#2351;&#2366;&#2351; '&#2361;&#2352;&#2367;&#2324;&#2306;&#2343;'
+    &#2346;&#2381;&#2352;&#2367;&#2351;&#2346;&#2381;&#2352;&#2357;&#2366;&#2360;
+    (&#2350;&#2361;&#2366;&#2325;&#2366;&#2357;&#2381;&#2351;)
+    &#2311;&#2325;&#2366;&#2312;-5</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/05/23/%e0%a4%95%e0%a4%ac%e0%a5%80%e0%a4%b0%e0%a4%a6%e0%a4%be%e0%a4%b8-%e0%a4%b8%e0%a4%82%e0%a5%a6-%e0%a4%b9%e0%a4%9c%e0%a4%be%e0%a4%b0%e0%a5%80%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%b8/"><span
+    lang=HI style='font-family:Hind'>'&#2325;&#2348;&#2368;&#2352;&#2342;&#2366;&#2360;'
+    (&#2360;&#2306;&#2406;
+    &#2361;&#2332;&#2366;&#2352;&#2368;&#2346;&#2381;&#2352;&#2360;&#2366;&#2342;
+    &#2342;&#2381;&#2357;&#2367;&#2357;&#2375;&#2342;&#2368;, &#2346;&#2342;
+    &#2360;&#2306; (160-209) &#2311;&#2325;&#2366;&#2312;-5</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/05/22/%e0%a4%85%e0%a4%ae%e0%a5%80%e0%a4%b0-%e0%a4%96%e0%a5%81%e0%a4%b8%e0%a4%b0%e0%a5%8b-%e0%a4%95%e0%a5%80-%e0%a4%aa%e0%a4%b9%e0%a5%87%e0%a4%b2%e0%a4%bf%e0%a4%af%e0%a4%be%e0%a4%81-%e0%a4%94%e0%a4%b0/"><span
+    lang=HI style='font-family:Hind'>&#2309;&#2350;&#2368;&#2352;
+    &#2326;&#2369;&#2360;&#2352;&#2379; &#2325;&#2368;
+    &#2346;&#2361;&#2375;&#2354;&#2367;&#2351;&#2366;&#2305; &#2324;&#2352;
+    &#2350;&#2369;&#2325;&#2352;&#2367;&#2351;&#2366;&#2305;
+    (&#2311;&#2325;&#2366;&#2312;-5)</span></a></p>
+
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/05/12/%e0%a4%ae%e0%a5%80%e0%a4%b0%e0%a4%be-%e0%a4%aa%e0%a4%a6%e0%a4%be%e0%a4%b5%e0%a4%b2%e0%a5%80-%e0%a4%b8%e0%a4%82%e0%a4%aa%e0%a4%be%e0%a4%a6%e0%a4%95-%e0%a4%b5%e0%a4%bf%e0%a4%b6%e0%a5%8d%e0%a4%b5/"><span
+    lang=HI style='font-family:Hind'>&#2350;&#2368;&#2352;&#2366;
+    &#2346;&#2342;&#2366;&#2357;&#2354;&#2368;
+    (&#2360;&#2306;&#2346;&#2366;&#2342;&#2325;
+    &#2357;&#2367;&#2358;&#2381;&#2357;&#2344;&#2366;&#2341;
+    &#2340;&#2381;&#2352;&#2367;&#2346;&#2366;&#2336;&#2368;) &#2346;&#2342; : &#2346;&#2381;&#2352;&#2366;&#2352;&#2306;&#2349;
+    &#2360;&#2375; (20 </span><span lang=HI style='line-height:
+    107%;font-family:Hind'>&#2340;&#2325;, &#2311;&#2325;&#2366;&#2312; ' 05</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/05/10/%e0%a4%b5%e0%a4%bf%e0%a4%a6%e0%a5%8d%e0%a4%af%e0%a4%be%e0%a4%aa%e0%a4%a4%e0%a4%bf-%e0%a4%95%e0%a5%80-%e0%a4%aa%e0%a4%a6%e0%a4%be%e0%a4%b5%e0%a4%b2%e0%a5%80-%e0%a4%b8%e0%a4%82%e0%a4%aa%e0%a4%be/"><span
+    lang=HI style='font-family:Hind'>&#2357;&#2367;&#2342;&#2381;&#2351;&#2366;&#2346;&#2340;&#2367;
+    &#2325;&#2368; &#2346;&#2342;&#2366;&#2357;&#2354;&#2368;
+    (&#2360;&#2306;&#2346;&#2366;&#2342;&#2325;- &#2337;&#2377;
+    &#2344;&#2352;&#2375;&#2344;&#2381;&#2342;&#2381;&#2352; &#2333;&#2366;)
+    &#2346;&#2342; &#2360;&#2306; 1-25 &#2340;&#2325; :
+    &#2311;&#2325;&#2366;&#2312; ' 5</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/05/03/%e0%a4%b8%e0%a5%82%e0%a4%b0%e0%a4%a6%e0%a4%be%e0%a4%b8-%e0%a4%ad%e0%a5%8d%e0%a4%b0%e0%a4%ae%e0%a4%b0%e0%a4%97%e0%a5%80%e0%a4%a4%e0%a4%b8%e0%a4%be%e0%a4%b0-%e0%a4%b8%e0%a4%82-%e0%a4%b0%e0%a4%be/"><span
+    lang=HI style='font-family:Hind'>&#2360;&#2370;&#2352;&#2342;&#2366;&#2360;
+    &#2349;&#2381;&#2352;&#2350;&#2352;&#2327;&#2368;&#2340;&#2360;&#2366;&#2352;
+    (&#2360;&#2306; &#2352;&#2366;&#2350;&#2330;&#2306;&#2342;
+    &#2358;&#2369;&#2325;&#2381;&#2354; ' &#2311;&#2325;&#2366;&#2312; 5) &#2346;&#2342;
+    &#2360;&#2306;&#2326;&#2381;&#2351;&#2366; 21- 70&#2340;&#2325;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/05/02/%e0%a4%b0%e0%a4%be%e0%a4%ae%e0%a4%9a%e0%a4%b0%e0%a4%bf%e0%a4%a4%e0%a4%ae%e0%a4%be%e0%a4%a8%e0%a4%b8-%e0%a4%a4%e0%a5%81%e0%a4%b2%e0%a4%b8%e0%a5%80%e0%a4%a6%e0%a4%be%e0%a4%b8-%e0%a4%89%e0%a4%a4/"><span
+    lang=HI style='font-family:Hind'>&#2352;&#2366;&#2350;&#2330;&#2352;&#2367;&#2340;&#2350;&#2366;&#2344;&#2360;
+    ' &#2340;&#2369;&#2354;&#2360;&#2368;&#2342;&#2366;&#2360;
+    (&#2313;&#2340;&#2381;&#2340;&#2352;&#2325;&#2366;&#2339;&#2381;&#2337; '
+    &#2311;&#2325;&#2366;&#2312; 5)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/02/25/%e0%a4%9c%e0%a5%8d%e0%a4%9e%e0%a4%be%e0%a4%a8%e0%a4%aa%e0%a5%80%e0%a4%a0-%e0%a4%aa%e0%a5%81%e0%a4%b0%e0%a4%b8%e0%a5%8d%e0%a4%95%e0%a4%be%e0%a4%b0/"><span
+    lang=HI style='font-family:Hind'>&#2332;&#2381;&#2334;&#2366;&#2344;&#2346;&#2368;&#2336;
+    &#2346;&#2369;&#2352;&#2360;&#2381;&#2325;&#2366;&#2352;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/02/16/%e0%a4%86%e0%a4%a4%e0%a5%8d%e0%a4%ae%e0%a4%95%e0%a4%a5%e0%a4%be-autobiography/"><span
+    lang=HI style='font-family:Hind'>&#2310;&#2340;&#2381;&#2350;&#2325;&#2341;&#2366;
+    (Autobiography)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/02/16/%e0%a4%9c%e0%a5%80%e0%a4%b5%e0%a4%a8%e0%a5%80-biography/"><span
+    lang=HI style='font-family:Hind'>&#2332;&#2368;&#2357;&#2344;&#2368;
+    (Biography)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/02/16/%e0%a4%b8%e0%a4%82%e0%a4%b8%e0%a5%8d%e0%a4%ae%e0%a4%b0%e0%a4%a3-memories/"><span
+    lang=HI style='font-family:Hind'>&#2360;&#2306;&#2360;&#2381;&#2350;&#2352;&#2339;
+    (Memories)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/02/16/%e0%a4%b0%e0%a5%87%e0%a4%96%e0%a4%be%e0%a4%9a%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%b0-drawing-sketch/"><span
+    lang=HI style='font-family:Hind'>&#2352;&#2375;&#2326;&#2366;&#2330;&#2367;&#2340;&#2381;&#2352;
+    (Drawing,
+    Sketch)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/02/16/%e0%a4%aa%e0%a4%a4%e0%a5%8d%e0%a4%b0-%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%af/"><span
+    lang=HI style='font-family:Hind'>&#2346;&#2340;&#2381;&#2352;-&#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/02/16/%e0%a4%b0%e0%a4%bf%e0%a4%aa%e0%a5%8b%e0%a4%b0%e0%a5%8d%e0%a4%a4%e0%a4%be%e0%a4%9c/"><span
+    lang=HI style='font-family:Hind'>&#2352;&#2367;&#2346;&#2379;&#2352;&#2381;&#2340;&#2366;&#2332;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/02/16/%e0%a4%a1%e0%a4%be%e0%a4%af%e0%a4%b0%e0%a5%80-dairy/"><span
+    lang=HI style='font-family:Hind'>&#2337;&#2366;&#2351;&#2352;&#2368;
+    (Dairy)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/02/16/%e0%a4%ad%e0%a5%87%e0%a4%82%e0%a4%9f%e0%a4%b5%e0%a4%be%e0%a4%b0%e0%a5%8d%e0%a4%a4%e0%a4%be-%e0%a4%b8%e0%a4%be%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a4%be%e0%a4%a4%e0%a5%8d%e0%a4%95%e0%a4%be%e0%a4%b0-intervi/"><span
+    lang=HI style='font-family:Hind'>&#2349;&#2375;&#2306;&#2335;&#2357;&#2366;&#2352;&#2381;&#2340;&#2366;
+    (&#2360;&#2366;&#2325;&#2381;&#2359;&#2366;&#2340;&#2381;&#2325;&#2366;&#2352;)
+    Interview</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/02/16/%e0%a4%97%e0%a4%a6%e0%a5%8d%e0%a4%af%e0%a4%95%e0%a4%be%e0%a4%b5%e0%a5%8d%e0%a4%af-gadya-kaavya/"><span
+    lang=HI style='font-family:Hind'>&#2327;&#2342;&#2381;&#2351;&#2325;&#2366;&#2357;&#2381;&#2351;
+    (Gadya
+    kaavya)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/02/16/%e0%a4%b2%e0%a4%98%e0%a5%81%e0%a4%95%e0%a4%a5%e0%a4%be-%e0%a4%ac%e0%a5%8b%e0%a4%a7%e0%a4%95%e0%a4%a5%e0%a4%be/"><span
+    lang=HI style='font-family:Hind'>&#2354;&#2328;&#2369;&#2325;&#2341;&#2366;
+    (&#2348;&#2379;&#2343;&#2325;&#2341;&#2366;)</span></a></p>
+
+
+
+  </div>
+  <!--<img class="mySlides" src="img_nature_wide.jpg" style="width:100%;display:none"> -->
+  <div class="mySlides"  style="width:100%;display:none">
+
+    <h2 class=MsoNormal align=center>
+        &#2358;&#2366;&#2360;&#2381;&#2340;&#2381;&#2352;</h2>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/08/10/%e0%a4%ad%e0%a4%be%e0%a4%b0%e0%a4%a4%e0%a5%80%e0%a4%af-%e0%a4%95%e0%a4%be%e0%a4%b5%e0%a5%8d%e0%a4%af%e0%a4%b6%e0%a4%be%e0%a4%b8%e0%a5%8d%e0%a4%a4%e0%a5%8d%e0%a4%b0-%e0%a4%95%e0%a5%80-%e0%a4%aa/"><span
+    lang=HI style='font-family:Hind'>&#2349;&#2366;&#2352;&#2340;&#2368;&#2351;
+    &#2325;&#2366;&#2357;&#2381;&#2351;&#2358;&#2366;&#2360;&#2381;&#2340;&#2381;&#2352;
+    &#2325;&#2368; &#2346;&#2352;&#2306;&#2346;&#2352;&#2366;
+    (&#2311;&#2325;&#2366;&#2312;- 3) : &#2360;&#2306;&#2360;&#2381;&#2325;&#2371;&#2340;
+    &#2325;&#2375; &#2346;&#2381;&#2352;&#2350;&#2369;&#2326;
+    &#2325;&#2366;&#2357;&#2381;&#2351;&#2358;&#2366;&#2360;&#2381;&#2340;&#2381;&#2352;&#2368;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/30/%e0%a4%ad%e0%a4%be%e0%a4%b0%e0%a4%a4%e0%a5%80%e0%a4%af-%e0%a4%95%e0%a4%be%e0%a4%b5%e0%a5%8d%e0%a4%af%e0%a4%b6%e0%a4%be%e0%a4%b8%e0%a5%8d%e0%a4%a4%e0%a5%8d%e0%a4%b0-%e0%a4%aa%e0%a5%8d%e0%a4%b0/"><span
+    lang=HI style='font-family:Hind'>&#2349;&#2366;&#2352;&#2340;&#2368;&#2351;
+    &#2325;&#2366;&#2357;&#2381;&#2351;&#2358;&#2366;&#2360;&#2381;&#2340;&#2381;&#2352;
+    ' &#2346;&#2381;&#2352;&#2350;&#2369;&#2326;
+    &#2360;&#2306;&#2346;&#2381;&#2352;&#2342;&#2366;&#2351; &#2324;&#2352; &#2360;&#2367;&#2342;&#2381;&#2343;&#2366;&#2306;&#2340;
+    : '&#2352;&#2360; &#2360;&#2306;&#2346;&#2381;&#2352;&#2342;&#2366;&#2351;'</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/07/20/%e0%a4%95%e0%a4%be%e0%a4%b5%e0%a5%8d%e0%a4%af%e0%a4%b6%e0%a4%be%e0%a4%b8%e0%a5%8d%e0%a4%a4%e0%a5%8d%e0%a4%b0-%e0%a4%b0%e0%a4%b8-%e0%a4%87%e0%a4%95%e0%a4%be%e0%a4%88-3/"><span
+    lang=HI style='font-family:Hind'>&#2325;&#2366;&#2357;&#2381;&#2351;&#2358;&#2366;&#2360;&#2381;&#2340;&#2381;&#2352;
+    ' '&#2352;&#2360;' (&#2311;&#2325;&#2366;&#2312;-3)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/30/%e0%a4%94%e0%a4%9a%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%af-%e0%a4%b8%e0%a4%82%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%a6%e0%a4%be%e0%a4%af/"><span
+    lang=HI style='font-family:Hind'>&#2324;&#2330;&#2367;&#2340;&#2381;&#2351;
+    &#2360;&#2306;&#2346;&#2381;&#2352;&#2342;&#2366;&#2351;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/30/%e0%a4%b5%e0%a4%95%e0%a5%8d%e0%a4%b0%e0%a5%8b%e0%a4%95%e0%a5%8d%e0%a4%a4%e0%a4%bf-%e0%a4%b8%e0%a4%82%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%a6%e0%a4%be%e0%a4%af/"><span
+    lang=HI style='font-family:Hind'>&#2357;&#2325;&#2381;&#2352;&#2379;&#2325;&#2381;&#2340;&#2367;
+    &#2360;&#2306;&#2346;&#2381;&#2352;&#2342;&#2366;&#2351;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/30/%e0%a4%a7%e0%a5%8d%e0%a4%b5%e0%a4%a8%e0%a4%bf-%e0%a4%b8%e0%a4%82%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%a6%e0%a4%be%e0%a4%af/"><span
+    lang=HI style='font-family:Hind'>&#2343;&#2381;&#2357;&#2344;&#2367;
+    &#2360;&#2306;&#2346;&#2381;&#2352;&#2342;&#2366;&#2351;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/30/%e0%a4%b0%e0%a5%80%e0%a4%a4%e0%a4%bf-%e0%a4%b8%e0%a4%82%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%a6%e0%a4%be%e0%a4%af/"><span
+    lang=HI style='font-family:Hind'>&#2352;&#2368;&#2340;&#2367;
+    &#2360;&#2306;&#2346;&#2381;&#2352;&#2342;&#2366;&#2351;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/30/%e0%a4%85%e0%a4%b2%e0%a4%82%e0%a4%95%e0%a4%be%e0%a4%b0-%e0%a4%b8%e0%a4%82%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%a6%e0%a4%be%e0%a4%af/"><span
+    lang=HI style='font-family:Hind'>&#2309;&#2354;&#2306;&#2325;&#2366;&#2352;
+    &#2360;&#2306;&#2346;&#2381;&#2352;&#2342;&#2366;&#2351;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/11/23/%e0%a4%b9%e0%a4%bf%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%80-%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%af-%e0%a4%ae%e0%a5%87%e0%a4%82-%e0%a4%b0%e0%a5%80%e0%a4%a4%e0%a4%bf%e0%a4%95/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;
+    &#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351; &#2350;&#2375;&#2306;
+    &#2352;&#2368;&#2340;&#2367;&#2325;&#2366;&#2354; &#2325;&#2375;
+    &#2346;&#2381;&#2352;&#2350;&#2369;&#2326; &#2325;&#2366;&#2357;&#2381;&#2351;&#2358;&#2366;&#2360;&#2381;&#2340;&#2381;&#2352;&#2368;
+    (&#2311;&#2325;&#2366;&#2312;-2)</span></a></p>
+
+    <br>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/18/%e0%a4%95%e0%a4%be%e0%a4%b5%e0%a5%8d%e0%a4%af-%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%af%e0%a5%8b%e0%a4%9c%e0%a4%a8/"><span
+    lang=HI style='font-family:Hind'>&#2325;&#2366;&#2357;&#2381;&#2351;-&#2346;&#2381;&#2352;&#2351;&#2379;&#2332;&#2344;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/06/%e0%a4%95%e0%a4%be%e0%a4%b5%e0%a5%8d%e0%a4%af-%e0%a4%95%e0%a5%87-%e0%a4%b2%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a4%a3/"><span
+    lang=HI style='font-family:Hind'>&#2325;&#2366;&#2357;&#2381;&#2351;
+    &#2325;&#2375; &#2354;&#2325;&#2381;&#2359;&#2339;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/06/%e0%a4%b8%e0%a4%be%e0%a4%a7%e0%a4%be%e0%a4%b0%e0%a4%a3%e0%a5%80%e0%a4%95%e0%a4%b0%e0%a4%a3/"><span
+    lang=HI style='font-family:Hind'>&#2360;&#2366;&#2343;&#2366;&#2352;&#2339;&#2368;&#2325;&#2352;&#2339;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/06/%e0%a4%b0%e0%a4%b8-%e0%a4%a8%e0%a4%bf%e0%a4%b7%e0%a5%8d%e0%a4%aa%e0%a4%a4%e0%a5%8d%e0%a4%a4%e0%a4%bf/"><span
+    lang=HI style='font-family:Hind'>&#2352;&#2360;
+    &#2344;&#2367;&#2359;&#2381;&#2346;&#2340;&#2381;&#2340;&#2367;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/07/22/%e0%a4%95%e0%a4%be%e0%a4%b5%e0%a5%8d%e0%a4%af%e0%a4%b6%e0%a4%be%e0%a4%b8%e0%a5%8d%e0%a4%a4%e0%a5%8d%e0%a4%b0-%e0%a4%95%e0%a4%be%e0%a4%b5%e0%a5%8d%e0%a4%af-%e0%a4%b9%e0%a5%87%e0%a4%a4%e0%a5%81/"><span
+    lang=HI style='font-family:Hind'>&#2325;&#2366;&#2357;&#2381;&#2351;&#2358;&#2366;&#2360;&#2381;&#2340;&#2381;&#2352;
+    '&#2325;&#2366;&#2357;&#2381;&#2351; &#2361;&#2375;&#2340;&#2369;'
+    (&#2311;&#2325;&#2366;&#2312;-3)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/07/20/%e0%a4%95%e0%a4%be%e0%a4%b5%e0%a5%8d%e0%a4%af-%e0%a4%a6%e0%a5%8b%e0%a4%b7-%e0%a4%87%e0%a4%95%e0%a4%be%e0%a4%88-3/"><span
+    lang=HI style='font-family:Hind'>&#2325;&#2366;&#2357;&#2381;&#2351;
+    &#2342;&#2379;&#2359; (&#2311;&#2325;&#2366;&#2312;-3)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/07/16/%e0%a4%95%e0%a4%be%e0%a4%b5%e0%a5%8d%e0%a4%af-%e0%a4%97%e0%a5%81%e0%a4%a3-%e0%a4%87%e0%a4%95%e0%a4%be%e0%a4%88-3/"><span
+    lang=HI style='font-family:Hind'>&#2325;&#2366;&#2357;&#2381;&#2351;
+    &#2327;&#2369;&#2339; (&#2311;&#2325;&#2366;&#2312;-3)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/18/%e0%a4%aa%e0%a4%be%e0%a4%b6%e0%a5%8d%e0%a4%9a%e0%a4%be%e0%a4%a4%e0%a5%8d%e0%a4%af-%e0%a4%95%e0%a4%be%e0%a4%b5%e0%a5%8d%e0%a4%af%e0%a4%b6%e0%a4%be%e0%a4%b8%e0%a5%8d%e0%a4%a4%e0%a5%8d%e0%a4%b0/"><span
+    lang=HI style='font-family:Hind'>&#2346;&#2366;&#2358;&#2381;&#2330;&#2366;&#2340;&#2381;&#2351;
+    &#2325;&#2366;&#2357;&#2381;&#2351;&#2358;&#2366;&#2360;&#2381;&#2340;&#2381;&#2352;:
+    &#2346;&#2381;&#2354;&#2375;&#2335;&#2379; &#2325;&#2366;
+    &#2325;&#2366;&#2357;&#2381;&#2351; &#2360;&#2367;&#2342;&#2381;&#2343;&#2366;&#2306;&#2340;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/16/%e0%a4%b0%e0%a5%82%e0%a4%aa%e0%a4%b5%e0%a4%be%e0%a4%a6-formalism/"><span
+    lang=HI style='font-family:Hind'>&#2352;&#2370;&#2346;&#2357;&#2366;&#2342;
+    (Formalism)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/16/%e0%a4%ab%e0%a5%88%e0%a4%82%e0%a4%9f%e0%a5%87%e0%a4%b8%e0%a5%80-fantasy/"><span
+    lang=HI style='font-family:Hind'>&#2347;&#2376;&#2306;&#2335;&#2375;&#2360;&#2368;
+    (Fantasy)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/16/%e0%a4%ac%e0%a4%bf%e0%a4%82%e0%a4%ac-image/"><span
+    lang=HI style='font-family:Hind'>&#2348;&#2367;&#2306;&#2348;
+    (Image)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/16/%e0%a4%ae%e0%a4%bf%e0%a4%a5%e0%a4%95-myth/"><span
+    lang=HI style='font-family:Hind'>&#2350;&#2367;&#2341;&#2325;
+    (myth)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/16/%e0%a4%86%e0%a4%88-%e0%a4%8f-%e0%a4%b0%e0%a4%bf%e0%a4%9a%e0%a4%b0%e0%a5%8d%e0%a4%a1%e0%a5%8d%e0%a4%b8-%e0%a4%ae%e0%a5%82%e0%a4%b2%e0%a5%8d%e0%a4%af-%e0%a4%b8%e0%a4%bf%e0%a4%a6%e0%a5%8d%e0%a4%a7/"><span
+    lang=HI style='font-family:Hind'>&#2310;&#2312;.
+    &#2319;. &#2352;&#2367;&#2330;&#2352;&#2381;&#2337;&#2381;&#2360;:
+    &#2350;&#2370;&#2354;&#2381;&#2351;
+    &#2360;&#2367;&#2342;&#2381;&#2343;&#2366;&#2306;&#2340;, &#2360;&#2306;&#2346;&#2381;&#2352;&#2375;&#2359;&#2339;
+    &#2360;&#2367;&#2342;&#2381;&#2343;&#2366;&#2306;&#2340; &#2340;&#2341;&#2366;
+    &#2325;&#2366;&#2357;&#2381;&#2351;
+    &#2349;&#2366;&#2359;&#2366;&#2360;&#2367;&#2342;&#2381;&#2343;&#2366;&#2306;&#2340;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/16/%e0%a4%9f%e0%a5%80-%e0%a4%8f%e0%a4%b8-%e0%a4%87%e0%a4%b2%e0%a4%bf%e0%a4%af%e0%a4%9f-%e0%a4%a8%e0%a4%bf%e0%a4%b0%e0%a5%8d%e0%a4%b5%e0%a5%88%e0%a4%95%e0%a5%8d%e0%a4%a4%e0%a4%bf%e0%a4%95%e0%a4%a4/"><span
+    lang=HI style='font-family:Hind'>&#2335;&#2368;.
+    &#2319;&#2360;. &#2311;&#2354;&#2367;&#2351;&#2335;
+    &#2344;&#2367;&#2352;&#2381;&#2357;&#2376;&#2325;&#2381;&#2340;&#2367;&#2325;&#2340;&#2366;
+    &#2319;&#2357;&#2306; &#2346;&#2352;&#2306;&#2346;&#2352;&#2366; &#2325;&#2368;
+    &#2309;&#2357;&#2343;&#2366;&#2352;&#2339;&#2366;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/06/%e0%a4%b5%e0%a4%b0%e0%a5%8d%e0%a4%a1%e0%a5%8d%e0%a4%b8%e0%a4%b5%e0%a4%b0%e0%a5%8d%e0%a4%a5-%e0%a4%95%e0%a4%be-%e0%a4%95%e0%a4%be%e0%a4%b5%e0%a5%8d%e0%a4%af-%e0%a4%ad%e0%a4%be%e0%a4%b7%e0%a4%be/"><span
+    lang=HI style='font-family:Hind'>&#2357;&#2352;&#2381;&#2337;&#2381;&#2360;&#2357;&#2352;&#2381;&#2341;
+    &#2325;&#2366; &#2325;&#2366;&#2357;&#2381;&#2351; &#2349;&#2366;&#2359;&#2366;
+    &#2360;&#2367;&#2342;&#2381;&#2343;&#2366;&#2306;&#2340;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/08/10/%e0%a4%aa%e0%a4%be%e0%a4%b6%e0%a5%8d%e0%a4%9a%e0%a4%be%e0%a4%a4%e0%a5%8d%e0%a4%af-%e0%a4%95%e0%a4%be%e0%a4%b5%e0%a5%8d%e0%a4%af%e0%a4%b6%e0%a4%be%e0%a4%b8%e0%a5%8d%e0%a4%a4%e0%a5%8d%e0%a4%b0%e0%a5%80/"><span
+    lang=HI style='font-family:Hind'>&#2346;&#2366;&#2358;&#2381;&#2330;&#2366;&#2340;&#2381;&#2351;
+    &#2325;&#2366;&#2357;&#2381;&#2351;&#2358;&#2366;&#2360;&#2381;&#2340;&#2381;&#2352;&#2368;
+    (&#2311;&#2325;&#2366;&#2312;-3) : &#2309;&#2352;&#2360;&#2381;&#2340;&#2370;
+    &#2325;&#2366; &#2309;&#2344;&#2369;&#2325;&#2352;&#2339;
+    &#2360;&#2367;&#2342;&#2381;&#2343;&#2366;&#2306;&#2340;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/06/%e0%a4%85%e0%a4%b0%e0%a4%b8%e0%a5%8d%e0%a4%a4%e0%a5%82-%e0%a4%a4%e0%a5%8d%e0%a4%b0%e0%a4%be%e0%a4%b8%e0%a4%a6%e0%a5%80-%e0%a4%b8%e0%a4%bf%e0%a4%a6%e0%a5%8d%e0%a4%a7%e0%a4%be%e0%a4%82%e0%a4%a4/"><span
+    lang=HI style='font-family:Hind'>&#2309;&#2352;&#2360;&#2381;&#2340;&#2370;:
+    &#2340;&#2381;&#2352;&#2366;&#2360;&#2342;&#2368;
+    &#2360;&#2367;&#2342;&#2381;&#2343;&#2366;&#2306;&#2340;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/06/%e0%a4%85%e0%a4%b0%e0%a4%b8%e0%a5%8d%e0%a4%a4%e0%a5%82-%e0%a4%b5%e0%a4%bf%e0%a4%b0%e0%a5%87%e0%a4%9a%e0%a4%a8-catharsis-%e0%a4%b8%e0%a4%bf%e0%a4%a6%e0%a5%8d%e0%a4%a7%e0%a4%be%e0%a4%82%e0%a4%a4/"><span
+    lang=HI style='font-family:Hind'>&#2309;&#2352;&#2360;&#2381;&#2340;&#2370;:
+    &#2357;&#2367;&#2352;&#2375;&#2330;&#2344; (Catharsis)&#2360;&#2367;&#2342;&#2381;&#2343;&#2366;&#2306;&#2340;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/06/%e0%a4%95%e0%a5%89%e0%a4%b2%e0%a4%b0%e0%a4%bf%e0%a4%9c-%e0%a4%95%e0%a4%b2%e0%a5%8d%e0%a4%aa%e0%a4%a8%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%ab%e0%a5%88%e0%a4%82%e0%a4%9f%e0%a5%87%e0%a4%b8%e0%a5%80/"><span
+    lang=HI style='font-family:Hind'>&#2325;&#2377;&#2354;&#2352;&#2367;&#2332;:
+    &#2325;&#2354;&#2381;&#2346;&#2344;&#2366; &#2324;&#2352;
+    &#2347;&#2376;&#2306;&#2335;&#2375;&#2360;&#2368;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/23/%e0%a4%95%e0%a5%8d%e0%a4%b0%e0%a5%8b%e0%a4%9a%e0%a5%87-%e0%a4%95%e0%a4%be-%e0%a4%85%e0%a4%ad%e0%a4%bf%e0%a4%b5%e0%a5%8d%e0%a4%af%e0%a4%82%e0%a4%9c%e0%a4%a8%e0%a4%be-%e0%a4%b8%e0%a4%bf%e0%a4%a6/"><span
+    lang=HI style='font-family:Hind'>&#2325;&#2381;&#2352;&#2379;&#2330;&#2375;
+    &#2325;&#2366;
+    &#2309;&#2349;&#2367;&#2357;&#2381;&#2351;&#2306;&#2332;&#2344;&#2366;
+    &#2360;&#2367;&#2342;&#2381;&#2343;&#2366;&#2306;&#2340;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/23/%e0%a4%b2%e0%a5%8b%e0%a4%82%e0%a4%9c%e0%a4%be%e0%a4%87%e0%a4%a8%e0%a4%b8-%e0%a4%95%e0%a4%be-%e0%a4%89%e0%a4%a6%e0%a4%be%e0%a4%a4%e0%a5%8d%e0%a4%a4-%e0%a4%a4%e0%a4%a4%e0%a5%8d%e0%a4%b5/"><span
+    lang=HI style='font-family:Hind'>&#2354;&#2379;&#2306;&#2332;&#2366;&#2311;&#2344;&#2360;
+    &#2325;&#2366; &#2313;&#2342;&#2366;&#2340;&#2381;&#2340;
+    &#2340;&#2340;&#2381;&#2357;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/10/07/%e0%a4%85%e0%a4%b8%e0%a5%8d%e0%a4%a4%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%b5%e0%a4%b5%e0%a4%be%e0%a4%a6-existentialism/"><span
+    lang=HI style='font-family:Hind'>&#2309;&#2360;&#2381;&#2340;&#2367;&#2340;&#2381;&#2357;&#2357;&#2366;&#2342;
+    (Existentialism)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/23/%e0%a4%86%e0%a4%a7%e0%a5%81%e0%a4%a8%e0%a4%bf%e0%a4%95%e0%a4%a4%e0%a4%be%e0%a4%b5%e0%a4%be%e0%a4%a6-modernism/"><span
+    lang=HI style='font-family:Hind'>&#2310;&#2343;&#2369;&#2344;&#2367;&#2325;&#2340;&#2366;&#2357;&#2366;&#2342;
+    (Modernism)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/10/07/%e0%a4%89%e0%a4%a4%e0%a5%8d%e0%a4%a4%e0%a4%b0-%e0%a4%86%e0%a4%a7%e0%a5%81%e0%a4%a8%e0%a4%bf%e0%a4%95%e0%a4%a4%e0%a4%be%e0%a4%b5%e0%a4%be%e0%a4%a6-post-modernism/"><span
+    lang=HI style='font-family:Hind'>&#2313;&#2340;&#2381;&#2340;&#2352;
+    &#2310;&#2343;&#2369;&#2344;&#2367;&#2325;&#2340;&#2366;&#2357;&#2366;&#2342; (Post Modernism)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/23/%e0%a4%af%e0%a4%a5%e0%a4%be%e0%a4%b0%e0%a5%8d%e0%a4%a5%e0%a4%b5%e0%a4%be%e0%a4%a6-realism/"><span
+    lang=HI style='font-family:Hind'>&#2351;&#2341;&#2366;&#2352;&#2381;&#2341;&#2357;&#2366;&#2342;
+    (Realism)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/23/%e0%a4%b8%e0%a4%82%e0%a4%b0%e0%a4%9a%e0%a4%a8%e0%a4%be%e0%a4%b5%e0%a4%be%e0%a4%a6-structuralism/"><span
+    lang=HI style='font-family:Hind'>&#2360;&#2306;&#2352;&#2330;&#2344;&#2366;&#2357;&#2366;&#2342;
+    (Structuralism)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/23/%e0%a4%b5%e0%a4%bf%e0%a4%96%e0%a4%82%e0%a4%a1%e0%a4%a8%e0%a4%b5%e0%a4%be%e0%a4%a6-deconstruction/"><span
+    lang=HI style='font-family:Hind'>&#2357;&#2367;&#2326;&#2306;&#2337;&#2344;&#2357;&#2366;&#2342;
+    (Deconstruction)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/10/07/%e0%a4%ae%e0%a4%be%e0%a4%b0%e0%a5%8d%e0%a4%95%e0%a5%8d%e0%a4%b8%e0%a4%b5%e0%a4%be%e0%a4%a6/"><span
+    lang=HI style='font-family:Hind'>&#2350;&#2366;&#2352;&#2381;&#2325;&#2381;&#2360;&#2357;&#2366;&#2342;</span></a></p>
+
+
+  </div>
+  <div class="mySlides"  style="width:100%;display:none">
+
+    <h2 class=MsoNormal Align='center'>
+        &#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351;&#2375;&#2340;&#2367;&#2361;&#2366;&#2360;</h2>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2022/12/21/%e0%a4%b9%e0%a4%bf%e0%a4%82%e0%a4%a6%e0%a5%80-%e0%a4%95%e0%a5%80-%e0%a4%90%e0%a4%a4%e0%a4%bf%e0%a4%b9%e0%a4%be%e0%a4%b8%e0%a4%bf%e0%a4%95-%e0%a4%aa%e0%a5%83%e0%a4%b7%e0%a5%8d%e0%a4%a0%e0%a4%ad/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2367;&#2306;&#2342;&#2368;
+    &#2325;&#2368; &#2320;&#2340;&#2367;&#2361;&#2366;&#2360;&#2367;&#2325;
+    &#2346;&#2371;&#2359;&#2381;&#2336;&#2349;&#2370;&#2350;&#2367;:
+    &#2346;&#2381;&#2352;&#2366;&#2330;&#2368;&#2344; &#2349;&#2366;&#2352;&#2340;&#2368;&#2351;
+    &#2310;&#2352;&#2381;&#2351; &#2349;&#2366;&#2359;&#2366;&#2319;&#2305;</span></a><span
+    style='font-family:Hind;color:black'> </span></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/06/12/%e0%a4%b9%e0%a4%bf%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%80-%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%af-%e0%a4%95%e0%a4%be-%e0%a4%95%e0%a4%be%e0%a4%b2-%e0%a4%b5%e0%a4%bf%e0%a4%ad/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;
+    &#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351; &#2325;&#2366;
+    &#2325;&#2366;&#2354; &#2357;&#2367;&#2349;&#2366;&#2332;&#2344; &#2324;&#2352;
+    &#2344;&#2366;&#2350;&#2325;&#2352;&#2339; &#2311;&#2325;&#2366;&#2312;- 2</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/06/12/%e0%a4%b9%e0%a4%bf%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%80-%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%af-%e0%a4%95%e0%a4%be-%e0%a4%87%e0%a4%a4%e0%a4%bf%e0%a4%b9%e0%a4%be%e0%a4%b8/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;
+    &#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351; &#2325;&#2366;
+    &#2311;&#2340;&#2367;&#2361;&#2366;&#2360; (&#2311;&#2325;&#2366;&#2312;-2)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/06/14/%e0%a4%86%e0%a4%a6%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%b2-%e0%a4%b2%e0%a5%8c%e0%a4%95%e0%a4%bf%e0%a4%95-%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%af-%e0%a4%87%e0%a4%95%e0%a4%be/"><span
+    lang=HI style='font-family:Hind'>&#2310;&#2342;&#2367;&#2325;&#2366;&#2354;
+    (&#2354;&#2380;&#2325;&#2367;&#2325;
+    &#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351;) :
+    &#2311;&#2325;&#2366;&#2312;- 2</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/06/14/%e0%a4%86%e0%a4%a6%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%b2-%e0%a4%b0%e0%a4%be%e0%a4%b8-%e0%a4%9c%e0%a5%88%e0%a4%a8-%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%af-%e0%a4%87%e0%a4%95/"><span
+    lang=HI style='font-family:Hind'>&#2310;&#2342;&#2367;&#2325;&#2366;&#2354;
+    (&#2352;&#2366;&#2360;/&#2332;&#2376;&#2344;
+    &#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351;) :
+    &#2311;&#2325;&#2366;&#2312;- 2</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/06/14/%e0%a4%86%e0%a4%a6%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%b2-%e0%a4%a8%e0%a4%be%e0%a4%a5-%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%af-%e0%a4%87%e0%a4%95%e0%a4%be%e0%a4%88-2/"><span
+    lang=HI style='font-family:Hind'>&#2310;&#2342;&#2367;&#2325;&#2366;&#2354;
+    (&#2344;&#2366;&#2341; &#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351;) :
+    &#2311;&#2325;&#2366;&#2312;- 2</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/06/12/%e0%a4%86%e0%a4%a6%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%b2-%e0%a4%b8%e0%a4%bf%e0%a4%a6%e0%a5%8d%e0%a4%a7-%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%af-%e0%a4%87%e0%a4%95%e0%a4%be/"><span
+    lang=HI style='font-family:Hind'>&#2310;&#2342;&#2367;&#2325;&#2366;&#2354;
+    (&#2360;&#2367;&#2342;&#2381;&#2343;
+    &#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351;) :
+    &#2311;&#2325;&#2366;&#2312;- 2</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/06/12/%e0%a4%86%e0%a4%a6%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%b2%e0%a5%80%e0%a4%a8-%e0%a4%95%e0%a4%be%e0%a4%b5%e0%a5%8d%e0%a4%af-%e0%a4%95%e0%a5%80-%e0%a4%a7%e0%a4%be%e0%a4%b0%e0%a4%be%e0%a4%8f%e0%a4%81/"><span
+    lang=HI style='font-family:Hind'>&#2310;&#2342;&#2367;&#2325;&#2366;&#2354;&#2368;&#2344;
+    &#2325;&#2366;&#2357;&#2381;&#2351; &#2325;&#2368;
+    &#2343;&#2366;&#2352;&#2366;&#2319;&#2305;: &#2311;&#2325;&#2366;&#2312;- 2</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2023/02/22/%e0%a4%b9%e0%a4%bf%e0%a4%82%e0%a4%a6%e0%a5%80-%e0%a4%86%e0%a4%a6%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%b2-%e0%a4%95%e0%a5%80-%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%af-%e0%a4%b8/"><span
+    lang=HI style='font-family:Hind'>&#2310;&#2342;&#2367;&#2325;&#2366;&#2354;
+    &#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351; &#2325;&#2375;
+    &#2350;&#2361;&#2340;&#2381;&#2357;&#2346;&#2370;&#2352;&#2381;&#2339;
+    &#2340;&#2341;&#2381;&#2351;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/08/08/%e0%a4%ad%e0%a4%95%e0%a5%8d%e0%a4%a4%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%b2%e0%a5%80%e0%a4%a8-%e0%a4%b8%e0%a4%82%e0%a4%a4-%e0%a4%95%e0%a4%be%e0%a4%b5%e0%a5%8d%e0%a4%af%e0%a4%a7%e0%a4%be%e0%a4%b0%e0%a4%be/"><span
+    lang=HI style='font-family:Hind'>&#2349;&#2325;&#2381;&#2340;&#2367;&#2325;&#2366;&#2354;&#2368;&#2344;
+    &#2360;&#2306;&#2340;
+    &#2325;&#2366;&#2357;&#2381;&#2351;&#2343;&#2366;&#2352;&#2366;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/08/08/%e0%a4%ad%e0%a4%95%e0%a5%8d%e0%a4%a4%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%b2%e0%a5%80%e0%a4%a8-%e0%a4%b0%e0%a4%9a%e0%a4%a8%e0%a4%be%e0%a4%95%e0%a4%be%e0%a4%b0%e0%a5%8b%e0%a4%82-%e0%a4%ae%e0%a5%87%e0%a4%82/"><span
+    lang=HI style='font-family:Hind'>&#2349;&#2325;&#2381;&#2340;&#2367;&#2325;&#2366;&#2354;&#2368;&#2344;
+    &#2352;&#2330;&#2344;&#2366;&#2325;&#2366;&#2352;&#2379;&#2306;
+    &#2350;&#2375;&#2306; &#2360;&#2370;&#2347;&#2368;
+    &#2325;&#2366;&#2357;&#2381;&#2351; &#2325;&#2368; &#2350;&#2361;&#2340;&#2381;&#2357;&#2346;&#2370;&#2352;&#2381;&#2339;
+    &#2346;&#2306;&#2325;&#2381;&#2340;&#2367;&#2351;&#2366;&#2305;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/08/01/%e0%a4%ad%e0%a4%95%e0%a5%8d%e0%a4%a4%e0%a4%bf-%e0%a4%95%e0%a4%be%e0%a4%b5%e0%a5%8d%e0%a4%af%e0%a4%a7%e0%a4%be%e0%a4%b0%e0%a4%be-%e0%a4%95%e0%a5%87-%e0%a4%a6%e0%a4%b0%e0%a5%8d%e0%a4%b6%e0%a4%a8/"><span
+    lang=HI style='font-family:Hind'>&#2349;&#2325;&#2381;&#2340;&#2367;
+    &#2325;&#2366;&#2357;&#2381;&#2351;&#2343;&#2366;&#2352;&#2366; &#2325;&#2375;
+    &#2342;&#2352;&#2381;&#2358;&#2344; &#2346;&#2306;&#2341; &#2324;&#2352;
+    &#2350;&#2340; : &#2311;&#2325;&#2366;&#2312;-2</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2023/01/28/%e0%a4%b0%e0%a5%80%e0%a4%a4%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%b2%e0%a5%80%e0%a4%a8-%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%af-%e0%a4%95%e0%a5%87-%e0%a4%ae%e0%a4%b9%e0%a4%a4/"><span
+    lang=HI style='font-family:Hind'>&#2352;&#2368;&#2340;&#2367;&#2325;&#2366;&#2354;&#2368;&#2344;
+    &#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351; &#2325;&#2375;
+    &#2350;&#2361;&#2340;&#2381;&#2357;&#2346;&#2370;&#2352;&#2381;&#2339;
+    &#2340;&#2341;&#2381;&#2351;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2023/01/10/%e0%a4%ae%e0%a4%b9%e0%a4%be%e0%a4%b5%e0%a5%80%e0%a4%b0-%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%b8%e0%a4%be%e0%a4%a6-%e0%a4%a6%e0%a5%8d%e0%a4%b5%e0%a4%bf%e0%a4%b5%e0%a5%87%e0%a4%a6%e0%a5%80-%e0%a4%94/"><span
+    lang=HI style='font-family:Hind'>&#2350;&#2361;&#2366;&#2357;&#2368;&#2352;
+    &#2346;&#2381;&#2352;&#2360;&#2366;&#2342; &#2342;&#2381;&#2357;&#2367;&#2357;&#2375;&#2342;&#2368;
+    &#2324;&#2352; &#2361;&#2367;&#2306;&#2342;&#2368;
+    &#2344;&#2357;&#2332;&#2366;&#2327;&#2352;&#2339;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2023/01/10/%e0%a4%ad%e0%a4%be%e0%a4%b0%e0%a4%a4%e0%a5%87%e0%a4%82%e0%a4%a6%e0%a5%81-%e0%a4%94%e0%a4%b0-%e0%a4%b9%e0%a4%bf%e0%a4%82%e0%a4%a6%e0%a5%80-%e0%a4%a8%e0%a4%b5%e0%a4%9c%e0%a4%be%e0%a4%97%e0%a4%b0/"><span
+    lang=HI style='font-family:Hind'>&#2349;&#2366;&#2352;&#2340;&#2375;&#2306;&#2342;&#2369;
+    &#2324;&#2352; &#2361;&#2367;&#2306;&#2342;&#2368;
+    &#2344;&#2357;&#2332;&#2366;&#2327;&#2352;&#2339;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2023/01/10/%e0%a4%ad%e0%a4%be%e0%a4%b0%e0%a4%a4%e0%a5%80%e0%a4%af-%e0%a4%a8%e0%a4%b5%e0%a4%9c%e0%a4%be%e0%a4%97%e0%a4%b0%e0%a4%a3-%e0%a4%94%e0%a4%b0-%e0%a4%b8%e0%a5%8d%e0%a4%b5%e0%a4%be%e0%a4%a7%e0%a5%80/"><span
+    lang=HI style='font-family:Hind'>&#2349;&#2366;&#2352;&#2340;&#2368;&#2351;
+    &#2344;&#2357;&#2332;&#2366;&#2327;&#2352;&#2339; &#2324;&#2352;
+    &#2360;&#2381;&#2357;&#2366;&#2343;&#2368;&#2344;&#2340;&#2366;
+    &#2310;&#2306;&#2342;&#2379;&#2354;&#2344; &#2325;&#2368; &#2357;&#2376;&#2330;&#2366;&#2352;&#2367;&#2325;
+    &#2346;&#2371;&#2359;&#2381;&#2336;&#2349;&#2370;&#2350;&#2367; :
+    &#2361;&#2367;&#2306;&#2342;&#2368;
+    &#2344;&#2357;&#2332;&#2366;&#2327;&#2352;&#2339;</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/08/04/%e0%a4%9b%e0%a4%be%e0%a4%af%e0%a4%be%e0%a4%b5%e0%a4%be%e0%a4%a6-%e0%a4%87%e0%a4%95%e0%a4%be%e0%a4%88-2/"><span
+    lang=HI style='font-family:Hind'>&#2331;&#2366;&#2351;&#2366;&#2357;&#2366;&#2342;
+    (&#2311;&#2325;&#2366;&#2312; ' 2)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/10/15/%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%97%e0%a4%a4%e0%a4%bf%e0%a4%b5%e0%a4%be%e0%a4%a6-%e0%a4%87%e0%a4%95%e0%a4%be%e0%a4%88-2%ef%bf%bc/"><span
+    lang=HI style='font-family:Hind'>&#2346;&#2381;&#2352;&#2327;&#2340;&#2367;&#2357;&#2366;&#2342;
+    (&#2311;&#2325;&#2366;&#2312; -2)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/08/30/%e0%a4%b9%e0%a4%bf%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%80-%e0%a4%95%e0%a5%80-%e0%a4%97%e0%a4%a6%e0%a5%8d%e0%a4%af-%e0%a4%b5%e0%a4%bf%e0%a4%a7%e0%a4%be%e0%a4%8f%e0%a4%81-%e0%a4%95%e0%a4%b9-4/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;
+    &#2325;&#2368; &#2327;&#2342;&#2381;&#2351;
+    &#2357;&#2367;&#2343;&#2366;&#2319;&#2305;
+    '&#2325;&#2361;&#2366;&#2344;&#2368;' (&#2311;.- 2) &#2349;&#2366;&#2327;
+    - 4</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/08/30/%e0%a4%b9%e0%a4%bf%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%80-%e0%a4%95%e0%a5%80-%e0%a4%97%e0%a4%a6%e0%a5%8d%e0%a4%af-%e0%a4%b5%e0%a4%bf%e0%a4%a7%e0%a4%be%e0%a4%8f%e0%a4%81-%e0%a4%95%e0%a4%b9-3/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;
+    &#2325;&#2368; &#2327;&#2342;&#2381;&#2351;
+    &#2357;&#2367;&#2343;&#2366;&#2319;&#2305;
+    '&#2325;&#2361;&#2366;&#2344;&#2368;' (&#2311;.- 2) &#2349;&#2366;&#2327;
+    - 3</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/08/30/%e0%a4%b9%e0%a4%bf%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%80-%e0%a4%95%e0%a5%80-%e0%a4%97%e0%a4%a6%e0%a5%8d%e0%a4%af-%e0%a4%b5%e0%a4%bf%e0%a4%a7%e0%a4%be%e0%a4%8f%e0%a4%81-%e0%a4%95%e0%a4%b9-2/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;
+    &#2325;&#2368; &#2327;&#2342;&#2381;&#2351;
+    &#2357;&#2367;&#2343;&#2366;&#2319;&#2305;
+    '&#2325;&#2361;&#2366;&#2344;&#2368;' (&#2311;.- 2) &#2349;&#2366;&#2327;
+    - 2</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/08/30/%e0%a4%b9%e0%a4%bf%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%80-%e0%a4%95%e0%a5%80-%e0%a4%97%e0%a4%a6%e0%a5%8d%e0%a4%af-%e0%a4%b5%e0%a4%bf%e0%a4%a7%e0%a4%be%e0%a4%8f%e0%a4%81-%e0%a4%95%e0%a4%b9/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;
+    &#2325;&#2368; &#2327;&#2342;&#2381;&#2351;
+    &#2357;&#2367;&#2343;&#2366;&#2319;&#2305;
+    '&#2325;&#2361;&#2366;&#2344;&#2368;' (&#2311;.- 2) &#2349;&#2366;&#2327;
+    - 1</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/11/01/%e0%a4%b9%e0%a4%bf%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%80-%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%af-%e0%a4%95%e0%a5%80-%e0%a4%97%e0%a4%a6%e0%a5%8d%e0%a4%af-%e0%a4%b5%e0%a4%bf-4/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;
+    &#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351; &#2325;&#2368;
+    &#2327;&#2342;&#2381;&#2351; &#2357;&#2367;&#2343;&#2366;
+    '&#2310;&#2354;&#2379;&#2330;&#2344;&#2366;'
+    &#2313;&#2342;&#2381;&#2349;&#2357; &#2324;&#2352;
+    &#2357;&#2367;&#2325;&#2366;&#2360; (&#2311;&#2325;&#2366;&#2312;-2)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/07/22/%e0%a4%b9%e0%a4%bf%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%80-%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%af-%e0%a4%95%e0%a5%80-%e0%a4%97%e0%a4%a6%e0%a5%8d%e0%a4%af-%e0%a4%b5%e0%a4%bf-3/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;
+    &#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351; &#2325;&#2368;
+    &#2327;&#2342;&#2381;&#2351; &#2357;&#2367;&#2343;&#2366;
+    '&#2344;&#2367;&#2348;&#2306;&#2343;' (&#2311;&#2325;&#2366;&#2312;-2)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/07/12/%e0%a4%b9%e0%a4%bf%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%80-%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%af-%e0%a4%95%e0%a5%80-%e0%a4%97%e0%a4%a6%e0%a5%8d%e0%a4%af-%e0%a4%b5%e0%a4%bf-2/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;
+    &#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351; &#2325;&#2368;
+    &#2327;&#2342;&#2381;&#2351; &#2357;&#2367;&#2343;&#2366;&#2319;&#2305;
+    (&#2342;&#2375;&#2358; &#2357;&#2367;&#2349;&#2366;&#2332;&#2344; &#2346;&#2352;
+    &#2310;&#2343;&#2366;&#2352;&#2367;&#2340;
+    &#2313;&#2346;&#2344;&#2381;&#2351;&#2366;&#2360;)
+    &#2311;&#2325;&#2366;&#2312;-2</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/07/12/%e0%a4%b9%e0%a4%bf%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%80-%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%af-%e0%a4%95%e0%a5%80-%e0%a4%97%e0%a4%a6%e0%a5%8d%e0%a4%af-%e0%a4%b5%e0%a4%bf/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;
+    &#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351; &#2325;&#2368;
+    &#2327;&#2342;&#2381;&#2351; &#2357;&#2367;&#2343;&#2366;:
+    &#2313;&#2346;&#2344;&#2381;&#2351;&#2366;&#2360;
+    (&#2311;&#2325;&#2366;&#2312;-2)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/07/10/%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%af%e0%a4%bf%e0%a4%95-%e0%a4%b5%e0%a4%bf%e0%a4%a7%e0%a4%be%e0%a4%8f%e0%a4%81-%e0%a4%86%e0%a4%a4%e0%a5%8d%e0%a4%ae%e0%a4%95%e0%a4%a5/"><span
+    lang=HI style='font-family:Hind'>&#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351;&#2367;&#2325;
+    &#2357;&#2367;&#2343;&#2366;&#2319;&#2305;
+    '&#2310;&#2340;&#2381;&#2350;&#2325;&#2341;&#2366;'
+    (&#2311;&#2325;&#2366;&#2312; ' 2)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/06/28/%e0%a4%b9%e0%a4%bf%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%80-%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%af-%e0%a4%95%e0%a5%80-%e0%a4%85%e0%a4%a8%e0%a5%8d%e0%a4%af-%e0%a4%97%e0%a4%a6/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;
+    &#2360;&#2366;&#2361;&#2367;&#2340;&#2381;&#2351; &#2325;&#2368;
+    &#2309;&#2344;&#2381;&#2351; &#2327;&#2342;&#2381;&#2351;
+    &#2357;&#2367;&#2343;&#2366;&#2319;&#2305;
+    (&#2332;&#2368;&#2357;&#2344;&#2368;) &#2311;&#2325;&#2366;&#2312;-2</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/06/24/%e0%a4%b9%e0%a4%bf%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%80-%e0%a4%b8%e0%a4%b9%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%af-%e0%a4%95%e0%a5%87-%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%a5%e0%a4%ae-%e0%a4%b0%e0%a4%9a/"><span
+    lang=HI style='font-family:Hind'>&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;
+    &#2360;&#2361;&#2367;&#2340;&#2381;&#2351; &#2325;&#2375;
+    &#2346;&#2381;&#2352;&#2341;&#2350;
+    &#2352;&#2330;&#2344;&#2366;&#2325;&#2366;&#2352; &#2319;&#2357;&#2306;
+    &#2313;&#2344;&#2325;&#2368; &#2352;&#2330;&#2344;&#2366;&#2319;&#2305;</span></a></p>
+
+
+  </div>
+  <div class="mySlides"  style="width:100%;display:none">
+
+    <h2 class=MsoNormal align=center>
+        &#2344;&#2366;&#2335;&#2325;</h2>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/02/04/%e0%a4%89%e0%a4%aa%e0%a5%87%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%8d%e0%a4%b0%e0%a4%a8%e0%a4%be%e0%a4%a5-%e0%a4%85%e0%a4%b6%e0%a5%8d%e0%a4%95-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%85%e0%a4%82/"><span
+    lang=AR-SA style='font-family:Hind'>&#2313;&#2346;&#2375;&#2344;&#2381;&#2342;&#2381;&#2352;&#2344;&#2366;&#2341;
+    &#2309;&#2358;&#2381;&#2325; &#2325;&#2371;&#2340; '&#2309;&#2306;&#2332;&#2379;
+    &#2342;&#2368;&#2342;&#2368;' (&#2344;&#2366;&#2335;&#2325;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/01/25/%e0%a4%b8%e0%a4%b0%e0%a5%8d%e0%a4%b5%e0%a5%87%e0%a4%b6%e0%a5%8d%e0%a4%b5%e0%a4%b0-%e0%a4%a6%e0%a4%af%e0%a4%be%e0%a4%b2-%e0%a4%b8%e0%a4%95%e0%a5%8d%e0%a4%b8%e0%a5%87%e0%a4%a8%e0%a4%be-%e0%a4%95/"><span
+    lang=AR-SA style='font-family:Hind'>&#2360;&#2352;&#2381;&#2357;&#2375;&#2358;&#2381;&#2357;&#2352;
+    &#2342;&#2351;&#2366;&#2354; &#2360;&#2325;&#2381;&#2360;&#2375;&#2344;&#2366;
+    &#2325;&#2371;&#2340; '&#2348;&#2325;&#2352;&#2368;'
+    (&#2344;&#2366;&#2335;&#2325;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/01/25/%e0%a4%ae%e0%a4%a8%e0%a5%8d%e0%a4%a8%e0%a5%82-%e0%a4%ad%e0%a4%82%e0%a4%a1%e0%a4%be%e0%a4%b0%e0%a5%80-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%ae%e0%a4%b9%e0%a4%be%e0%a4%ad%e0%a5%8b%e0%a4%9c/"><span
+    lang=AR-SA style='font-family:Hind'>&#2350;&#2344;&#2381;&#2344;&#2370;
+    &#2349;&#2306;&#2337;&#2366;&#2352;&#2368; &#2325;&#2371;&#2340;
+    '&#2350;&#2361;&#2366;&#2349;&#2379;&#2332;' (&#2344;&#2366;&#2335;&#2325;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/01/25/%e0%a4%b9%e0%a4%ac%e0%a5%80%e0%a4%ac-%e0%a4%a4%e0%a4%a8%e0%a4%b5%e0%a5%80%e0%a4%b0-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%86%e0%a4%97%e0%a4%b0%e0%a4%be-%e0%a4%ac%e0%a4%be%e0%a4%9c%e0%a4%be/"><span
+    lang=AR-SA style='font-family:Hind'>&#2361;&#2348;&#2368;&#2348;
+    &#2340;&#2344;&#2357;&#2368;&#2352; &#2325;&#2371;&#2340;
+    '&#2310;&#2327;&#2352;&#2366; &#2348;&#2366;&#2332;&#2366;&#2352;'
+    (&#2344;&#2366;&#2335;&#2325;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/01/12/%e0%a4%9c%e0%a4%af%e0%a4%b6%e0%a4%82%e0%a4%95%e0%a4%b0-%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%b8%e0%a4%be%e0%a4%a6-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%9a%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%8d/"><span
+    lang=AR-SA style='font-family:Hind'>&#2332;&#2351;&#2358;&#2306;&#2325;&#2352;
+    &#2346;&#2381;&#2352;&#2360;&#2366;&#2342; &#2325;&#2371;&#2340;
+    '&#2330;&#2344;&#2381;&#2342;&#2381;&#2352;&#2327;&#2369;&#2346;&#2381;&#2340;'
+    (&#2344;&#2366;&#2335;&#2325;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/01/12/%e0%a4%9c%e0%a4%af%e0%a4%b6%e0%a4%82%e0%a4%95%e0%a4%b0-%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%b8%e0%a4%be%e0%a4%a6-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%a7%e0%a5%8d%e0%a4%b0%e0%a5%81%e0%a4%b5/"><span
+    lang=AR-SA style='font-family:Hind'>&#2332;&#2351;&#2358;&#2306;&#2325;&#2352;
+    &#2346;&#2381;&#2352;&#2360;&#2366;&#2342; &#2325;&#2371;&#2340;
+    '&#2343;&#2381;&#2352;&#2369;&#2357;&#2360;&#2381;&#2357;&#2366;&#2350;&#2367;&#2344;&#2368;
+    (&#2344;&#2366;&#2335;&#2325;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/01/12/%e0%a4%9c%e0%a4%af%e0%a4%b6%e0%a4%82%e0%a4%95%e0%a4%b0-%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%b8%e0%a4%be%e0%a4%a6-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%b8%e0%a5%8d%e0%a4%95%e0%a4%82%e0%a4%a6/"><span
+    lang=AR-SA style='font-family:Hind'>&#2332;&#2351;&#2358;&#2306;&#2325;&#2352;
+    &#2346;&#2381;&#2352;&#2360;&#2366;&#2342; &#2325;&#2371;&#2340;
+    '&#2360;&#2381;&#2325;&#2306;&#2342;&#2327;&#2369;&#2346;&#2381;&#2340;
+    (&#2344;&#2366;&#2335;&#2325;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/01/12/%e0%a4%ae%e0%a5%8b%e0%a4%b9%e0%a4%a8-%e0%a4%b0%e0%a4%be%e0%a4%95%e0%a5%87%e0%a4%b6-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%86%e0%a4%a7%e0%a5%87-%e0%a4%85%e0%a4%a7%e0%a5%82%e0%a4%b0%e0%a5%87/"><span
+    lang=AR-SA style='font-family:Hind'>&#2350;&#2379;&#2361;&#2344;
+    &#2352;&#2366;&#2325;&#2375;&#2358; &#2325;&#2371;&#2340;
+    '&#2310;&#2343;&#2375;-&#2309;&#2343;&#2370;&#2352;&#2375;'
+    (&#2344;&#2366;&#2335;&#2325;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/01/12/%e0%a4%a7%e0%a4%b0%e0%a5%8d%e0%a4%ae%e0%a4%b5%e0%a5%80%e0%a4%b0-%e0%a4%ad%e0%a4%be%e0%a4%b0%e0%a4%a4%e0%a5%80-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%85%e0%a4%81%e0%a4%a7%e0%a4%be-%e0%a4%af/"><span
+    lang=AR-SA style='font-family:Hind'>&#2343;&#2352;&#2381;&#2350;&#2357;&#2368;&#2352;
+    &#2349;&#2366;&#2352;&#2340;&#2368; &#2325;&#2371;&#2340;
+    '&#2309;&#2305;&#2343;&#2366; &#2351;&#2369;&#2327;'
+    (&#2344;&#2366;&#2335;&#2325;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/01/12/%e0%a4%aa%e0%a5%a6-%e0%a4%b2%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a5%8d%e0%a4%ae%e0%a5%80-%e0%a4%a8%e0%a4%be%e0%a4%b0%e0%a4%be%e0%a4%af%e0%a4%a3-%e0%a4%ae%e0%a4%bf%e0%a4%b6%e0%a5%8d%e0%a4%b0-%e0%a4%95/"><span
+    lang=AR-SA style='font-family:Hind'>&#2346;&#2406;
+    &#2354;&#2325;&#2381;&#2359;&#2381;&#2350;&#2368;
+    &#2344;&#2366;&#2352;&#2366;&#2351;&#2339; &#2350;&#2367;&#2358;&#2381;&#2352;
+    &#2325;&#2371;&#2340; '&#2360;&#2367;&#2306;&#2342;&#2370;&#2352;
+    &#2325;&#2368; &#2361;&#2379;&#2354;&#2368;' (&#2344;&#2366;&#2335;&#2325;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/01/12/%e0%a4%ae%e0%a5%8b%e0%a4%b9%e0%a4%a8-%e0%a4%b0%e0%a4%be%e0%a4%95%e0%a5%87%e0%a4%b6-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%86%e0%a4%b7%e0%a4%be%e0%a5%9d-%e0%a4%95%e0%a4%be-%e0%a4%8f%e0%a4%95/"><span
+    lang=AR-SA style='font-family:Hind'>&#2350;&#2379;&#2361;&#2344;
+    &#2352;&#2366;&#2325;&#2375;&#2358; &#2325;&#2371;&#2340;
+    '&#2310;&#2359;&#2366;&#2397; &#2325;&#2366; &#2319;&#2325;
+    &#2342;&#2367;&#2344;' (&#2344;&#2366;&#2335;&#2325;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/01/12/%e0%a4%b6%e0%a4%82%e0%a4%95%e0%a4%b0%e0%a4%b6%e0%a5%87%e0%a4%b7-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%a8%e0%a4%be%e0%a4%9f%e0%a4%95-%e0%a4%8f%e0%a4%95-%e0%a4%94%e0%a4%b0-%e0%a4%a6%e0%a5%8d/"><span
+    lang=AR-SA style='font-family:Hind'>&#2358;&#2306;&#2325;&#2352;&#2358;&#2375;&#2359;
+    &#2325;&#2371;&#2340; &#2344;&#2366;&#2335;&#2325; '&#2319;&#2325;
+    &#2324;&#2352;
+    &#2342;&#2381;&#2352;&#2379;&#2339;&#2366;&#2330;&#2366;&#2352;&#2381;&#2351;'</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2020/12/18/%e0%a4%ad%e0%a4%be%e0%a4%b0%e0%a4%a4%e0%a5%87%e0%a4%82%e0%a4%a6%e0%a5%81-%e0%a4%b9%e0%a4%b0%e0%a4%bf%e0%a4%b6%e0%a5%8d%e0%a4%9a%e0%a4%82%e0%a4%a6%e0%a5%8d%e0%a4%b0-%e0%a4%95%e0%a5%83%e0%a4%a4/"><span
+    lang=AR-SA style='font-family:Hind'>&#2349;&#2366;&#2352;&#2340;&#2375;&#2306;&#2342;&#2369;
+    &#2361;&#2352;&#2367;&#2358;&#2381;&#2330;&#2306;&#2342;&#2381;&#2352;
+    &#2325;&#2371;&#2340;
+    '&#2349;&#2366;&#2352;&#2340;-&#2342;&#2369;&#2352;&#2381;&#2342;&#2358;&#2366;'
+    (&#2344;&#2366;&#2335;&#2325;) Bhartendu Harishchndra, 'Bharat-Durdasha' (Drama)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2020/12/18/%e0%a4%ad%e0%a4%be%e0%a4%b0%e0%a4%a4%e0%a5%87%e0%a4%82%e0%a4%a6%e0%a5%81-%e0%a4%b9%e0%a4%b0%e0%a4%bf%e0%a4%b6%e0%a5%8d%e0%a4%9a%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%8d%e0%a4%b0-%e0%a4%95%e0%a5%83%e0%a4%a4/"><span
+    lang=AR-SA style='font-family:Hind'>&#2349;&#2366;&#2352;&#2340;&#2375;&#2306;&#2342;&#2369;
+    &#2361;&#2352;&#2367;&#2358;&#2381;&#2330;&#2344;&#2381;&#2342;&#2381;&#2352;
+    &#2325;&#2371;&#2340; '&#2309;&#2306;&#2343;&#2375;&#2352;
+    &#2344;&#2327;&#2352;&#2368;' (&#2344;&#2366;&#2335;&#2325;) Bhartendu
+    Harishchndra, Andher Nagri (Drama)</span></a></p>
+
+
+  </div>
+  <div class="mySlides"  style="width:100%;display:none">
+
+    <h2 class=MsoNormal align=center>
+        &#2325;&#2361;&#2366;&#2344;&#2368;</h2>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2020/12/16/%e0%a4%b9%e0%a4%b0%e0%a4%bf%e0%a4%b6%e0%a4%82%e0%a4%95%e0%a4%b0-%e0%a4%aa%e0%a4%b0%e0%a4%b8%e0%a4%be%e0%a4%88-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%87%e0%a4%82%e0%a4%b8%e0%a5%8d%e0%a4%aa/"><span
+    lang=AR-SA style='font-family:Hind'>&#2361;&#2352;&#2367;&#2358;&#2306;&#2325;&#2352;
+    &#2346;&#2352;&#2360;&#2366;&#2312; &#2325;&#2371;&#2340;
+    '&#2311;&#2306;&#2360;&#2381;&#2346;&#2375;&#2325;&#2381;&#2335;&#2352;
+    &#2350;&#2366;&#2340;&#2366;&#2342;&#2368;&#2344; &#2330;&#2366;&#2305;&#2342;
+    &#2346;&#2352;' (&#2325;&#2361;&#2366;&#2344;&#2368;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2020/12/13/%e0%a4%95%e0%a5%83%e0%a4%b7%e0%a5%8d%e0%a4%a3%e0%a4%be-%e0%a4%b8%e0%a5%8b%e0%a4%ac%e0%a4%a4%e0%a5%80-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%b8%e0%a4%bf%e0%a4%95%e0%a5%8d%e0%a4%95%e0%a4%be/"><span
+    lang=AR-SA style='font-family:Hind'>&#2325;&#2371;&#2359;&#2381;&#2339;&#2366;
+    &#2360;&#2379;&#2348;&#2340;&#2368; &#2325;&#2371;&#2340;
+    '&#2360;&#2367;&#2325;&#2381;&#2325;&#2366; &#2348;&#2342;&#2354;
+    &#2327;&#2351;&#2366;' (&#2325;&#2361;&#2366;&#2344;&#2368;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2020/12/13/%e0%a4%9c%e0%a5%8d%e0%a4%9e%e0%a4%be%e0%a4%a8%e0%a4%b0%e0%a4%82%e0%a4%9c%e0%a4%a8-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%aa%e0%a4%bf%e0%a4%a4%e0%a4%be-%e0%a4%95%e0%a4%b9%e0%a4%be/"><span
+    lang=AR-SA style='font-family:Hind'>&#2332;&#2381;&#2334;&#2366;&#2344;&#2352;&#2306;&#2332;&#2344;
+    &#2325;&#2371;&#2340; '&#2346;&#2367;&#2340;&#2366;'
+    (&#2325;&#2361;&#2366;&#2344;&#2368;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2020/12/13/%e0%a4%ad%e0%a5%80%e0%a4%b7%e0%a5%8d%e0%a4%ae-%e0%a4%b8%e0%a4%be%e0%a4%b9%e0%a4%a8%e0%a5%80-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%85%e0%a4%ae%e0%a5%83%e0%a4%a4%e0%a4%b8%e0%a4%b0-%e0%a4%86/"><span
+    lang=AR-SA style='font-family:Hind'>&#2349;&#2368;&#2359;&#2381;&#2350;
+    &#2360;&#2366;&#2361;&#2344;&#2368; &#2325;&#2371;&#2340;
+    '&#2309;&#2350;&#2371;&#2340;&#2360;&#2352; &#2310; &#2327;&#2351;&#2366;'
+    (&#2325;&#2361;&#2366;&#2344;&#2368;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2020/12/13/%e0%a4%b6%e0%a5%87%e0%a4%96%e0%a4%b0-%e0%a4%9c%e0%a5%8b%e0%a4%b6%e0%a5%80-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%95%e0%a5%8b%e0%a4%b6%e0%a5%80-%e0%a4%95%e0%a4%be-%e0%a4%98%e0%a4%9f%e0%a4%b5/"><span
+    lang=AR-SA style='font-family:Hind'>&#2358;&#2375;&#2326;&#2352;
+    &#2332;&#2379;&#2358;&#2368; &#2325;&#2371;&#2340;
+    '&#2325;&#2379;&#2358;&#2368; &#2325;&#2366;
+    &#2328;&#2335;&#2357;&#2366;&#2352;' (&#2325;&#2361;&#2366;&#2344;&#2368;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2020/12/13/%e0%a4%85%e0%a4%9c%e0%a5%8d%e0%a4%9e%e0%a5%87%e0%a4%af-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%97%e0%a5%88%e0%a4%82%e0%a4%97%e0%a5%8d%e0%a4%b0%e0%a5%80%e0%a4%a8-%e0%a4%95%e0%a4%b9%e0%a4%be%e0%a4%a8/"><span
+    lang=AR-SA style='font-family:Hind'>&#2309;&#2332;&#2381;&#2334;&#2375;&#2351;
+    &#2325;&#2371;&#2340; &#2327;&#2376;&#2306;&#2327;&#2381;&#2352;&#2368;&#2344;
+    (&#2325;&#2361;&#2366;&#2344;&#2368;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2020/12/13/%e0%a4%aa%e0%a4%82%e0%a4%a1%e0%a4%bf%e0%a4%a4-%e0%a4%9a%e0%a4%82%e0%a4%a6%e0%a5%8d%e0%a4%b0%e0%a4%a7%e0%a4%b0-%e0%a4%b6%e0%a4%b0%e0%a5%8d%e0%a4%ae%e0%a4%be-%e0%a4%97%e0%a5%81%e0%a4%b2/"><span
+    lang=AR-SA style='font-family:Hind'>&#2346;&#2306;&#2337;&#2367;&#2340;
+    &#2330;&#2306;&#2342;&#2381;&#2352;&#2343;&#2352;
+    &#2358;&#2352;&#2381;&#2350;&#2366; '&#2327;&#2369;&#2354;&#2375;&#2352;&#2368;
+    &#2325;&#2371;&#2340; '&#2313;&#2360;&#2344;&#2375; &#2325;&#2361;&#2366;
+    &#2341;&#2366;' (&#2325;&#2361;&#2366;&#2344;&#2368;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2020/12/13/%e0%a4%9c%e0%a5%88%e0%a4%a8%e0%a5%87%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%8d%e0%a4%b0-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%85%e0%a4%aa%e0%a4%a8%e0%a4%be-%e0%a4%85%e0%a4%aa%e0%a4%a8%e0%a4%be/"><span
+    lang=AR-SA style='font-family:Hind'>&#2332;&#2376;&#2344;&#2375;&#2344;&#2381;&#2342;&#2381;&#2352;
+    &#2325;&#2371;&#2340; '&#2309;&#2346;&#2344;&#2366;-&#2309;&#2346;&#2344;&#2366;
+    &#2349;&#2366;&#2327;&#2381;&#2351;' (&#2325;&#2361;&#2366;&#2344;&#2368;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2020/12/13/%e0%a4%9c%e0%a4%af%e0%a4%b6%e0%a4%82%e0%a4%95%e0%a4%b0-%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%b8%e0%a4%be%e0%a4%a6-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%86%e0%a4%95%e0%a4%be%e0%a4%b6%e0%a4%a6/"><span
+    lang=AR-SA style='font-family:Hind'>&#2332;&#2351;&#2358;&#2306;&#2325;&#2352;
+    &#2346;&#2381;&#2352;&#2360;&#2366;&#2342; &#2325;&#2371;&#2340;
+    '&#2310;&#2325;&#2366;&#2358;&#2342;&#2368;&#2346;'
+    (&#2325;&#2361;&#2366;&#2344;&#2368;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2020/12/13/%e0%a4%a8%e0%a4%bf%e0%a4%b0%e0%a5%8d%e0%a4%ae%e0%a4%b2-%e0%a4%b5%e0%a4%b0%e0%a5%8d%e0%a4%ae%e0%a4%be-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%aa%e0%a4%b0%e0%a4%bf%e0%a4%82%e0%a4%a6%e0%a5%87/"><span
+    lang=AR-SA style='font-family:Hind'>&#2344;&#2367;&#2352;&#2381;&#2350;&#2354;
+    &#2357;&#2352;&#2381;&#2350;&#2366; &#2325;&#2371;&#2340;
+    '&#2346;&#2352;&#2367;&#2306;&#2342;&#2375;'
+    (&#2325;&#2361;&#2366;&#2344;&#2368;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2020/12/10/%e0%a4%95%e0%a4%ae%e0%a4%b2%e0%a5%87%e0%a4%b6%e0%a5%8d%e0%a4%b5%e0%a4%b0-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%b0%e0%a4%be%e0%a4%9c%e0%a4%be-%e0%a4%a8%e0%a4%bf%e0%a4%b0%e0%a4%ac%e0%a4%82/"><span
+    lang=AR-SA style='font-family:Hind'>&#2325;&#2350;&#2354;&#2375;&#2358;&#2381;&#2357;&#2352;
+    &#2325;&#2371;&#2340; '&#2352;&#2366;&#2332;&#2366;
+    &#2344;&#2367;&#2352;&#2348;&#2306;&#2360;&#2367;&#2351;&#2366;'
+    (&#2325;&#2361;&#2366;&#2344;&#2368;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2020/12/09/%e0%a4%ab%e0%a4%a3%e0%a5%80%e0%a4%b6%e0%a5%8d%e0%a4%b5%e0%a4%b0-%e0%a4%a8%e0%a4%be%e0%a4%a5-%e0%a4%b0%e0%a5%87%e0%a4%a3%e0%a5%81-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%b2%e0%a4%be%e0%a4%b2/"><span
+    lang=AR-SA style='font-family:Hind'>&#2347;&#2339;&#2368;&#2358;&#2381;&#2357;&#2352;
+    &#2344;&#2366;&#2341; &#2352;&#2375;&#2339;&#2369; &#2325;&#2371;&#2340;
+    '&#2354;&#2366;&#2354;&#2346;&#2366;&#2344; &#2325;&#2368;
+    &#2348;&#2375;&#2327;&#2350;' (&#2325;&#2361;&#2366;&#2344;&#2368;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2020/12/09/%e0%a4%ab%e0%a4%a3%e0%a5%80%e0%a4%b6%e0%a5%8d%e0%a4%b5%e0%a4%b0-%e0%a4%a8%e0%a4%be%e0%a4%a5-%e0%a4%b0%e0%a5%87%e0%a4%a3%e0%a5%81-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%a4%e0%a5%80%e0%a4%b8/"><span
+    lang=AR-SA style='font-family:Hind'>&#2347;&#2339;&#2368;&#2358;&#2381;&#2357;&#2352;
+    &#2344;&#2366;&#2341; &#2352;&#2375;&#2339;&#2369; &#2325;&#2371;&#2340;
+    '&#2340;&#2368;&#2360;&#2352;&#2368; &#2325;&#2360;&#2350;
+    &#2313;&#2352;&#2381;&#2347; &#2350;&#2366;&#2352;&#2375; &#2327;&#2319;
+    &#2327;&#2369;&#2354;&#2398;&#2366;&#2350;'
+    (&#2325;&#2361;&#2366;&#2344;&#2368;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2020/11/30/%e0%a4%8f%e0%a4%95-%e0%a4%9f%e0%a5%8b%e0%a4%95%e0%a4%b0%e0%a5%80-%e0%a4%ad%e0%a4%b0-%e0%a4%ae%e0%a4%bf%e0%a4%9f%e0%a5%8d%e0%a4%9f%e0%a5%80-%e0%a4%95%e0%a4%b9%e0%a4%be%e0%a4%a8%e0%a5%80/"><span
+    lang=AR-SA style='font-family:Hind'>&#2319;&#2325;
+    &#2335;&#2379;&#2325;&#2352;&#2368; &#2349;&#2352;
+    &#2350;&#2367;&#2335;&#2381;&#2335;&#2368;
+    (&#2325;&#2361;&#2366;&#2344;&#2368;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2020/11/30/%e0%a4%ae%e0%a5%81%e0%a4%82%e0%a4%b6%e0%a5%80-%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a5%87%e0%a4%ae%e0%a4%9a%e0%a4%82%e0%a4%a6-%e0%a4%95%e0%a5%83%e0%a4%a4-%e0%a4%a6%e0%a5%81%e0%a4%a8%e0%a4%bf/"><span
+    lang=AR-SA style='font-family:Hind'>&#2350;&#2369;&#2306;&#2358;&#2368;
+    &#2346;&#2381;&#2352;&#2375;&#2350;&#2330;&#2306;&#2342; &#2325;&#2371;&#2340;
+    '&#2342;&#2369;&#2344;&#2367;&#2351;&#2366; &#2325;&#2366;
+    &#2360;&#2348;&#2360;&#2375; &#2309;&#2344;&#2350;&#2379;&#2354;
+    &#2352;&#2340;&#2344;'(&#2325;&#2361;&#2366;&#2344;&#2368;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2020/11/30/%e0%a4%ae%e0%a5%81%e0%a4%82%e0%a4%b6%e0%a5%80-%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a5%87%e0%a4%ae%e0%a4%9a%e0%a4%82%e0%a4%a6-%e0%a4%88%e0%a4%a6%e0%a4%97%e0%a4%be%e0%a4%b9-%e0%a4%95/"><span
+    lang=AR-SA style='font-family:Hind'>&#2350;&#2369;&#2306;&#2358;&#2368;
+    &#2346;&#2381;&#2352;&#2375;&#2350;&#2330;&#2306;&#2342;
+    '&#2312;&#2342;&#2327;&#2366;&#2361;' (&#2325;&#2361;&#2366;&#2344;&#2368;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2020/11/30/%e0%a4%b0%e0%a4%be%e0%a4%b9%e0%a5%80-%e0%a4%95%e0%a4%b9%e0%a4%be%e0%a4%a8%e0%a5%80/"><span
+    lang=AR-SA style='font-family:Hind'>&#2360;&#2369;&#2349;&#2342;&#2381;&#2352;&#2366;
+    &#2325;&#2369;&#2350;&#2366;&#2352;&#2368; &#2330;&#2380;&#2361;&#2366;&#2344;
+    &#2325;&#2371;&#2340; '&#2352;&#2366;&#2361;&#2368;'
+    (&#2325;&#2361;&#2366;&#2344;&#2368;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2020/11/30/%e0%a4%a6%e0%a5%81%e0%a4%b2%e0%a4%be%e0%a4%88%e0%a4%b5%e0%a4%be%e0%a4%b2%e0%a5%80-%e0%a4%95%e0%a4%b9%e0%a4%be%e0%a4%a8%e0%a5%80/"><span
+    lang=AR-SA style='font-family:Hind'>&#2348;&#2306;&#2327;
+    &#2350;&#2361;&#2367;&#2354;&#2366; &#2325;&#2368;
+    '&#2342;&#2369;&#2354;&#2366;&#2312;&#2357;&#2366;&#2354;&#2368;' (&#2325;&#2361;&#2366;&#2344;&#2368;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2020/11/30/%e0%a4%9a%e0%a4%82%e0%a4%a6%e0%a5%8d%e0%a4%b0%e0%a4%a6%e0%a5%87%e0%a4%b5-%e0%a4%b8%e0%a5%87-%e0%a4%ae%e0%a5%87%e0%a4%b0%e0%a5%80-%e0%a4%ac%e0%a4%be%e0%a4%a4%e0%a5%87%e0%a4%82/"><span
+    lang=AR-SA style='font-family:Hind'>&#2352;&#2366;&#2332;&#2375;&#2344;&#2381;&#2342;&#2381;&#2352;&#2348;&#2366;&#2354;&#2366;
+    &#2328;&#2379;&#2359; (&#2348;&#2306;&#2327;
+    &#2350;&#2361;&#2367;&#2354;&#2366;) &#2325;&#2368;
+    '&#2330;&#2306;&#2342;&#2381;&#2352;&#2342;&#2375;&#2357; &#2360;&#2375;
+    &#2350;&#2375;&#2352;&#2368; &#2348;&#2366;&#2340;&#2375;&#2306;'
+    (&#2325;&#2361;&#2366;&#2344;&#2368;)</span></a></p>
+
+  </div>
+  <div class="mySlides"  style="width:100%;display:none">
+
+    <h2 class=MsoNormal align=center>
+        &#2325;&#2357;&#2367;&#2340;&#2366;</h2>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/08/01/%e0%a4%97%e0%a4%9c%e0%a4%be%e0%a4%a8%e0%a4%a8-%e0%a4%ae%e0%a4%be%e0%a4%a7%e0%a4%b5-%e0%a4%ae%e0%a5%81%e0%a4%95%e0%a5%8d%e0%a4%a4%e0%a4%bf%e0%a4%ac%e0%a5%8b%e0%a4%a7/"><span
+    lang=AR-SA style='font-family:Hind'>&#2327;&#2332;&#2366;&#2344;&#2344;
+    &#2350;&#2366;&#2343;&#2357;
+    '&#2350;&#2369;&#2325;&#2381;&#2340;&#2367;&#2348;&#2379;&#2343;'-
+    '&#2348;&#2381;&#2352;&#2361;&#2381;&#2350;&#2352;&#2366;&#2325;&#2381;&#2359;&#2360;'
+    (&#2325;&#2357;&#2367;&#2340;&#2366;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/04/01/%e0%a4%97%e0%a4%9c%e0%a4%be%e0%a4%a8%e0%a4%a8-%e0%a4%ae%e0%a4%be%e0%a4%a7%e0%a4%b5-%e0%a4%ae%e0%a5%81%e0%a4%95%e0%a5%8d%e0%a4%a4%e0%a4%bf%e0%a4%ac%e0%a5%8b%e0%a4%a7-%e0%a4%ad/"><span
+    lang=AR-SA style='font-family:Hind'>&#2327;&#2332;&#2366;&#2344;&#2344;
+    &#2350;&#2366;&#2343;&#2357;
+    '&#2350;&#2369;&#2325;&#2381;&#2340;&#2367;&#2348;&#2379;&#2343;' '
+    &#2349;&#2370;&#2354;-&#2327;&#2354;&#2340;&#2368;
+    (&#2325;&#2357;&#2367;&#2340;&#2366;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/03/20/%e0%a4%97%e0%a4%9c%e0%a4%be%e0%a4%a8%e0%a4%a8-%e0%a4%ae%e0%a4%be%e0%a4%a7%e0%a4%b5-%e0%a4%ae%e0%a5%81%e0%a4%95%e0%a5%8d%e0%a4%a4%e0%a4%bf%e0%a4%ac%e0%a5%8b%e0%a4%a7-%e0%a4%85/"><span
+    lang=AR-SA style='font-family:Hind'>&#2327;&#2332;&#2366;&#2344;&#2344;
+    &#2350;&#2366;&#2343;&#2357;
+    '&#2350;&#2369;&#2325;&#2381;&#2340;&#2367;&#2348;&#2379;&#2343;'-&#2309;&#2306;&#2343;&#2352;&#2375;
+    &#2350;&#2375;&#2306; (&#2325;&#2357;&#2367;&#2340;&#2366;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/06/10/%e0%a4%b0%e0%a4%be%e0%a4%ae%e0%a4%a7%e0%a4%be%e0%a4%b0%e0%a5%80-%e0%a4%b8%e0%a4%bf%e0%a4%82%e0%a4%b9-%e0%a4%a6%e0%a4%bf%e0%a4%a8%e0%a4%95%e0%a4%b0-%e0%a4%89%e0%a4%b0%e0%a5%8d/"><span
+    lang=AR-SA style='font-family:Hind'>&#2352;&#2366;&#2350;&#2343;&#2366;&#2352;&#2368;
+    &#2360;&#2367;&#2306;&#2361; '&#2342;&#2367;&#2344;&#2325;&#2352;'
+    (&#2313;&#2352;&#2381;&#2357;&#2358;&#2368;-
+    &#2340;&#2371;&#2340;&#2368;&#2351; &#2309;&#2306;&#2325;)
+    &#2311;&#2325;&#2366;&#2312;-5</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/06/09/%e0%a4%9c%e0%a4%be%e0%a4%af%e0%a4%b8%e0%a5%80-%e0%a4%97%e0%a5%8d%e0%a4%b0%e0%a4%82%e0%a4%a5%e0%a4%be%e0%a4%b5%e0%a4%b2%e0%a5%80-%e0%a4%b8%e0%a4%82%e0%a4%aa%e0%a4%be%e0%a4%a6%e0%a4%95-%e0%a4%b0/"><span
+    lang=AR-SA style='font-family:Hind'>&#2332;&#2366;&#2351;&#2360;&#2368;
+    &#2327;&#2381;&#2352;&#2306;&#2341;&#2366;&#2357;&#2354;&#2368;
+    (&#2360;&#2306;&#2346;&#2366;&#2342;&#2325;-
+    &#2352;&#2366;&#2350;&#2330;&#2306;&#2342;&#2381;&#2352;
+    &#2358;&#2369;&#2325;&#2381;&#2354;)
+    '&#2344;&#2366;&#2327;&#2350;&#2340;&#2368; &#2357;&#2367;&#2351;&#2379;&#2327;
+    &#2326;&#2306;&#2337;' (&#2311;&#2325;&#2366;&#2312;- 5)</span></a><span
+    style='font-family:Hind'> </span></p>
+
+    <br>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/06/07/%e0%a4%95%e0%a4%bf%e0%a4%a4%e0%a4%a8%e0%a5%80-%e0%a4%a8%e0%a4%be%e0%a4%b5%e0%a5%8b%e0%a4%82-%e0%a4%ae%e0%a5%87%e0%a4%82-%e0%a4%95%e0%a4%bf%e0%a4%a4%e0%a4%a8%e0%a5%80-%e0%a4%ac%e0%a4%be/"><span
+    lang=HI style='font-family:Hind'>'&#2325;&#2367;&#2340;&#2344;&#2368;
+    &#2344;&#2366;&#2357;&#2379;&#2306; &#2350;&#2375;&#2306;
+    &#2325;&#2367;&#2340;&#2344;&#2368; &#2348;&#2366;&#2352;'
+    (&#2325;&#2357;&#2367;&#2340;&#2366;) ' &#2360;. &#2361;&#2368;&#2352;&#2366;&#2344;&#2344;&#2381;&#2342;
+    &#2357;&#2366;&#2340;&#2381;&#2360;&#2381;&#2351;&#2366;&#2351;&#2344;
+    '&#2309;&#2332;&#2381;&#2334;&#2375;&#2351;' (&#2311;&#2325;&#2366;&#2312;-5)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/06/07/%e0%a4%b9%e0%a4%b0%e0%a4%bf-%e0%a4%98%e0%a4%be%e0%a4%b8-%e0%a4%aa%e0%a4%b0-%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a4%a3-%e0%a4%ad%e0%a4%b0-%e0%a4%95%e0%a4%b5%e0%a4%bf%e0%a4%a4%e0%a4%be/"><span
+    lang=HI style='font-family:Hind'>'&#2361;&#2352;&#2367;
+    &#2328;&#2366;&#2360; &#2346;&#2352; &#2325;&#2381;&#2359;&#2339;
+    &#2349;&#2352;' (&#2325;&#2357;&#2367;&#2340;&#2366;)
+    '&#2360;&#2330;&#2381;&#2330;&#2367;&#2340;&#2366;&#2344;&#2344;&#2381;&#2342;
+    &#2361;&#2368;&#2352;&#2366;&#2344;&#2344;&#2381;&#2342;
+    &#2357;&#2366;&#2340;&#2381;&#2360;&#2381;&#2351;&#2366;&#2351;&#2344;
+    '&#2309;&#2332;&#2381;&#2334;&#2375;&#2351;' (&#2311;&#2325;&#2366;&#2312;-5)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/03/12/%e0%a4%85%e0%a4%9c%e0%a5%8d%e0%a4%9e%e0%a5%87%e0%a4%af-%e0%a4%af%e0%a4%b9-%e0%a4%a6%e0%a5%80%e0%a4%aa-%e0%a4%85%e0%a4%95%e0%a5%87%e0%a4%b2%e0%a4%be-%e0%a4%95%e0%a4%b5%e0%a4%bf%e0%a4%a4%e0%a4%be/"><span
+    lang=HI style='font-family:Hind'>&#2309;&#2332;&#2381;&#2334;&#2375;&#2351;
+    ' &#2351;&#2361; &#2342;&#2368;&#2346; &#2309;&#2325;&#2375;&#2354;&#2366;
+    (&#2325;&#2357;&#2367;&#2340;&#2366;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/03/09/%e0%a4%85%e0%a4%9c%e0%a5%8d%e0%a4%9e%e0%a5%87%e0%a4%af-%e0%a4%95%e0%a4%b2%e0%a4%97%e0%a5%80-%e0%a4%ac%e0%a4%be%e0%a4%9c%e0%a4%b0%e0%a5%87-%e0%a4%95%e0%a5%80-%e0%a4%95%e0%a4%b5%e0%a4%bf%e0%a4%a4/"><span
+    lang=HI style='font-family:Hind'>&#2309;&#2332;&#2381;&#2334;&#2375;&#2351;
+    ' &#2325;&#2354;&#2327;&#2368; &#2348;&#2366;&#2332;&#2352;&#2375;
+    &#2325;&#2368; (&#2325;&#2357;&#2367;&#2340;&#2366;)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/03/09/%e0%a4%85%e0%a4%9c%e0%a5%8d%e0%a4%9e%e0%a5%87%e0%a4%af-%e0%a4%85%e0%a4%b8%e0%a4%be%e0%a4%a7%e0%a5%8d%e0%a4%af-%e0%a4%b5%e0%a5%80%e0%a4%a3%e0%a4%be-%e0%a4%95%e0%a4%b5%e0%a4%bf%e0%a4%a4/"><span
+    lang=HI style='font-family:Hind'>&#2309;&#2332;&#2381;&#2334;&#2375;&#2351;'&#2309;&#2360;&#2366;&#2343;&#2381;&#2351;
+    &#2357;&#2368;&#2339;&#2366; (&#2325;&#2357;&#2367;&#2340;&#2366;)</span></a></p>
+
+    <br>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/06/05/%e0%a4%b0%e0%a4%b6%e0%a5%8d%e0%a4%ae%e0%a4%bf%e0%a4%b0%e0%a4%a5%e0%a5%80-%e0%a4%96%e0%a4%a3%e0%a5%8d%e0%a4%a1%e0%a4%95%e0%a4%be%e0%a4%b5%e0%a5%8d%e0%a4%af-%e0%a4%b0%e0%a4%be%e0%a4%ae%e0%a4%a7/"><span
+    lang=AR-SA style='font-family:Hind'>&#2352;&#2358;&#2381;&#2350;&#2367;&#2352;&#2341;&#2368;
+    (&#2326;&#2339;&#2381;&#2337;&#2325;&#2366;&#2357;&#2381;&#2351;) '
+    &#2352;&#2366;&#2350;&#2343;&#2366;&#2352;&#2368; &#2360;&#2367;&#2306;&#2361;
+    '&#2342;&#2367;&#2344;&#2325;&#2352;' : &#2311;&#2325;&#2366;&#2312;-5</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/06/03/%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%a5%e0%a4%ae-%e0%a4%b0%e0%a4%b6%e0%a5%8d%e0%a4%ae%e0%a4%bf-%e0%a4%95%e0%a4%b5%e0%a4%bf%e0%a4%a4%e0%a4%be-%e0%a4%b8%e0%a5%81%e0%a4%ae%e0%a4%bf%e0%a4%a4/"><span
+    lang=AR-SA style='font-family:Hind'>&#2346;&#2381;&#2352;&#2341;&#2350;
+    &#2352;&#2358;&#2381;&#2350;&#2367; (&#2325;&#2357;&#2367;&#2340;&#2366;) '
+    &#2360;&#2369;&#2350;&#2367;&#2340;&#2381;&#2352;&#2366;&#2344;&#2306;&#2342;&#2344;&#2346;&#2306;&#2340;
+    : &#2311;&#2325;&#2366;&#2312;-5</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/06/03/%e0%a4%aa%e0%a4%b0%e0%a4%bf%e0%a4%b5%e0%a4%b0%e0%a5%8d%e0%a4%a4%e0%a4%a8-%e0%a4%95%e0%a4%b5%e0%a4%bf%e0%a4%a4%e0%a4%be-%e0%a4%b8%e0%a5%81%e0%a4%ae%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%b0/"><span
+    lang=AR-SA style='font-family:Hind'>&#2346;&#2352;&#2367;&#2357;&#2352;&#2381;&#2340;&#2344;
+    (&#2325;&#2357;&#2367;&#2340;&#2366;) '
+    &#2360;&#2369;&#2350;&#2367;&#2340;&#2381;&#2352;&#2366;&#2344;&#2306;&#2342;&#2344;
+    &#2346;&#2306;&#2340;: &#2311;&#2325;&#2366;&#2312;-5</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/06/02/%e0%a4%a6%e0%a5%8d%e0%a4%b0%e0%a5%81%e0%a4%a4-%e0%a4%9d%e0%a4%b0%e0%a5%8b%e0%a4%82-%e0%a4%9c%e0%a4%97%e0%a4%a4-%e0%a4%95%e0%a5%87-%e0%a4%9c%e0%a5%80%e0%a4%b0%e0%a5%8d%e0%a4%a3-%e0%a4%aa%e0%a4%a4/"><span
+    lang=AR-SA style='font-family:Hind'>&#2342;&#2381;&#2352;&#2369;&#2340;
+    &#2333;&#2352;&#2379;&#2306; &#2332;&#2327;&#2340; &#2325;&#2375;
+    &#2332;&#2368;&#2352;&#2381;&#2339; &#2346;&#2340;&#2381;&#2352;
+    (&#2325;&#2357;&#2367;&#2340;&#2366;) '
+    &#2360;&#2369;&#2350;&#2367;&#2340;&#2381;&#2352;&#2366;&#2344;&#2306;&#2342;&#2344;
+    &#2346;&#2306;&#2340; : (&#2311;&#2325;&#2366;&#2312;-5)</span></a></p>
+
+    <br>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/06/02/%e0%a4%ae%e0%a4%b9%e0%a4%be%e0%a4%a6%e0%a5%87%e0%a4%b5%e0%a5%80-%e0%a4%b5%e0%a4%b0%e0%a5%8d%e0%a4%ae%e0%a4%be-%e0%a4%95%e0%a5%80-%e0%a4%95%e0%a4%b5%e0%a4%bf%e0%a4%a4%e0%a4%be%e0%a4%8f%e0%a4%81/"><span
+    lang=AR-SA style='font-family:Hind'>&#2350;&#2361;&#2366;&#2342;&#2375;&#2357;&#2368;
+    &#2357;&#2352;&#2381;&#2350;&#2366; &#2325;&#2368;
+    &#2325;&#2357;&#2367;&#2340;&#2366;&#2319;&#2305;:
+    (&#2311;&#2325;&#2366;&#2312;-5)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/05/29/%e0%a4%b8%e0%a5%81%e0%a4%a6%e0%a4%be%e0%a4%ae%e0%a4%be-%e0%a4%aa%e0%a4%be%e0%a4%82%e0%a4%a1%e0%a5%87%e0%a4%af-%e0%a4%a7%e0%a5%82%e0%a4%ae%e0%a4%bf%e0%a4%b2-%e0%a4%95%e0%a5%80/"><span
+    lang=AR-SA style='font-family:Hind'>&#2360;&#2369;&#2342;&#2366;&#2350;&#2366;
+    &#2346;&#2366;&#2306;&#2337;&#2375;&#2351;
+    '&#2343;&#2370;&#2350;&#2367;&#2354;' &#2325;&#2368;
+    &#2325;&#2357;&#2367;&#2340;&#2366;&#2319;&#2305; '
+    &#2311;&#2325;&#2366;&#2312;-5</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/05/27/%e0%a4%ad%e0%a4%b5%e0%a4%be%e0%a4%a8%e0%a5%80%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%b8%e0%a4%be%e0%a4%a6-%e0%a4%ae%e0%a4%bf%e0%a4%b6%e0%a5%8d%e0%a4%b0-%e0%a4%95%e0%a5%80-%e0%a4%95%e0%a4%b5%e0%a4%bf/"><span
+    lang=AR-SA style='font-family:Hind'>&#2349;&#2357;&#2366;&#2344;&#2368;&#2346;&#2381;&#2352;&#2360;&#2366;&#2342;
+    &#2350;&#2367;&#2358;&#2381;&#2352; &#2325;&#2368;
+    &#2325;&#2357;&#2367;&#2340;&#2366;&#2319;&#2305;
+    (&#2311;&#2325;&#2366;&#2312;-5)</span></a></p>
+
+    <p class=MsoNormal ><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/05/25/%e0%a4%a8%e0%a4%be%e0%a4%97%e0%a4%be%e0%a4%b0%e0%a5%8d%e0%a4%9c%e0%a5%81%e0%a4%a8-%e0%a4%95%e0%a5%80-%e0%a4%95%e0%a4%b5%e0%a4%bf%e0%a4%a4%e0%a4%be%e0%a4%8f%e0%a4%81-%e0%a4%87%e0%a4%95%e0%a4%be/"><span
+    lang=AR-SA style='font-family:Hind'>&#2344;&#2366;&#2327;&#2366;&#2352;&#2381;&#2332;&#2369;&#2344;
+    &#2325;&#2368; &#2325;&#2357;&#2367;&#2340;&#2366;&#2319;&#2305; :
+    &#2311;&#2325;&#2366;&#2312; ' 5</span></a></p>
+
+    <br>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/04/05/%e0%a4%b8%e0%a5%82%e0%a4%b0%e0%a5%8d%e0%a4%af%e0%a4%95%e0%a4%be%e0%a4%82%e0%a4%a4-%e0%a4%a4%e0%a5%8d%e0%a4%b0%e0%a4%bf%e0%a4%aa%e0%a4%be%e0%a4%a0%e0%a5%80-%e0%a4%a8%e0%a4%bf%e0%a4%b0%e0%a4%be-6/"><span
+    lang=HI style='font-family:Hind'>&#2360;&#2370;&#2352;&#2381;&#2351;&#2325;&#2366;&#2306;&#2340;
+    &#2340;&#2381;&#2352;&#2367;&#2346;&#2366;&#2336;&#2368;
+    '&#2344;&#2367;&#2352;&#2366;&#2354;&#2366;' ' &#2360;&#2352;&#2379;&#2332;
+    &#2360;&#2381;&#2350;&#2371;&#2340;&#2367;
+    (&#2325;&#2357;&#2367;&#2340;&#2366;)</span></a></p>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/04/05/%e0%a4%b8%e0%a5%82%e0%a4%b0%e0%a5%8d%e0%a4%af%e0%a4%95%e0%a4%be%e0%a4%82%e0%a4%a4-%e0%a4%a4%e0%a5%8d%e0%a4%b0%e0%a4%bf%e0%a4%aa%e0%a4%be%e0%a4%a0%e0%a5%80-%e0%a4%a8%e0%a4%bf%e0%a4%b0%e0%a4%be-5/"><span
+    lang=HI style='font-family:Hind'>&#2360;&#2370;&#2352;&#2381;&#2351;&#2325;&#2366;&#2306;&#2340;
+    &#2340;&#2381;&#2352;&#2367;&#2346;&#2366;&#2336;&#2368;
+    '&#2344;&#2367;&#2352;&#2366;&#2354;&#2366;' '
+    &#2325;&#2369;&#2325;&#2369;&#2352;&#2350;&#2369;&#2340;&#2381;&#2340;&#2366;
+    (&#2325;&#2357;&#2367;&#2340;&#2366;)</span></a></p>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/04/01/%e0%a4%b8%e0%a5%82%e0%a4%b0%e0%a5%8d%e0%a4%af%e0%a4%95%e0%a4%be%e0%a4%82%e0%a4%a4-%e0%a4%a4%e0%a5%8d%e0%a4%b0%e0%a4%bf%e0%a4%aa%e0%a4%be%e0%a4%a0%e0%a5%80-%e0%a4%a8%e0%a4%bf%e0%a4%b0%e0%a4%be-4/"><span
+    lang=HI style='font-family:Hind'>&#2360;&#2370;&#2352;&#2381;&#2351;&#2325;&#2366;&#2306;&#2340;
+    &#2340;&#2381;&#2352;&#2367;&#2346;&#2366;&#2336;&#2368;
+    '&#2344;&#2367;&#2352;&#2366;&#2354;&#2366;' ' &#2332;&#2370;&#2361;&#2368;
+    &#2325;&#2368; &#2325;&#2354;&#2368; (&#2325;&#2357;&#2367;&#2340;&#2366;)</span></a></p>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/04/01/%e0%a4%b8%e0%a5%82%e0%a4%b0%e0%a5%8d%e0%a4%af%e0%a4%95%e0%a4%be%e0%a4%82%e0%a4%a4-%e0%a4%a4%e0%a5%8d%e0%a4%b0%e0%a4%bf%e0%a4%aa%e0%a4%be%e0%a4%a0%e0%a5%80-%e0%a4%a8%e0%a4%bf%e0%a4%b0%e0%a4%be-3/"><span
+    lang=HI style='font-family:Hind'>&#2360;&#2370;&#2352;&#2381;&#2351;&#2325;&#2366;&#2306;&#2340;
+    &#2340;&#2381;&#2352;&#2367;&#2346;&#2366;&#2336;&#2368;
+    '&#2344;&#2367;&#2352;&#2366;&#2354;&#2366;'- &#2352;&#2366;&#2350;
+    &#2325;&#2368; &#2358;&#2325;&#2381;&#2340;&#2367;&#2346;&#2370;&#2332;&#2366;
+    (&#2325;&#2366;&#2357;&#2381;&#2351;)</span></a></p>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/04/01/%e0%a4%b8%e0%a5%82%e0%a4%b0%e0%a5%8d%e0%a4%af%e0%a4%95%e0%a4%be%e0%a4%82%e0%a4%a4-%e0%a4%a4%e0%a5%8d%e0%a4%b0%e0%a4%bf%e0%a4%aa%e0%a4%be%e0%a4%a0%e0%a5%80-%e0%a4%a8%e0%a4%bf%e0%a4%b0%e0%a4%be-2/"><span
+    lang=HI style='font-family:Hind'>&#2360;&#2370;&#2352;&#2381;&#2351;&#2325;&#2366;&#2306;&#2340;
+    &#2340;&#2381;&#2352;&#2367;&#2346;&#2366;&#2336;&#2368;
+    '&#2344;&#2367;&#2352;&#2366;&#2354;&#2366;' '
+    &#2348;&#2366;&#2306;&#2343;&#2379;&#2306; &#2344; &#2344;&#2366;&#2357;
+    &#2311;&#2360; &#2336;&#2366;&#2305;&#2357; &#2348;&#2306;&#2343;&#2369;
+    (&#2325;&#2357;&#2367;&#2340;&#2366;)</span></a></p>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/03/20/%e0%a4%b8%e0%a5%82%e0%a4%b0%e0%a5%8d%e0%a4%af%e0%a4%95%e0%a4%be%e0%a4%82%e0%a4%a4-%e0%a4%a4%e0%a5%8d%e0%a4%b0%e0%a4%bf%e0%a4%aa%e0%a4%be%e0%a4%a0%e0%a5%80-%e0%a4%a8%e0%a4%bf%e0%a4%b0%e0%a4%be/"><span
+    lang=HI style='font-family:Hind'>&#2360;&#2370;&#2352;&#2381;&#2351;&#2325;&#2366;&#2306;&#2340;
+    &#2340;&#2381;&#2352;&#2367;&#2346;&#2366;&#2336;&#2368;
+    '&#2344;&#2367;&#2352;&#2366;&#2354;&#2366;'- &#2332;&#2366;&#2327;&#2379;
+    &#2347;&#2367;&#2352; &#2319;&#2325; &#2348;&#2366;&#2352;
+    (&#2325;&#2357;&#2367;&#2340;&#2366;)</span></a></p>
+
+    <br>
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/02/23/%e0%a4%95%e0%a4%be%e0%a4%ae%e0%a4%be%e0%a4%af%e0%a4%a8%e0%a5%80-%e0%a4%b2%e0%a4%9c%e0%a5%8d%e0%a4%9c%e0%a4%be-%e0%a4%b8%e0%a4%b0%e0%a5%8d%e0%a4%97-%e0%a4%9c%e0%a4%af%e0%a4%b6/"><span
+    >
+
+        &#2332;&#2351;&#2358;&#2306;&#2325;&#2352;
+    &#2346;&#2381;&#2352;&#2360;&#2366;&#2342; '
+    &#2325;&#2366;&#2350;&#2366;&#2351;&#2344;&#2368;
+    '&#2354;&#2332;&#2381;&#2332;&#2366; &#2360;&#2352;&#2381;&#2327;'
+    (&#2325;&#2357;&#2367;&#2340;&#2366;)</span></a></p>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/02/23/%e0%a4%95%e0%a4%be%e0%a4%ae%e0%a4%be%e0%a4%af%e0%a4%a8%e0%a5%80-%e0%a4%b6%e0%a5%8d%e0%a4%b0%e0%a4%a6%e0%a5%8d%e0%a4%a7%e0%a4%be-%e0%a4%b8%e0%a4%b0%e0%a5%8d%e0%a4%97-%e0%a4%9c/"><span
+    lang=HI style='font-family:Hind'>&#2332;&#2351;&#2358;&#2306;&#2325;&#2352;
+    &#2346;&#2381;&#2352;&#2360;&#2366;&#2342; '
+    &#2325;&#2366;&#2350;&#2366;&#2351;&#2344;&#2368;
+    '&#2358;&#2381;&#2352;&#2342;&#2381;&#2343;&#2366; &#2360;&#2352;&#2381;&#2327;'
+    (&#2325;&#2357;&#2367;&#2340;&#2366;)</span></a></p>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/02/23/%e0%a4%95%e0%a4%be%e0%a4%ae%e0%a4%be%e0%a4%af%e0%a4%a8%e0%a5%80-%e0%a4%87%e0%a5%9c%e0%a4%be-%e0%a4%b8%e0%a4%b0%e0%a5%8d%e0%a4%97-%e0%a4%9c%e0%a4%af%e0%a4%b6%e0%a4%82%e0%a4%95/"><span
+    lang=HI style='font-family:Hind'>&#2332;&#2351;&#2358;&#2306;&#2325;&#2352;
+    &#2346;&#2381;&#2352;&#2360;&#2366;&#2342; '
+    &#2325;&#2366;&#2350;&#2366;&#2351;&#2344;&#2368; '&#2311;&#2396;&#2366;
+    &#2360;&#2352;&#2381;&#2327;' (&#2325;&#2357;&#2367;&#2340;&#2366;)</span></a></p>
+
+    <p class=MsoNormal><a target="_blank" class="article-link" 
+    href="https://abhivyakti.life/2021/02/23/%e0%a4%95%e0%a4%be%e0%a4%ae%e0%a4%be%e0%a4%af%e0%a4%a8%e0%a5%80-%e0%a4%9c%e0%a4%af%e0%a4%b6%e0%a4%82%e0%a4%95%e0%a4%b0-%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%b8%e0%a4%be%e0%a4%a6/"><span
+    lang=HI style='font-family:Hind'>&#2332;&#2351;&#2358;&#2306;&#2325;&#2352;
+    &#2346;&#2381;&#2352;&#2360;&#2366;&#2342;
+    '&#2325;&#2366;&#2350;&#2366;&#2351;&#2344;&#2368;
+    &#2350;&#2361;&#2366;&#2325;&#2366;&#2357;&#2381;&#2351;'
+    (&#2325;&#2357;&#2367;&#2340;&#2366;)</span></a></p>
+
+
+  </div>
+  <div class="mySlides"  style="width:100%;display:none">
+  </div>
+
+  <div class="wiki-tBtn z9" id="wikiTBtn"></div>
+
+  <div class="wiki-search z9">
+    <input type="search" id="searchInput" placeholder="Search on Wikipedia">
+    <button id="searchButton">Search</button>
+  </div>
+
+  </div>
+
+
+</div>
+
+<div id="tl" onclick="menu()" style="margin:5px;display:none;position:fixed;top:2px;z-index:999;">
+
+    <p id="button" style="margin:0"  >__<br>__<br>__</p>
+    <div id="menubar"> </div>
+</div>
+
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
+<iframe id="iframe" name="iframe" style="border-left: 2px solid;" frameborder="0" class="iframe"></iframe>
+<script>
+$(document).ready(function(){
+  $('.wiki-tBtn').on('click',function(){
+      $('.wiki-search').slideToggle(100);
+      
+      if ($(this).html() === '<i class="fa fa-chevron-up"></i>') {
+          $(this).html('<i class="fa fa-chevron-down"></i>');
+      } else {
+          $(this).html('<i class="fa fa-chevron-up"></i>');
+      }
+        
+  });
+  // $('.wiki-search').on('mouseover',function(){
+  //   $('.wiki-search input').focus()
+  // })
+  $('.wiki-tBtn').click();
+
+
+    $("#searchButton").click(function(){
+        var searchTerm = $("#searchInput").val();
+        if (searchTerm.trim() !== "") {
+          var searchUrl = "https://hi.wikipedia.org/w/index.php?search=" + encodeURI(searchTerm) + "&title=%E0%A4%B5%E0%A4%BF%E0%A4%B6%E0%A5%87%E0%A4%B7%3A%E0%A4%96%E0%A5%8B%E0%A4%9C&ns0=1";
+            // window.open(searchUrl, "_blank");
+            var xD = new HwDialog({
+              title:'Wikipedia',
+              message:`<iframe style="width:100%;height:100%" src="${searchUrl}"></iframe>`,
+              buttons: ['Ok'],
+              Class:'wiki-w',
+              msgClass : 'wiki-d',
+              callback:i=>{
+                xD.close()
+              }
+
+            }).open();
+        } else {
+            alert("Please enter a search term");
+        }
+    });
+});
+</script>
+<script>
+var b = document.getElementById("sidebar");
+var antib = document.getElementById("antisidebar");
+var home = document.getElementById("home");
+var btn = document.getElementById("button");
+var mbody = document.getElementById("mainbody");
+var nbtn = document.getElementById("nightmode");
+var abody = document.getElementsByTagName("body")[0];
+let pinned = false;
+nbtn.style.display = 'none';
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  antisidebar();
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+
+  document.getElementById("h1").style.display = "none";
+  document.getElementById("pic").style.display = "none";
+
+  document.getElementById("main").style.clear = "both";
+  document.getElementById("main").style.display = "block";
+  // $('.bbbar').css('display','block');
+  antib.style.zIndex = -1;
+  if ( pinned == false ) {
+  document.getElementById("tl").style.display = "block"; }
+
+  var he = document.getElementById("header");
+  // document.getElementsByTagName('body')[0].style.backgroundColor = 'beige'; 
+  he.style.position = "fixed";
+  he.style.display = "none";
+  he.style.zIndex = "99";
+  he.style.top = "0px";
+  he.style.paddingBottom = "10px";
+  he.style.width = "100%";
+  he.style.marginLeft = "-2.5%";
+  he.style.transition = "all 0.3s ease-in-out";
+  nbtn.style.display = 'initial';
+
+  window.scrollTo(0,0);
+  const boxes = document.querySelectorAll('.s4');
+
+  boxes.forEach(box => {
+    box.style.width = '33%';
+    box.style.marginLeft = "2.5%";
+    box.style.margin = "auto";
+    box.style.borderRadius = "2%";
+    box.style.lineHeight = ".1";
+  });
+
+
+ }
+
+function menu(){
+
+    if (b.style.display == "none" || b.style.left == "-200px")
+    {b.style.display = "block";
+    b.style.left = "0px";
+    antib.style.zIndex = 2;
+    btn.innerHTML = "<br><br>!!!<br>";}
+      else
+      {b.style.left = "-200px";antib.style.zIndex = -1;
+      btn.innerHTML = "__<br>__<br>__";}
+    }
+
+function antisidebar(){
+
+    if (b.style.left == "0px") {
+    if (pinned) {
+    tl.style.display = "none";}
+    else {
+    b.style.left = "-200px"; }
+    antib.style.zIndex = -1;
+    btn.innerHTML = "__<br>__<br>__";
+    }
+}
+
+
+
+
+/* home.src = "https://img.icons8.com/?size=151&id=9J1KcyzZVytT&format=png";
+home.style = "width:25px;margin-top:2px;margin-bottom:0px;"; */
+function homepage() {
+  /*
+  let text = "Going to home page!";
+  if (confirm(text) == true) {
+    text = "You pressed OK!";
+    location.reload();
+  } else {
+    text = "You canceled!";
+  }
+  /8/*/
+  window.open('../','_parent')
+}
+
+
+
+
+function pin(){
+var pin = document.getElementById("pin");
+    if ( pin.style.background == "green") {
+      pin.style.background = "inherit";
+      antib.style.zIndex = -1;
+      tl.style.display = "block";
+      mbody.style.marginLeft = "auto";b.style.left = "-200px";
+      pinned = false;}
+    else {
+      antib.style.zIndex = -1;
+      pin.style.background = "green";
+      tl.style.display = "none";
+      mbody.style.marginLeft = "200px";
+      pinned = true;}
+}
+let x = 0;
+function nightmode(){
+	x += 1;
+	if (x%3==0){abody.style.background = "beige";b.style.background = "lightyellow"; nbtn.src = "https://img.icons8.com/?size=151&id=sx3VmTOVeYFg&format=png";}
+
+	if (x%3==1){abody.style.background = "darkgrey"; b.style.background = "black"; nbtn.src = "https://img.icons8.com/?size=151&id=102041&format=png";}
+
+	if (x%3==2){abody.style.background = "black";b.style.background = "black"; nbtn.src = "https://img.icons8.com/?size=151&id=15352&format=png";}
+}
+
+function nightmode2(){
+    b.style.background="black";
+
+}
+
+var dateBox = document.getElementById("dateBox");
+    dateBox.innerHTML = Date().slice(0,16) + "<br>" + Date().slice(16,21) ;
+
+//checking Date every minute
+setInterval( function () {
+  dateBox.innerHTML = Date().slice(0,16) + "<br>" + Date().slice(16,21) ;
+}, 30*1000);
+
+
+</script>
+<!-- <p id="DP">DP</p> -->
+<style>
+p a.checked {
+  color:green;
+  text-decoration: none;
+}
+p input[type="checkbox"] {
+  display: none;
+  opacity: .15;
+  margin-left:5px;
+}
+p input[type="checkbox"]:hover {
+  opacity: .7;
+}
+</style>
+<script>
+$(document).ready(function(){
+
+  $('p a').parent().append('<input type="checkbox">'); 
+  $cbs = $('p input[type="checkbox"]'); 
+  $ps = $('p a');
+  createpopup(2);
+  const localStorage = window.localStorage;
+  $('#readCheck').change(function () {
+    if ($('#readCheck').is(":checked")) {
+      $cbs.css('display','inline-block');
+    } else {
+      $cbs.css('display', 'none');
+    }
+  });
+  $cbs.change(function(){
+
+    var index = $cbs.index(this);
+    var keyname = 'HWq_key' + index;
+    var storedData = localStorage.getItem('HWq_key');
+    if (!storedData){ storedData = {
+    "HWq_key151": true,
+    "HWq_key152": true,
+    "HWq_key153": true,
+    "HWq_key154": true,
+    "HWq_key155": true,
+    "HWq_key156": true,
+    "HWq_key157": true,
+    "HWq_key158": true,
+    "HWq_key159": true,
+    "HWq_key160": true,
+    "HWq_key161": true,
+    "HWq_key162": true,
+    "HWq_key163": true,
+    "HWq_key164": true,
+    "HWq_key165": true,
+    "HWq_key166": true,
+    "HWq_key167": true,
+    "HWq_key168": true,
+    "HWq_key169": true,
+    "HWq_key138": true,
+    "HWq_key185": true,
+    "HWq_key186": true,
+    "HWq_key40": true,
+    "HWq_key87": true,
+    "HWq_key95": true,
+    "HWq_key96": true,
+    "HWq_key97": true,
+    "HWq_key187": true,
+    "HWq_key145": true,
+    "HWq_key172": true,
+    "HWq_key171": true,
+    "HWq_key170": true,
+    "HWq_key177": true,
+    "HWq_key178": true,
+    "HWq_key176": true,
+    "HWq_key175": true,
+    "HWq_key179": true,
+    "HWq_key197": false,
+    "HWq_key188": true,
+    "HWq_key192": true,
+    "HWq_key193": true,
+    "HWq_key190": true,
+    "HWq_key147": true,
+    "HWq_key0": false,
+    "HWq_key189": true,
+    "HWq_key191": true,
+    "HWq_key181": true,
+    "HWq_key149": true,
+    "HWq_key150": true,
+    "HWq_key139": true,
+    "HWq_key144": true,
+    "HWq_key146": true,
+    "HWq_key148": true,
+    "HWq_key137": true,
+    "HWq_key83": true,
+    "HWq_key82": true,
+    "HWq_key19": true,
+    "HWq_key142": true,
+    "HWq_key140": true,
+    "HWq_key184": true,
+    "HWq_key183": true,
+    "HWq_key98": true,
+    "HWq_key94": true,
+    "HWq_key93": true,
+    "HWq_key92": true,
+    "HWq_key84": true,
+    "HWq_key80": true,
+    "HWq_key81": true
+  };}
+    else {storedData = JSON.parse(storedData)}
+    storedData[keyname] = $(this).is(":checked");
+
+    localStorage.setItem('HWq_key', JSON.stringify(storedData));//keyname
+    sendHwqkeysToServer(storedData);
+
+    if ($(this).is(":checked")) {
+      $(this).parent().find('a').addClass('checked');
+    } else {
+      $(this).parent().find('a').removeClass('checked');
+    }
+    let dones = $('p a.checked').length;
+    let all = $cbs.length;
+    popup((dones/all*100).toFixed(1) + '%');
+    calcChecks()
+
+    //showpopup(2,dones + '/' + all );
+  });
+
+
+  /***
+
+  var hwkeys = localStorage.getItem('HWq_key'); // keyname
+  hwkeys = JSON.parse(hwkeys)
+
+  $cbs.each(function(){
+    var keyname = 'HWq_key' + $cbs.index(this);
+    if (hwkeys)valueForThis = hwkeys[keyname];
+    console.log(valueForThis);
+    if (valueForThis) {
+      $(this).prop('checked',true);
+      $(this).parent().find('a').addClass('checked');
+    }
+  });
+  ***/
+  calcChecks()
+});
+
+function sendHwqkeysToServer(data){
+  // $.ajax({
+  //   url:'../progress.php',
+  //   method : 'POST',
+  //   data : {HWqkeys : JSON.stringify(data)}
+  // });
+}
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the iframe element
+    var iframe = document.getElementById('iframe');
+
+    // Get all links with class 'iframe-link'
+    var links = document.querySelectorAll('.article-link');
+
+    // Attach event listener to each link
+    links.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            // Prevent default link behavior
+            event.preventDefault();
+            $(iframe).addClass('i');
+            $('#mainbody').addClass('i');
+
+            // Get the href attribute of the clicked link
+            var url = this.getAttribute('href');
+
+            // Set the src attribute of the iframe to the link's URL
+            iframe.src = url;
+        });
+    });
+});
+$(document).keydown(function(e) {
+  if(e.ctrlKey && e.code ==='ArrowLeft'){
+    // window.history.back() 
+    window.location.href = '../';
+  }
+});
+
+function calcChecks(){
+  var totalCheckboxes = $('p input[type="checkbox"]').length;
+
+  // Number of checked checkboxes
+  var checkedCheckboxes = $('p input[type="checkbox"]:checked').length;
+
+  // Calculate the percentage of checked checkboxes
+  var pC = (checkedCheckboxes / totalCheckboxes) * 100;
+  pC = pC.toFixed(2)
+ // popup(pC+"%")
+  
+  $('.bbbar').css('background-image',`linear-gradient(90deg, green ${pC}%,beige ${pC}%)`)
+
+}
+
+</script>
+
+</body>
+</html>
+
