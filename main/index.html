@@ -1784,6 +1784,16 @@
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
 <iframe id="iframe" name="iframe" style="border-left: 2px solid;" frameborder="0" class="iframe"></iframe>
 <script>
+// Function to pause body scrolling
+function pauseBodyScroll() {
+    $('body').css('overflow', 'hidden');
+}
+
+// Function to resume body scrolling
+function resumeBodyScroll() {
+    $('body').css('overflow', 'visible');
+}
+
 $(document).ready(function(){
   $('.wiki-tBtn').on('click',function(){
       $('.wiki-search').slideToggle(100);
@@ -1806,6 +1816,7 @@ $(document).ready(function(){
         if (searchTerm.trim() !== "") {
           var searchUrl = "https://hi.wikipedia.org/w/index.php?search=" + encodeURI(searchTerm) + "&title=%E0%A4%B5%E0%A4%BF%E0%A4%B6%E0%A5%87%E0%A4%B7%3A%E0%A4%96%E0%A5%8B%E0%A4%9C&ns0=1";
             // window.open(searchUrl, "_blank");
+            pauseBodyScroll();
             var xD = new HwDialog({
               title:'Wikipedia',
               message:`<iframe style="width:100%;height:100%" src="${searchUrl}"></iframe>`,
@@ -1813,7 +1824,8 @@ $(document).ready(function(){
               Class:'wiki-w',
               msgClass : 'wiki-d',
               callback:i=>{
-                xD.close()
+                xD.close();
+                resumeBodyScroll();
               }
 
             }).open();
@@ -2141,14 +2153,16 @@ document.addEventListener('DOMContentLoaded', function() {
             // Prevent default link behavior
             event.preventDefault();
             searchUrl = this.getAttribute('href');
+            pauseBodyScroll();
             var xL = new HwDialog({
               title:'',
-              message:`<iframe style="width:100%;height:100%" src="${searchUrl}"></iframe>`,
+              message:`<iframe style="width:100%;max-width:100vw;height:100%" src="${searchUrl}"></iframe>`,
               buttons: ['Close'],
               Class:'link-w',
               msgClass : 'link-d',
               callback:i=>{
-                xL.close()
+                xL.close();
+                resumeBodyScroll();
               }
 
             }).open();
