@@ -10,5 +10,8 @@
         "type": "image/png"
         }
     ],
-    "form_factor": "none"
+    "form_factor": "none",
+    "theme_color":"#000000",
+    "background_color":"#ebe72d",
+    "description":"Let's study something... "
 }
