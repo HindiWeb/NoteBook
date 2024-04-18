@@ -288,7 +288,6 @@
     
     .hw-d-box.link-w {
       background-color: inherit;
-      max-width: 100vw;
     }
     .hw-d-overlay.link-ow {
       background-color: inherit;
@@ -303,7 +302,38 @@
       box-sizing: border-box;
     }
 
-
+  </style>
+  <style>
+    /* Syllabus style */
+    #syllabus {
+        font-size: 20px;
+        line-height: 1.5;
+        margin: auto;
+        max-width: 888px;
+        font-family:  'Mukta','Hind';
+        text-align: left;
+    }
+    .ikai-wrap {
+        margin:6px 0 ;
+    }
+    .ikai-content {
+        padding: 8px;
+        border:1px solid grey;
+        border-radius: 8px;
+    }
+    .ikai-head {
+        margin:5px;
+    }
+    .ikai-number,.ikai-title {
+        font-family: 'Noto Serif Devanagari';
+        text-align: center;
+        font-size: 120%;
+    }
+    .ikai-cnts {
+        margin:8px 0;
+        padding:3px 12px;
+        position: relative;
+    }
   </style>
 </head>
 <body>
@@ -314,10 +344,10 @@
 </picture>
 <div id="anim" ></div>
 <div id="antisidebar" onclick="antisidebar()" ></div>
-<div class="w3-container">
-  <h1 id="h1" ><span lang="hi" > हिंदी झटपट </span></h1>
-<!--  <p>Using images to indicate how many slides there are in the slideshow, and highlight the image the user is currently viewing.</p>-->
-</div>  
+  <div class="w3-container">
+    <h1 id="h1" ><span lang="hi" > हिंदी झटपट </span></h1>
+  <!--  <p>Using images to indicate how many slides there are in the slideshow, and highlight the image the user is currently viewing.</p>-->
+  </div>  
   <div id="sidebar"  class="w3-row-padding w3-section" style="left:-200px;" >
   <input id="readCheck" title="Reading progress" type="checkbox" style="position: absolute;right:0px;top:25px;cursor:pointer;" hidden>
     <img id="pin" onclick="pin()" src="https://img.icons8.com/?size=2x&id=AfpSfD7cu5Sq&format=png"
@@ -354,6 +384,10 @@
       <p  style="cursor:pointer" >
       &#2325;&#2357;&#2367;&#2340;&#2366;</p>
     </div>
+    <div  onclick="currentDiv(7)">
+      <p  style="cursor:pointer" >
+      Syllabus</p>
+    </div>
      
     <div id="dateBox" onclick="nightmode2()"></div>
     <div style="margin:1rem 0">
@@ -362,7 +396,7 @@
     </div>
 
   </div>
-<div class="w3-content" id="mainbody" style="border-radius:5px;border-bottom: 2px solid rgb(193, 90, 107);"> <!--style="max-width:1200px;"-->
+<div class="w3-content" id="mainbody" style="border-radius:5px;border-bottom: 2px solid rgb(193, 90, 107);margin-bottom: 7px;"> <!--style="max-width:1200px;"-->
   <div class="bbbar" style="position: absolute;top:0;left:0;width: 100%;height: 3px;background-color:aliceblue;"></div>
 
   <img onclick="nightmode()" id="nightmode" src="https://img.icons8.com/?size=151&id=sx3VmTOVeYFg&format=png"
@@ -393,6 +427,10 @@
     <div class="w3-col s4" onclick="currentDiv(6)">
       <p class="demo w3-opacity w3-hover-opacity-off"  style="width:100%;cursor:pointer" >
       &#2325;&#2357;&#2367;&#2340;&#2366;</p>
+    </div>
+    <div class="w3-col s4"   onclick="currentDiv(7)">
+      <p  class="demo w3-opacity w3-hover-opacity-off"  style="width:100%;cursor:pointer" >
+      Syllabus</p>
     </div>
   </div>
 <!-- </div> -->
@@ -433,7 +471,7 @@
 
 	<div id="AGV"  >	
 
-    <p id="hint" style="font-size:15px;text-align:center;max-width:110px;margin:auto;margin-top:0px;border:1px dotted grey;border-radius:10px;opacity:.78;font-family: 'Utsaah', 'mukta', 'Times New Roman'" ;>अन्य गद्य विधाएँ </p>
+    <p id="hint" style="font-size:15px;text-align:center;max-width:110px;margin:auto;margin-top:0px;border:1px dotted grey;border-radius:10px;opacity: .7;font-family: 'Utsaah', 'mukta', 'Times New Roman'" ;>अन्य गद्य विधाएँ </p>
 
 
     <p class=MsoNormal><a target="_blank" class="article-link" 
@@ -1792,6 +1830,245 @@
     (&#2325;&#2357;&#2367;&#2340;&#2366;)</span></a></p>
 
 
+  </div>
+  <div class="mySlides"  style="width:100%;display:none">
+    <div id="syllabus">
+      <div class="ikai-wrap">
+          <div class="ikai" id="ikai1">
+              <div class="ikai-head">
+                  <div class="ikai-number">इकाई - I</div>
+                  <div class="ikai-title">हिन्दी भाषा और उसका विकास।</div>
+              </div>
+              <div class="ikai-content">
+                  <div class="ikai-cnts"><span id="spani1" class="level0">हिन्दी की ऐतिहासिक पृष्ठभूमि : प्राचीन भारतीय आर्य भाषाएं, मध्यकालीन भारतीय आर्य भाषाएं-पालि, प्राकृत - शौरसेनी, अर्द्धमागधी, मागधी, अपभ्रंश और उनकी विशेषताएं, अपभ्रंश अवहठ, और पुरानी हिन्दी का संबंध, आधुनिक भारतीय आर्य भाषाएं और उनका वर्गीकरण।</span></div>
+                  <div class="ikai-cnts"><span id="spani2" class="level0">हिन्दी का भौगोलिक विस्तार : हिन्दी की उपभाषाएं, पश्चिमी हिन्दी, पूर्वी हिन्दी, राजस्थानी, बिहारी तथा पहाड़ी वर्ग और उनकी बोलियां।</span></div>
+                  <div class="ikai-cnts"><span id="spani3" class="level0">खड़ीबोली, ब्रज और अवधी की विशेषताएं।</span></div>
+                  <div class="ikai-cnts"><span id="spani4" class="level0">हिन्दी के विविध रूप : हिन्दी, उर्दू, दक्खिनी, हिन्दुस्तानी।</span></div>
+                  <div class="ikai-cnts"><span id="spani5">हिन्दी का भाषिक स्वरूप : हिन्दी की स्वनिम व्यवस्था - खंड्य और खंड्येतर, हिन्दी ध्वनियों के वर्गीकरण का आधार, हिन्दी शब्द रचना -उपसर्ग, प्रत्यय, समास, हिन्दी की रूप रचना - लिंग, वचन और कारक व्यवस्था के सन्दर्भ में संज्ञा, सर्वनाम, विशेषण और क्रिया रुप, हिन्दी - वाक्य - रचना।</span></div>
+                  <div class="ikai-cnts"><span id="spani6" class="level0">हिन्दी भाषा - प्रयोग के विविध रूप : बोली, मानक भाषा, राजभाषा, राष्ट्रभाषा और सम्पर्क भाषा।</span></div>
+                  <div class="ikai-cnts"><span id="spani7">संचार माध्यम और हिन्दी, कम्पूटर और हिन्दी, हिन्दी की  संवैधानिक स्थिति।</span></div>
+                  <div class="ikai-cnts"><span id="spani8" class="level0">देवानागरी लिपि : विशेषताएं और मानकीकरण।</span></div>
+              </div>
+          </div>
+      </div>
+      <div class="ikai-wrap">
+          <div class="ikai" id="ikai2">
+              <div class="ikai-head">
+                  <div class="ikai-number">इकाई - II</div>
+                  <div class="ikai-title">हिन्दी साहित्य का इतिहास</div>
+              </div>
+              <div class="ikai-content">
+                  <div class="ikai-cnts"><span id="spani9">हिन्दी साहित्येतिहास दर्शन</span></div>
+                  <div class="ikai-cnts"><span id="spani10">हिन्दी साहित्य के इतिहास लेखन की पद्धतियां</span></div>
+                  <div class="ikai-cnts"><span id="spani11">हिन्दी साहित्य का कालविभाजन और नामकरण, आदिकाल की विशेषताएं एवं साहित्यिक प्रवृतियां, रासो-साहित्य, आदिकालीन हिन्दी का जैन साहित्य, सिद्ध और नाथ साहित्य, अमीर खुसरो की हिन्दी कविता, विद्यापति और उनकी पदावली तथा लौकिक साहित्य</span></div>
+                  <div class="ikai-cnts"><span id="spani12">भक्तिकाल</span></div>
+                  <div class="ikai-cnts"><span id="spani13">भक्ति-आंदोलन के उदय के सामाजिक-सांस्कृतिक कारण, भक्ति-आंदोलन का अखिल भारतीय स्वरुप और उसका अन्तःप्रादेशिक वैशिष्ट्य।</span></div>
+                  <div class="ikai-cnts"><span id="spani14">भक्ति काव्य की सामाजिक-सांस्कृतिक पृष्ठभूमि, आलवार सन्त।</span></div>
+                  <div class="ikai-cnts"><span id="spani15">भक्ति काव्य के प्रमुख सम्प्रदाय और उनका वैचारिक आधार।</span></div>
+                  <div class="ikai-cnts"><span id="spani16">निर्गुण-सुगण कवि और उनका काव्य।</span></div>
+                  <div class="ikai-cnts"><span id="spani17">रीतिकाल</span></div>
+                  <div class="ikai-cnts"><span id="spani18">सामाजिक-सांस्कृतिक पृष्टभूमि, रीतिकाल की प्रमुख प्रवृत्तियां (रीतिबद्ध, रीतिसिद्ध, रीतिमुक्त)</span></div>
+                  <div class="ikai-cnts"><span id="spani19">रीतिकवियों का आचार्यत्व।</span></div>
+                  <div class="ikai-cnts"><span id="spani20">रीतिकाल के प्रमुख कवि और उनका काव्य</span></div>
+                  <div class="ikai-cnts"><span id="spani21">आधुनिक काल</span></div>
+                  <div class="ikai-cnts"><span id="spani22">हिन्दी गद्य का उद्धूव और विकास।</span></div>
+                  <div class="ikai-cnts"><span id="spani23">भारतेन्दु पूर्व हिन्दी गद्य, 1857 की क्रान्ति और सांस्कृतिक पुनर्जागरण, भारतेन्दु और उनका युग, पत्रकारिता का आरम्भ और 19वीं शताब्दी की हिन्दी</span></div>
+                  <div class="ikai-cnts"><span id="spani24">पत्रकारिता, आधुनिकता की अवधारणा।</span></div>
+                  <div class="ikai-cnts"><span id="spani25">द्विवेदी युग : महावीर प्रसाद द्विवेदी और उनका युग, हिन्दी नवजागरण और सरस्वती, राष्ट्रीय काव्य धारा के प्रमुख कवि, स्वछन्दतावाद और उसके प्रमुख कवि।</span></div>
+                  <div class="ikai-cnts"><span id="spani26">छायावाद : छायावादी काव्य की प्रमुख विशेषताएं, छायावाद के प्रमुख कवि, प्रगतिवाद की अवधारणा, प्रगतिवादी काव्य और उसके प्रमुख कवि, प्रयोगवाद और नई कविता, नई कविता के कवि, समकालीन कविता (वर्ष 2000 तक) समकालीन साहित्यिक पत्रकारिता।</span></div>
+              </div>
+          </div>
+      </div>
+      <div class="ikai-wrap">
+          <div class="ikai" id="ikai3">
+              <div class="ikai-head">
+                  <div class="ikai-number">इकाई- III</div>
+                  <div class="ikai-title">साहित्यशास्त्र</div>
+              </div>
+              <div class="ikai-content">
+                  <div class="ikai-cnts"><span id="spani27" class="level0">काव्य के लक्षण, काव्य हेतु और काव्य प्रयोजन।</span></div>
+                  <div class="ikai-cnts"><span id="spani28">प्रमुख संप्रदाय और सिद्धान्त - रस, अलंकार, रीति, ध्वनि, वक्रोक्ति और औचित्य।</span></div>
+                  <div class="ikai-cnts"><span id="spani29">रस निष्पत्ति, साधारणीकरण।</span></div>
+                  <div class="ikai-cnts"><span id="spani30">शब्दशक्ति, काव्यगुण, काव्य दोष</span></div>
+                  <div class="ikai-cnts"><span id="spani31">प्लेटो के काव्य सिद्धान्त।</span></div>
+                  <div class="ikai-cnts"><span id="spani32">अरस्तू : अनुकरण सिद्धान्त, त्रासदी विवेचन, विरेचन सिद्धान्त।</span></div>
+                  <div class="ikai-cnts"><span id="spani33">वरड्र्सवर्थ का काव्यभाषा सिद्धान्त।</span></div>
+                  <div class="ikai-cnts"><span id="spani34">कॉलरिज : कल्पना और फैंटेसी।</span></div>
+                  <div class="ikai-cnts"><span id="spani35">टी.एस.इलिएट : निर्वैयक्तिकता का सिद्धान्त, परम्परा की अवधारणा।</span></div>
+                  <div class="ikai-cnts"><span id="spani36">आई.ए.रिचड्र्स : मूल्य सिद्धान्त, संप्रेषण सिद्धान्त तथा काव्य-भाषा सिद्धान्त।</span></div>
+                  <div class="ikai-cnts"><span id="spani37" class="level0">रूसी रुपवाद।</span></div>
+                  <div class="ikai-cnts"><span id="spani38">नयी समीक्षा।</span></div>
+                  <div class="ikai-cnts"><span id="spani39">मिथक, फन्तासी, कल्पना, प्रतीक, बिम्ब।</span></div>
+              </div>
+          </div>
+      </div>
+      <div class="ikai-wrap">
+          <div class="ikai" id="ikai4">
+              <div class="ikai-head">
+                  <div class="ikai-number">इकाई - IV</div>
+                  <div class="ikai-title">वैचारिक पृष्ठभूमि</div>
+              </div>
+              <div class="ikai-content">
+                  <div class="ikai-cnts"><span id="spani40">भारतीय नवजागरण और स्वाधीनता आन्दोलन की वैचारिक पृष्ठभूमि</span></div>
+                  <div class="ikai-cnts"><span id="spani41">हिन्दी नवजागरण।</span></div>
+                  <div class="ikai-cnts"><span id="spani42">खड़ीबोली आन्दोलन।</span></div>
+                  <div class="ikai-cnts"><span id="spani43">फोर्ट विलियम कॉलेज</span></div>
+                  <div class="ikai-cnts"><span id="spani44">भारतेन्दु और हिन्दी नवजागरण,</span></div>
+                  <div class="ikai-cnts"><span id="spani45">महावीर प्रसाद द्विवेदी और हिन्दी नवजागरण</span></div>
+                  <div class="ikai-cnts"><span id="spani46">गांधीवादी दर्शन</span></div>
+                  <div class="ikai-cnts"><span id="spani47">अम्बेडकर दर्शन</span></div>
+                  <div class="ikai-cnts"><span id="spani48">लोहिया दर्शन</span></div>
+                  <div class="ikai-cnts"><span id="spani49">मार्क्सवाद, मनोविश्लेषणवाद, अस्तित्ववाद, उत्तर आधुनिकतावाद, अस्मितामूलक विमर्श (दलित, स्त्री, आदिवासी एवं अल्पसंख्यक)</span></div>
+              </div>
+          </div>
+      </div>
+      <div class="ikai-wrap">
+          <div class="ikai" id="ikai5">
+              <div class="ikai-head">
+                  <div class="ikai-number">इकाई - V</div>
+                  <div class="ikai-title">हिन्दी कविता</div>
+              </div>
+              <div class="ikai-content">
+                  <div class="ikai-cnts"><span id="spani50">पृथ्वीराज रासो - रेवा तट</span></div>
+                  <div class="ikai-cnts"><span id="spani51">अमीरखुसरो - खुसरों की पहेलियाँ और मुकरियाँ</span></div>
+                  <div class="ikai-cnts"><span id="spani52">विद्यापति की पदावली (संपादक - डॉ. नरेन्द्र झा) - पद संख्या 1 -25</span></div>
+                  <div class="ikai-cnts"><span id="spani53">कबीर - (सं .- हजारी प्रसाद द्विवेदी) - पद संख्या - 160 -209</span></div>
+                  <div class="ikai-cnts"><span id="spani54">जायसी ग्रंथावली - (सं. राम चन्द्र शुक्ल) - नागमती वियोग खण्ड</span></div>
+                  <div class="ikai-cnts"><span id="spani55">सूरदास - भ्रमरगीत सार - (सं .- राम चन्द्र शुक्ल) - पद संख्या 21 से 70</span></div>
+                  <div class="ikai-cnts"><span id="spani56">तुलसीदास - रामचरितमानस, उत्तर काण्ड</span></div>
+                  <div class="ikai-cnts"><span id="spani57">बिहारी सतसई - (सं .- जगन्नाथ दास रत्नाकर) - दोहा संख्या 1-50</span></div>
+                  <div class="ikai-cnts"><span id="spani58">घनानन्द कवित्त - (सं .- विश्वनाथ मिश्र) - कवित्त संख्या 1 -30</span></div>
+                  <div class="ikai-cnts"><span id="spani59">मीरा - (सं .- विश्वनाथ त्रिपाठी) - प्रारम्भ से 20 पद</span></div>
+                  <div class="ikai-cnts"><span id="spani60">अयोध्या सिंह उपाध्याय हरिऔध - प्रियप्रवास</span></div>
+                  <div class="ikai-cnts"><span id="spani61">मैथिलीशरण गुप्त - भारत भारती, साकेत (नवम् सर्ग)</span></div>
+                  <div class="ikai-cnts"><span id="spani62">जयशंकर प्रसाद - आंसू, कामायनी (श्रद्धा, लज्जा, इड़ा)</span></div>
+                  <div class="ikai-cnts"><span id="spani63">निराला - जुही की कली, जागो फिर एक बार, सरोजस्मृति, राम की शक्तिपूजा, कुकरमुत्ता, बाँधो न नाव इस ठाँव बंधु।</span></div>
+                  <div class="ikai-cnts"><span id="spani64">सुमित्रानंदन पंत - परिवर्तन, प्रथम रश्मि</span></div>
+                  <div class="ikai-cnts"><span id="spani65">महादेवी वर्मा - बीन भी हूँ मैं तुम्हारी रागिनी भी हूँ, मै नीर भरी दुख की बदली, फिर विकल है प्राण मेरे, यह मन्दिर का दीप इसे नीरव जलने दो, द्रुत झरो जगत के जीर्ण पत्र</span></div>
+                  <div class="ikai-cnts"><span id="spani66" class="level0">रामधारी सिंह दिनकर - उर्वशी (तृतीय अंक), रश्मिरथी</span></div>
+                  <div class="ikai-cnts"><span id="spani67" class="level0">नागार्जुन - कालिदास, बादल को घिरते देखा है, अकाल और उसके बाद, खुरदरे पैर, शासन की बंदूक, मनुष्य हूँ।</span></div>
+                  <div class="ikai-cnts"><span id="spani68">सच्चिदानंद हीरानन्द वात्स्यायन अज्ञेय - कलगी बाजरे की, यह दीप अकेला, हरी घास पर क्षण भर, असाध्यवीणा, कितनी नावों में कितनी बार</span></div>
+                  <div class="ikai-cnts"><span id="spani69">भवानीप्रसाद मिश्र - गीत फरोश, सतपुड़ा के जगल</span></div>
+                  <div class="ikai-cnts"><span id="spani70">मुक्तिबोध - भूल गलती, ब्रह्मराक्षस, अंधेरे में</span></div>
+                  <div class="ikai-cnts"><span id="spani71">धूमिल - नक्सलवाड़ी, मोचीराम, अकाल दर्शन, रोटी और संसद</span></div>
+              </div>
+          </div>
+      </div>
+      <div class="ikai-wrap">
+          <div class="ikai" id="ikai6">
+              <div class="ikai-head">
+                  <div class="ikai-number">इकाई-VI</div>
+                  <div class="ikai-title">हिन्दी उपन्यास</div>
+              </div>
+              <div class="ikai-content">
+                  <div class="ikai-cnts"><span id="spani72" class="level0">पं. गौरीदत्त - देवरानी जेठानी की कहानी</span></div>
+                  <div class="ikai-cnts"><span id="spani73">लाला श्रीनिवास दास - परीक्षा गुरू</span></div>
+                  <div class="ikai-cnts"><span id="spani74">प्रेमचन्द - गोदान</span></div>
+                  <div class="ikai-cnts"><span id="spani75">अज्ञेय - शेखर एक जीवनी (भाग - 1)</span></div>
+                  <div class="ikai-cnts"><span id="spani76">हजारी प्रसाद द्विवेदी - बाणभट्ट की आत्मकथा</span></div>
+                  <div class="ikai-cnts"><span id="spani77">फणीश्वर नाथ रेणु - मैला आंचल</span></div>
+                  <div class="ikai-cnts"><span id="spani78">यशपाल - झूठा सच</span></div>
+                  <div class="ikai-cnts"><span id="spani79">अमृत लाल नागर - मानस का हंस</span></div>
+                  <div class="ikai-cnts"><span id="spani80">भीष्म साहनी - तमस</span></div>
+                  <div class="ikai-cnts"><span id="spani81">श्रीलाल शुक्ल - राग दरबारी</span></div>
+                  <div class="ikai-cnts"><span id="spani82">कृष्णा सोबती - जिन्दगी नामा</span></div>
+                  <div class="ikai-cnts"><span id="spani83">मन्नू भंडारी - आपका बंटी</span></div>
+                  <div class="ikai-cnts"><span id="spani84">जगदीश चन्द्र - धरती धन न अपना</span></div>
+              </div>
+          </div>
+      </div>
+      <div class="ikai-wrap">
+          <div class="ikai" id="ikai7">
+              <div class="ikai-head">
+                  <div class="ikai-number">इकाई-VII</div>
+                  <div class="ikai-title">हिन्दी कहानी</div>
+              </div>
+              <div class="ikai-content">
+                  <div class="ikai-cnts"><span id="spani85">राजेन्द्र बाला घोष (बंग महिला) - चन्द्रदेव से मेरी बातें, दुलाईवाली</span></div>
+                  <div class="ikai-cnts"><span id="spani86">माधवराव सप्रे - एक टोकरी भर मिट्टी</span></div>
+                  <div class="ikai-cnts"><span id="spani87">सुभद्रा कुमारी चौहान - राही</span></div>
+                  <div class="ikai-cnts"><span id="spani88">प्रेमचंद - ईदगाह, दुनिया का अनमोल रतन</span></div>
+                  <div class="ikai-cnts"><span id="spani89">राजा राधिकारमण प्रसाद सिंह - कानों में कंगना</span></div>
+                  <div class="ikai-cnts"><span id="spani90">चन्द्रधर शर्मा गुलेरी - उसने कहा था</span></div>
+                  <div class="ikai-cnts"><span id="spani91">जयशंकर प्रसाद - आकाशदीप</span></div>
+                  <div class="ikai-cnts"><span id="spani92">जैनेन्द्र - अपना-अपना भाग्य</span></div>
+                  <div class="ikai-cnts"><span id="spani93">फणीश्वरनाथ रेणु - तीसरी कसम, लाल पान की बेगम</span></div>
+                  <div class="ikai-cnts"><span id="spani94">अज्ञेय - गैंग्रीन</span></div>
+                  <div class="ikai-cnts"><span id="spani95">शेखर जोशी - कोसी का घटवार</span></div>
+                  <div class="ikai-cnts"><span id="spani96">भीष्म साहनी - अमृतसर आ गया है, चीफ की दावत</span></div>
+                  <div class="ikai-cnts"><span id="spani97">कृष्णा सोबती - सिक्का बदल गया</span></div>
+                  <div class="ikai-cnts"><span id="spani98">हरिशंकर परसाई - इस्पेक्टर मातादीन चांद पर</span></div>
+                  <div class="ikai-cnts"><span id="spani99">ज्ञानरंजन - पिता</span></div>
+                  <div class="ikai-cnts"><span id="spani100">कमलेश्वर - राजा निरबंसिया</span></div>
+                  <div class="ikai-cnts"><span id="spani101">निर्मल वर्मा - परिंदे</span></div>
+              </div>
+          </div>
+      </div>
+      <div class="ikai-wrap">
+          <div class="ikai" id="ikai8">
+              <div class="ikai-head">
+                  <div class="ikai-number">इकाई -VIII</div>
+                  <div class="ikai-title">हिन्दी नाटक</div>
+              </div>
+              <div class="ikai-content">
+                  <div class="ikai-cnts"><span id="spani102">भारतेन्दु - अंधेर नगरी, भारत दुर्दशा</span></div>
+                  <div class="ikai-cnts"><span id="spani103">जयशंकर प्रसाद - चन्द्रगुप्त, स्कंदगुप्त, ध्रुवस्वामिनी</span></div>
+                  <div class="ikai-cnts"><span id="spani104">धर्मवीरभारती - अंधायुग</span></div>
+                  <div class="ikai-cnts"><span id="spani105">लक्ष्मीनारायण लाल - सिंदूर की होली</span></div>
+                  <div class="ikai-cnts"><span id="spani106">मोहन राकेश - आधे-अधूरे, आषाढ़ का एक दिन</span></div>
+                  <div class="ikai-cnts"><span id="spani107">हबीब तनवीर - आगरा बाज़ार</span></div>
+                  <div class="ikai-cnts"><span id="spani108">सर्वेश्वरदयाल सक्सेना - बकरी</span></div>
+                  <div class="ikai-cnts"><span id="spani109">शंकरशेष - एक और द्रोणाचार्य</span></div>
+                  <div class="ikai-cnts"><span id="spani110">उपेन्द्रनाथ अश्क - अंजो दीदी</span></div>
+                  <div class="ikai-cnts"><span id="spani111">मन्नू भंडारी - महाभोज</span></div>
+              </div>
+          </div>
+      </div>
+      <div class="ikai-wrap">
+          <div class="ikai" id="ikai9">
+              <div class="ikai-head">
+                  <div class="ikai-number">इकाई-IX</div>
+                  <div class="ikai-title">हिन्दी निबंध</div>
+              </div>
+              <div class="ikai-content">
+                  <div class="ikai-cnts"><span id="spani112">भारतेन्दु - दिल्ली दरबार दर्पण, भारतवर्षोन्नति कैसे हो सकती है</span></div>
+                  <div class="ikai-cnts"><span id="spani113">प्रताप नारायण मिश्र - शिवमूर्तति</span></div>
+                  <div class="ikai-cnts"><span id="spani114">बाल कृष्ण भट्ट-शिवशंभु के चिट्ठे</span></div>
+                  <div class="ikai-cnts"><span id="spani115">रामचन्द्र शुक्ल - कविता क्या है</span></div>
+                  <div class="ikai-cnts"><span id="spani116">हजारी प्रसाद द्विवेदी - नाखून क्यों बढ़ते हैं</span></div>
+                  <div class="ikai-cnts"><span id="spani117">विद्यानिवास मिश्र - मेरे राम का मुकुट भीग रहा है</span></div>
+                  <div class="ikai-cnts"><span id="spani118">अध्यापक पूर्ण सिंह - मजदूरी और प्रेम</span></div>
+                  <div class="ikai-cnts"><span id="spani119">कुबेरनाथ राय - उत्तराफाल्गुनी के आस-पास</span></div>
+                  <div class="ikai-cnts"><span id="spani120">विवेकी राय - उठ जाग मुसाफिर</span></div>
+                  <div class="ikai-cnts"><span id="spani121">नामवर सिंह - संस्कृति और सौंदर्य</span></div>
+              </div>
+          </div>
+      </div>
+      <div class="ikai-wrap">
+          <div class="ikai" id="ikai10">
+              <div class="ikai-head">
+                  <div class="ikai-number">इकाई -X</div>
+                  <div class="ikai-title">आत्मकथा, जीवनी तथा अन्य गद्य विधाएं</div>
+              </div>
+              <div class="ikai-content">
+                  <div class="ikai-cnts"><span id="spani122">रामवृक्ष बेनीपुरी - माटी की मूरतें</span></div>
+                  <div class="ikai-cnts"><span id="spani123">महादेवी वर्मा - ठकुरी बाबा</span></div>
+                  <div class="ikai-cnts"><span id="spani124">तुलसीराम - मुर्दहिया</span></div>
+                  <div class="ikai-cnts"><span id="spani125">शिवरानी देबी - प्रेमचन्द घर में</span></div>
+                  <div class="ikai-cnts"><span id="spani126">मन्नू भंडारी - एक कहानी यह भी</span></div>
+                  <div class="ikai-cnts"><span id="spani127">विष्णु प्रभाकर - आवारा मसीहा</span></div>
+                  <div class="ikai-cnts"><span id="spani128">हरिवंशराय बच्चन - क्या भूलूँ क्या याद करूँ</span></div>
+                  <div class="ikai-cnts"><span id="spani129">रमणिका गुप्ता - आपहुदरी</span></div>
+                  <div class="ikai-cnts"><span id="spani130">हरिशंकर परसाई - भोलाराम का जीव</span></div>
+                  <div class="ikai-cnts"><span id="spani131">कृष्ण चन्दर - जामुन का पेड़</span></div>
+                  <div class="ikai-cnts"><span id="spani132">दिनकर - संस्कृति के चार अध्याय</span></div>
+                  <div class="ikai-cnts"><span id="spani133">मुक्तिबोध - एक लेखक की डायरी</span></div>
+                  <div class="ikai-cnts"><span id="spani134" class="level0">राहुल सांकृत्यायन - मेरी तिब्बत यात्रा</span></div>
+                  <div class="ikai-cnts"><span id="spani135" class="level0">अज्ञेय - अरे यायावर रहेगा याद</span></div>
+              </div>
+          </div>
+      </div>
+    </div>
   </div>
   <div class="mySlides"  style="width:100%;display:none">
   </div>
