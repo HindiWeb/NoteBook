@@ -2135,7 +2135,9 @@ $(document).ready(function(){
               Class:'wiki-w',
               msgClass : 'wiki-d',
               callback:i=>{
-                xD.close();
+                setTimeout(() => {
+                  xD.close();                 
+                }, 200);
                 resumeBodyScroll();
               }
 
@@ -2478,7 +2480,10 @@ document.addEventListener('DOMContentLoaded', function() {
                   msgClass : 'link-d',
                   overlayClass : 'link-ow',
                   callback:i=>{
-                    xL.close();
+                    setTimeout(() => {
+                      xL.close();                 
+                    }, 200);
+                    
                     resumeBodyScroll();
                   }
                 }).open();
