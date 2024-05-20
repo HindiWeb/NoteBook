@@ -11,7 +11,7 @@
         }
     ],
     "form_factor": "none",
-    "theme_color":"#ebe72d",
-    "background_color":"#775e4a",
+    "theme_color":"#222",
+    "background_color":"#e9e8a5",
     "description":"Let's study something... "
 }
