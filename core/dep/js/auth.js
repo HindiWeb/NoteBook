@@ -66,7 +66,7 @@ $(document).ready(function() {
     setInterval(checkSession, 600000); // 10 minutes
 
     window.saveProgress = function (id,level) {
-        popup('wait...');
+        // popup('wait...');
         $.ajax({
             url : serverUrl + 'phps/note.php',
             type : 'POST',
