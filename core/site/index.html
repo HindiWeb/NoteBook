@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primary UI</title>
+    <link rel="stylesheet" href="../Ex/css/w3.css"> 
+    <link rel="stylesheet" href="../Ex/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Ex/css/all.min.css">
+    <link rel="stylesheet" href="../dep/css/syllabus.css">
+    <link rel="stylesheet" href="../dep/css/sidebar.css">
+    <link rel="stylesheet" href="../dep/css/style.css">
+    <script src="../Ex/jquery-3.7.1.min.js"></script>
+    <script src="../Ex/Upopup-2.2.3.min.js"></script>
+    <script src="../dep/js/get.js"></script>
+    <script src="../dep/js/auth.js"></script>
+    <link rel="stylesheet" href="../Ex/quill-2.0.0-beta2/quill.snow.css">
+    <script src="../Ex/quill-2.0.0-beta2/quill.js"></script>
+    <link rel="manifest" href="manifest.json">
+
+    <script>
+        loggingOn = true
+        var syllabus;
+        async function loadsyllabus() {
+            try {
+                let response = await fetch('../data/syllabus.json');
+                let data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Error loading result.json:', error);
+                return null;
+            }
+        }
+        loadsyllabus().then(function (d) {
+            syllabus = d;
+            if (loggingOn) console.log(syllabus);
+            document.dispatchEvent(new Event('dataLoaded'));
+        });
+    </script>
+</head>
+<body>
+    <div class="page container p-0">
+
+        <div  id="login-form"></div>
+
+        <div class="top-button position-fixed top-0 z-1">
+            <button id="toggle-sidebar" class="border"> <i class="fa fa-list-ul"></i> 
+            </button>
+        </div>
+        <div id="sidebar" class="sidebar z-2">
+            <div class="sidebar-header">
+        <!-- Logged-in Section -->                
+                <div id="logged-in-section">
+                    <div class="d-flex justify-content-between   cursor-default">
+                        <div title="Your username" class="username w3-text-pink m-1 w3-shadow"></div>
+                        <div id="logout-btn" class="flex-end border mr-0 btn px-2 w3-text-white" title="Log out"><i class="fa fa-sign-out-alt"></i></div>
+                    </div>
+                </div>
+                <div class="btn w-100 border w3-grey"> UGC-NET JRF </div>
+                <div class="btn w-100 border w3-grey" hidden> CUET PG </div>
+                <div class="btn w-100 border w3-grey" hidden> To-do </div>
+            </div>
+            <hr>
+            <div class="min">Jump to..</div>
+            <div class="sidebar-QL" id="sidebar-QL"></div>
+        </div>
+
+        <div class="sy-outer my-5 mx-1">
+            <div class="sy-core">
+                <div id="sy" class="sy">
+                    <div class="unit" id="">
+                        <div class="text-center"><div  class="spinner m-auto text-center"></div></div>
+                        <div class="heading">
+                            <div class="unit-number"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+    snippet('login.html','#login-form');
+
+document.addEventListener('dataLoaded', function() {
+       console.log(sy);          // Your code here
+       id= getName(getID('Migration'));
+       if (loggingOn) console.log('id',id);
+       let html = "";
+       result = syllabus;
+    for (let unit in result) {
+        html += `<div class="unit" id="${unit}">
+                    <div class="heading">
+                        <div class="unit-number">${unit}</div>
+                        <h2 class="unit-name">${result[unit].name}</h2>
+                    </div>
+                    <div class="unit-contents">
+                        <ul>`;
+        result[unit].items.forEach(item => {
+            html += `<li class="topic" data-id="${item.id}" id="${item.id}">
+                        <span  class="topic-name">${item.name}</span>
+                        <div class="item-control">
+                            <button class="item-control-btn"><i class="fa fa-ellipsis-vertical"> </i></button>
+                            <div class="ic-outer z-1 position-absolute m-2 p-2 ">
+                                <div class="ic-inner w3-grey p-2 border px-2 rounded d-flex row">
+                                    <div class="level-up btn  w-100"> <i class="fa fa-circle-arrow-up"></i> Level up</div>
+                                    <button class="editBtn btn  btn-primary" hidden>Edit</button>
+                                    <div class="note btn  w-100"> <i class="fa fa-clipboard-list"></i>  Notes  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notewall-outer">
+                            <div class="notewall"> 
+                                <div class="editor mb-2 fs-6">
+                                    <div class="text-center">
+                                        <div class="text-center m-auto loader sm"></div>
+                                    </div>                                
+                                </div>
+                                <div class="btns m-auto text-end mb-3">
+                                    <button class="editBtn btn btn-sm btn-outline-primary" style="display: none;" >Edit</button>
+                                    <button class="saveBtn btn btn-success" style="display: none;">Save</button> 
+                                </div>
+                            </div>
+                        </div>
+                    </li>`;
+        });
+        html += `       </ul> 
+                    </div>
+                </div>`;
+    }
+
+    // Inserting the generated HTML into the page
+    $('#sy').html(html);
+
+    // sidebar
+    setQl(syllabus);
+    document.dispatchEvent(new Event('syLoaded'));
+
+
+});
+
+function setQl(syllabus){
+    html='';
+    count = 1;
+    for(let unit in syllabus) {
+        html+= `<div title="${syllabus[unit].name}" class='has-data-link btn' data-link="${unit}">${count}. ${syllabus[unit].name}</div>`;
+        count++;
+    }
+    $('#sidebar-QL').html(html)        
+}
+
+
+// SIDEBAR
+
+$('#toggle-sidebar').on('click',function(){
+    $('#sidebar').toggleClass('active');
+});
+
+function hideSidebar(){
+    $('#sidebar').removeClass('active');
+}
+$('body').on('click',function(e){
+    // if (loggingOn) console.log(e.target);
+    if($('#sidebar').hasClass('active') &&  !$(e.target).closest('#sidebar, #toggle-sidebar').length) {
+        $('#sidebar').removeClass('active');
+    }
+    if($(e.target).hasClass('has-data-link')){
+        let link = $(e.target).data('link');
+        $('#'+link)[0].scrollIntoView();
+        hideSidebar()
+    } else if($(e.target).hasClass('btn')) {
+        hideSidebar()
+    }
+
+    if (!$(e.target).closest('.ic-outer').length && (!$(e.target).hasClass('item-control-btn') && !$(e.target).hasClass('fa'))) {
+        $('.ic-outer').removeClass('active')
+    }
+
+            
+});
+</script>
+<script>
+    if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(registration => console.log(
+        'App :', registration.active.state
+        //'Service Worker registered with scope:',registration.scope
+      ))
+      .catch(error => console.error('Service Worker registration failed:', error));
+    }
+</script>
+<script src="../dep/js/ic.js"></script>
+<script src="../dep/js/notewall.js"></script>
+</body>
+</html>

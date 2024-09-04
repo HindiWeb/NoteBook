@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Making things up - Syllabus</title>
+    <script src="../../Ex/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="../../Ex/css/all.min.css">
+
+</head>
+<body>
+
+    <h1>The test ground</h1>
+    <textarea name="" id="sy">
+
+Unit-1 : Micro Economics
+        Theory of Consumer Behaviour
+        Theory of Production and Costs
+        Decision making under uncertainty Attitude towards Risk
+        Game Theory - Non Cooperative games
+        Market Structures, competitive and non-competitive equilibria and their efficiency properties
+        Factor Pricing
+        General Equilibrium Analysis
+        Efficiency Criteria: Pareto-Optimality, Kaldor - Hicks and Wealth Maximization
+        Welfare Economics: Fundamental Theorems , Social Welfare Function
+        Asymmetric Information: Adverse Selection and Moral Hazard
+        
+Unit-2 : Macro Economics
+        National Income: Concepts and Measurement
+        Determination of output and employment: Classical & Keynesian Approach
+        Consumption Function
+        Investment Function
+        Multiplier and Accelerator
+        Demand for Money
+        Supply of Money
+        IS - LM Model Approach
+        Inflation and Phillips Curve Analysis
+        Business Cycles
+        Monetary and Fiscal Policy
+        Rational Expectation Hypothesis and its critique
+        
+
+Unit-3 : Statistics and Econometrics
+        Probability Theory: Concepts of probability, Distributions, Moments, Central Limit theorem
+        Descriptive Statistics - Measures of Central tendency & dispersions, Correlation, Index Numbers
+        Sampling methods & Sampling Distribution
+        Statistical Inferences, Hypothesis testing
+        Linear Regression Models and their properties - BLUE
+        Identification Problem
+        Simultaneous Equation Models - recursive and non-recursive
+        Discrete choice models
+        Time Series Analysis
+        
+Unit-4 : Mathematical Economics
+        Sets, functions and continuity, sequence, series
+        Differential Calculus and its Applications
+        Linear Algebra - Matrices, Vector Spaces
+        Static Optimization Problems and their applications
+        Input-Output Model, Linear Programming
+        Difference and Differential equations with applications
+
+        
+Unit-5 : International Economics
+        International Trade: Basic concepts and analytical tools
+        Theories of International Trade
+        International Trade under imperfect competition
+        Balance of Payments: Composition, Equilibrium and Disequilibrium and Adjustment Mechanisms
+        Exchange Rate: Concepts and Theories
+        Foreign Exchange Market and Arbitrage
+        Gains from Trade, Terms of Trade, Trade Multiplier
+        Tariff and Non-Tariff barriers to trade; Dumping
+        GATT, WTO and Regional Trade Blocks; Trade Policy Issues
+        IMF & World Bank
+
+        
+Unit-6 : Public Economics
+        Market Failure and Remedial Measures: Asymmetric Information, Public Goods, Externality
+        Regulation of Market - Collusion and Consumers' Welfare
+        Public Revenue: Tax & Non-Tax Revenue, Direct & Indirect Taxes, Progressive and non-Progressive Taxation, Incidence and Effects of Taxation
+        Public expenditure
+        Public Debt and its management
+        Public Budget and Budget Multiplier
+        Fiscal Policy and its implications
+         
+Unit-7 : Money and Banking
+        Components of Money Supply
+        Central Bank
+        Commercial Banking
+        Instruments and Working of Monetary Policy
+        Non-banking Financial Institutions
+        Capital Market and its Regulation
+        
+Unit-8 : Growth and Development Economics
+        Economic Growth and Economic Development
+        Theories of Economic Development: Adam Smith, Ricardo, Marx, Schumpeter, Rostow, Balanced & Unbalanced growth, Big Pushapproach.
+        Models of Economic Growth: Harrod-Domar, Solow, Robinson, Kaldor
+        Technical progress - Disembodied & embodied; endogenous growth
+        Indicators of Economic Development: PQLI, HDI, SDGs
+        Poverty and Inequalities - Concepts and Measurement
+        Social Sector Development: Health, Education, Gender
+        
+Unit-9 : Environmental Economics and Demography
+        Environment as a Public Good
+        Market Failure
+        Coase Theorem
+        Cost-Benefit Analysis and Compensation Criteria
+        Valuation of Environmental Goods
+        Theories of Population
+        Concepts and Measures: Fertility, Morbidity, Mortality
+        Age Structure, Demographic Dividend
+        Life Table
+        Migration
+        
+Unit-10 : Indian Economy
+        Economic Growth in India: Pattern and Structure
+        Agriculture: Pattern & Structure of Growth, Major Challenges, Policy Responses
+        Industry: Pattern & Structure of Growth, Major Challenges, Policy Responses
+        Services: Pattern & Structure of Growth, Major Challenges, Policy Responses
+        Rural Development - Issues, Challenges & Policy Responses
+        Urban Development - Issues, Challenges and Policy Responses.
+        Foreign Trade: Structure and Direction, BOP, Flow of Foreign Capital, Trade Policies
+        Infrastructure Development: Physical and Social; Public-Private Partnerships
+        Reforms in Land, Labour and Capital Markets
+        Centre-State Financial Relations and Finance Commissions of India; FRBM
+        Poverty, Inequality & Unemployment
+    </textarea>
+    <div id="output"></div>
+    <script>
+        loggingOn = true;
+        obj= {};
+        sy = $('#sy').val()
+        sy = sy.split('\n')
+        sy.forEach(e => {
+            e = e.trim()
+            if(!e) return
+            if(e.startsWith('')){}
+        });
+        if (loggingOn) console.log(obj);
+        
+//  $(document).ready(function() {
+//     let text = $('#sy').val().trim();
+//     let lines = text.split('\n');
+//     let result = {};
+//     let currentUnit = "";
+
+//     // Helper function to generate a simple hex ID
+//     function generateHexId() {
+//         return Math.floor(Math.random() * 0xFFFFFF).toString(16);
+//     }
+//     // Parsing the text into an object
+//     lines.forEach(line => {
+//         line = line.trim();
+//         if(!line)return
+        
+//         if (line.startsWith("Unit")) {
+//             let [unit, name] = line.split(" : ");
+//             currentUnit = unit.trim();
+//             result[currentUnit] = {
+//                 name: name.trim(),
+//                 items: []
+//             };
+//         } else if (currentUnit) {
+//             let item = {
+//                 id: generateHexId(),
+//                 name: line
+//             };
+//             result[currentUnit].items.push(item);        }
+//     });
+
+//     // Generating HTML from the object
+//     console.log(result);
+    
+//     let html = "";
+//     for (let unit in result) {
+//         html += `<h6>${unit}</h6><h2>${result[unit].name}</h2><ul>`;
+//         result[unit].items.forEach(item => {
+//             html += `<li>${item.name}</li>`;
+//         });
+//         html += `</ul>`;
+//     }
+
+//     // Inserting the generated HTML into the page
+//     $('#output').html(html);
+// });
+
+$(document).ready(function() {
+    let text = $('#sy').val().trim();
+    let lines = text.split('\n');
+    let result = {};
+    let nameToIdMap = {};
+    let idToNameMap = {};
+    let currentUnit = "";
+
+    // Helper function to generate a unique hex ID
+    function generateHexId() {
+        let id;
+        do {
+            id = Math.floor(Math.random() * 0xFFFFFF).toString(16).padStart(6, '0');
+        } while (idToNameMap[id]); // Ensure ID is unique
+        return id;
+    }
+
+    // Parsing the text into an object with unique hex IDs
+    lines.forEach(line => {
+        line = line.trim();
+        if(!line)return
+        
+        if (line.startsWith("Unit")) {
+            let [unit, name] = line.split(" : ");
+            currentUnit = unit.trim();
+            result[currentUnit] = {
+                name: name.trim(),
+                items: []
+            };
+        } else if (currentUnit) {
+            let itemName = line;
+            let itemId = generateHexId();
+
+            result[currentUnit].items.push({ id: itemId, name: itemName });
+
+            // Store in mapping objects
+            nameToIdMap[itemName] = itemId;
+            idToNameMap[itemId] = itemName;
+        }
+    });
+
+    console.log(result);
+    
+    // Function to get ID by name
+    function getID(name) {
+        return nameToIdMap[name] || null;
+    }
+
+    // Function to get name by ID
+    function getName(id) {
+        return idToNameMap[id] || null;
+    }
+
+    // Generating HTML from the object with unique hex IDs
+    let html = "";
+    for (let unit in result) {
+        html += `<h2>${result[unit].name}</h2><ul>`;
+        result[unit].items.forEach(item => {
+            html += `<li id="${item.id}">${item.name}</li>`;
+        });
+        html += `</ul>`;
+    }
+
+    // Inserting the generated HTML into the page
+    $('#output').html(html);
+
+    // Example usage:
+    console.log(getID("Migration")); // Outputs the unique ID for "Algebra"
+    console.log(getName("d7b3c8")); // Outputs "Geometry" if that was the ID
+});
+        
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "EcoNET progress tracker",
+  "short_name": "EcoNET",
+  "start_url": "../",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "199x199.png",
+      "sizes": "199x199",
+      "type": "image/png"
+      
+    }
+  ],
+  "form_factor": "none"
+}

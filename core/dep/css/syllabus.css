@@ -1,0 +1,89 @@
+/* this is BOUT CSS of the syllabus page */
+.sy-core {
+    max-width: 800px;
+    margin:auto;
+    border:1px solid #999;
+}
+#sy {
+    margin: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.unit {
+    /* border-bottom: 2px solid; */
+    padding:32px 0;
+    margin:16px;
+}
+.unit-number , .min {
+    font-size: smaller;
+    color: rgb(125, 144, 144);
+}
+.unit .heading h2{
+    margin-top: 8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.unit-contents ul {
+    margin-block-start:0;
+    padding-inline-start: 8px;
+}
+.unit-contents li {
+    display: list-item;
+    list-style-type: square;
+    margin:3px;
+    border-bottom: 1px solid #ccc;
+    padding:3px;
+    cursor:default;
+}
+/* .unit-contents span:hover {
+    background:#d7bbbb
+} */
+
+.item-control {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.item-control-btn {
+    align-self: flex-end;
+    text-align: end;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    padding:0 8px;
+}
+.ic-inner {
+    border: 1px solid ;
+    box-shadow: 8px 8px 15px -15px  ;
+}
+.ic-outer {
+    display: none;
+    transition: all 2s;
+}
+.ic-outer.active {
+    display: block;
+}
+
+/* notes */
+
+/* .editor {
+    height: 1400px;
+} */
+.notewall {
+    /* border: 1px solid #ccc; */
+    /* padding: 15px; */
+    /* display: none; */
+    height: 0px;
+    overflow: hidden;
+    /* transition: height .3s; */
+    /* border-radius: 5px; */
+    margin-top: 20px;
+}
+.notewall.active {
+    /* display: block; */
+    height: 100%;
+    overflow: auto;
+}
+.ql-toolbar.ql-snow {
+    display: none; /* Hide toolbar initially */
+}
+.ql-editor {
+    border-top: 1px solid #ccc;
+}

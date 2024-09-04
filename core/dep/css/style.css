@@ -1,0 +1,96 @@
+.spinner {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+    margin-bottom: 10px;
+}
+.spinner.sm {
+    width: 25px;
+    height: 25px;
+    animation-duration: .7s;
+    border-width: 3px;
+}
+/* Keyframes for spinning animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Ensure the loading animation is centered and properly spaced */
+
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+    height: 4px;
+    width: 130px;
+    --c:no-repeat linear-gradient(#6100ee 0 0);
+    background: var(--c),var(--c),#d7b8fc;
+    background-size: 60% 100%;
+    animation: l16 3s infinite;
+  }
+  @keyframes l16 {
+    0%   {background-position:-150% 0,-150% 0}
+    66%  {background-position: 250% 0,-150% 0}
+    100% {background-position: 250% 0, 250% 0}
+  }
+
+#logged-in-section {
+    display: none;
+}
+#login-form {
+    display: none;
+}
+/* snippet LOG-IN */
+.login-cover {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgb(67, 67, 67) ;
+}
+.login-inner {
+    width: 300px;
+    margin: auto;
+}
+
+
+
+[data-level="0"] .topic-name {
+    font-weight: normal;
+}
+
+[data-level="1"] .topic-name {
+    font-weight: bold;
+}
+
+[data-level="2"] .topic-name {
+    background-color: #ffeb3b; /* Bright Yellow */
+}
+
+
+[data-level="3"] .topic-name {
+    background-color: #8bc34a; /* Lime Green */
+}
+
+[data-level="4"] .topic-name {
+    background-color: #9c27b0; /* Purple */
+    color: #ffff00;
+}
+
+    /* background-color: #03a9f4; Sky Blue */
+    #multi-color-progress-bar {
+        width: 100%;
+        height: 30px;
+        background-color: #e0e0e0; /* Background color for the empty part */
+        display: flex; /* To place segments side by side */
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .progress-segment {
+        height: 100%;
+        transition: width 0.5s ease;
+    }

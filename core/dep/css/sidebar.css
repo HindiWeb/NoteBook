@@ -1,0 +1,41 @@
+/* sidebar */
+
+#sidebar.active{
+    left:0;
+}
+
+#sidebar {
+    --width:250px;
+    display: block;
+    width: var(--width);
+    position: fixed;
+    height: 100vh;
+    overflow: auto;
+    top: 0;
+    transition: left .3s;
+    transition-delay: .2s;
+    left: calc(1px - var(--width));
+    z-index: 9px;
+    border:0px solid;
+    background-color: rgba(0, 0, 0, 0.88);
+    color: #fff;
+    padding: 8px;
+    /*   */
+    /* left:0 */
+}
+.sidebar-QL{
+    margin:8px;
+}
+.sidebar-header .btn{
+    padding: 3px;
+    margin:3px;
+}
+.sidebar-QL div{
+    color: #fff;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: left;
+}
+

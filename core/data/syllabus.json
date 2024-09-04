@@ -1,0 +1,404 @@
+{
+    "Unit-1": {
+        "name": "Micro Economics",
+        "items": [
+            {
+                "id": "d8fd34b",
+                "name": "Theory of Consumer Behaviour"
+            },
+            {
+                "id": "d21b521",
+                "name": "Theory of Production and Costs"
+            },
+            {
+                "id": "d930f6f",
+                "name": "Decision making under uncertainty Attitude towards Risk"
+            },
+            {
+                "id": "d7de891",
+                "name": "Game Theory - Non Cooperative games"
+            },
+            {
+                "id": "d006bf5",
+                "name": "Market Structures, competitive and non-competitive equilibria and their efficiency properties"
+            },
+            {
+                "id": "d5770bd",
+                "name": "Factor Pricing"
+            },
+            {
+                "id": "d697074",
+                "name": "General Equilibrium Analysis"
+            },
+            {
+                "id": "ddd76e6",
+                "name": "Efficiency Criteria: Pareto-Optimality, Kaldor - Hicks and Wealth Maximization"
+            },
+            {
+                "id": "d83d8cf",
+                "name": "Welfare Economics: Fundamental Theorems , Social Welfare Function"
+            },
+            {
+                "id": "d686b5e",
+                "name": "Asymmetric Information: Adverse Selection and Moral Hazard"
+            }
+        ]
+    },
+    "Unit-2": {
+        "name": "Macro Economics",
+        "items": [
+            {
+                "id": "d7efd7e",
+                "name": "National Income: Concepts and Measurement"
+            },
+            {
+                "id": "db66d42",
+                "name": "Determination of output and employment: Classical & Keynesian Approach"
+            },
+            {
+                "id": "dfcf31d",
+                "name": "Consumption Function"
+            },
+            {
+                "id": "d3cb462",
+                "name": "Investment Function"
+            },
+            {
+                "id": "dd51b65",
+                "name": "Multiplier and Accelerator"
+            },
+            {
+                "id": "d00ba75",
+                "name": "Demand for Money"
+            },
+            {
+                "id": "da6c5c2",
+                "name": "Supply of Money"
+            },
+            {
+                "id": "dd1382a",
+                "name": "IS - LM Model Approach"
+            },
+            {
+                "id": "de53692",
+                "name": "Inflation and Phillips Curve Analysis"
+            },
+            {
+                "id": "d49d102",
+                "name": "Business Cycles"
+            },
+            {
+                "id": "d5fae69",
+                "name": "Monetary and Fiscal Policy"
+            },
+            {
+                "id": "d9795ee",
+                "name": "Rational Expectation Hypothesis and its critique"
+            }
+        ]
+    },
+    "Unit-3": {
+        "name": "Statistics and Econometrics",
+        "items": [
+            {
+                "id": "d4b2288",
+                "name": "Probability Theory: Concepts of probability, Distributions, Moments, Central Limit theorem"
+            },
+            {
+                "id": "d89092e",
+                "name": "Descriptive Statistics - Measures of Central tendency & dispersions, Correlation, Index Numbers"
+            },
+            {
+                "id": "da64388",
+                "name": "Sampling methods & Sampling Distribution"
+            },
+            {
+                "id": "de21952",
+                "name": "Statistical Inferences, Hypothesis testing"
+            },
+            {
+                "id": "d3c7dae",
+                "name": "Linear Regression Models and their properties - BLUE"
+            },
+            {
+                "id": "d0c5a87",
+                "name": "Identification Problem"
+            },
+            {
+                "id": "d5dae72",
+                "name": "Simultaneous Equation Models - recursive and non-recursive"
+            },
+            {
+                "id": "dce39a0",
+                "name": "Discrete choice models"
+            },
+            {
+                "id": "d8e4715",
+                "name": "Time Series Analysis"
+            }
+        ]
+    },
+    "Unit-4": {
+        "name": "Mathematical Economics",
+        "items": [
+            {
+                "id": "df6ccc2",
+                "name": "Sets, functions and continuity, sequence, series"
+            },
+            {
+                "id": "d2029e2",
+                "name": "Differential Calculus and its Applications"
+            },
+            {
+                "id": "d8a65c0",
+                "name": "Linear Algebra - Matrices, Vector Spaces"
+            },
+            {
+                "id": "d7b754d",
+                "name": "Static Optimization Problems and their applications"
+            },
+            {
+                "id": "d0fce8f",
+                "name": "Input-Output Model, Linear Programming"
+            },
+            {
+                "id": "ddcda28",
+                "name": "Difference and Differential equations with applications"
+            }
+        ]
+    },
+    "Unit-5": {
+        "name": "International Economics",
+        "items": [
+            {
+                "id": "d5b7024",
+                "name": "International Trade: Basic concepts and analytical tools"
+            },
+            {
+                "id": "dc19b4f",
+                "name": "Theories of International Trade"
+            },
+            {
+                "id": "d5315d1",
+                "name": "International Trade under imperfect competition"
+            },
+            {
+                "id": "d08e617",
+                "name": "Balance of Payments: Composition, Equilibrium and Disequilibrium and Adjustment Mechanisms"
+            },
+            {
+                "id": "d03e7c8",
+                "name": "Exchange Rate: Concepts and Theories"
+            },
+            {
+                "id": "d55c75e",
+                "name": "Foreign Exchange Market and Arbitrage"
+            },
+            {
+                "id": "d822af3",
+                "name": "Gains from Trade, Terms of Trade, Trade Multiplier"
+            },
+            {
+                "id": "dfe62e1",
+                "name": "Tariff and Non-Tariff barriers to trade; Dumping"
+            },
+            {
+                "id": "da1b0e1",
+                "name": "GATT, WTO and Regional Trade Blocks; Trade Policy Issues"
+            },
+            {
+                "id": "d07d5d0",
+                "name": "IMF & World Bank"
+            }
+        ]
+    },
+    "Unit-6": {
+        "name": "Public Economics",
+        "items": [
+            {
+                "id": "dc70e23",
+                "name": "Market Failure and Remedial Measures: Asymmetric Information, Public Goods, Externality"
+            },
+            {
+                "id": "d7078a0",
+                "name": "Regulation of Market - Collusion and Consumers' Welfare"
+            },
+            {
+                "id": "de5d6f7",
+                "name": "Public Revenue: Tax & Non-Tax Revenue, Direct & Indirect Taxes, Progressive and non-Progressive Taxation, Incidence and Effects of Taxation"
+            },
+            {
+                "id": "d329d15",
+                "name": "Public expenditure"
+            },
+            {
+                "id": "d881694",
+                "name": "Public Debt and its management"
+            },
+            {
+                "id": "d10717f",
+                "name": "Public Budget and Budget Multiplier"
+            },
+            {
+                "id": "d8c7f8d",
+                "name": "Fiscal Policy and its implications"
+            }
+        ]
+    },
+    "Unit-7": {
+        "name": "Money and Banking",
+        "items": [
+            {
+                "id": "df9dd51",
+                "name": "Components of Money Supply"
+            },
+            {
+                "id": "dfe630a",
+                "name": "Central Bank"
+            },
+            {
+                "id": "d7e2c74",
+                "name": "Commercial Banking"
+            },
+            {
+                "id": "d5d1885",
+                "name": "Instruments and Working of Monetary Policy"
+            },
+            {
+                "id": "dd9b915",
+                "name": "Non-banking Financial Institutions"
+            },
+            {
+                "id": "d42cd35",
+                "name": "Capital Market and its Regulation"
+            }
+        ]
+    },
+    "Unit-8": {
+        "name": "Growth and Development Economics",
+        "items": [
+            {
+                "id": "d08cc6d",
+                "name": "Economic Growth and Economic Development"
+            },
+            {
+                "id": "dc08abc",
+                "name": "Theories of Economic Development: Adam Smith, Ricardo, Marx, Schumpeter, Rostow, Balanced & Unbalanced growth, Big Pushapproach."
+            },
+            {
+                "id": "d0e7dab",
+                "name": "Models of Economic Growth: Harrod-Domar, Solow, Robinson, Kaldor"
+            },
+            {
+                "id": "deabfc7",
+                "name": "Technical progress - Disembodied & embodied; endogenous growth"
+            },
+            {
+                "id": "d5721fb",
+                "name": "Indicators of Economic Development: PQLI, HDI, SDGs"
+            },
+            {
+                "id": "de9902f",
+                "name": "Poverty and Inequalities - Concepts and Measurement"
+            },
+            {
+                "id": "d07414b",
+                "name": "Social Sector Development: Health, Education, Gender"
+            }
+        ]
+    },
+    "Unit-9": {
+        "name": "Environmental Economics and Demography",
+        "items": [
+            {
+                "id": "d0258cb",
+                "name": "Environment as a Public Good"
+            },
+            {
+                "id": "d48084a",
+                "name": "Market Failure"
+            },
+            {
+                "id": "d18dbbc",
+                "name": "Coase Theorem"
+            },
+            {
+                "id": "d9f002d",
+                "name": "Cost-Benefit Analysis and Compensation Criteria"
+            },
+            {
+                "id": "dbce77f",
+                "name": "Valuation of Environmental Goods"
+            },
+            {
+                "id": "d3dde9f",
+                "name": "Theories of Population"
+            },
+            {
+                "id": "d90668b",
+                "name": "Concepts and Measures: Fertility, Morbidity, Mortality"
+            },
+            {
+                "id": "db8dd21",
+                "name": "Age Structure, Demographic Dividend"
+            },
+            {
+                "id": "d5f93b4",
+                "name": "Life Table"
+            },
+            {
+                "id": "dbec497",
+                "name": "Migration"
+            }
+        ]
+    },
+    "Unit-10": {
+        "name": "Indian Economy",
+        "items": [
+            {
+                "id": "d84d5ca",
+                "name": "Economic Growth in India: Pattern and Structure"
+            },
+            {
+                "id": "de4a248",
+                "name": "Agriculture: Pattern & Structure of Growth, Major Challenges, Policy Responses"
+            },
+            {
+                "id": "dacf436",
+                "name": "Industry: Pattern & Structure of Growth, Major Challenges, Policy Responses"
+            },
+            {
+                "id": "dad65d7",
+                "name": "Services: Pattern & Structure of Growth, Major Challenges, Policy Responses"
+            },
+            {
+                "id": "dbdb57e",
+                "name": "Rural Development - Issues, Challenges & Policy Responses"
+            },
+            {
+                "id": "d2cf6a0",
+                "name": "Urban Development - Issues, Challenges and Policy Responses."
+            },
+            {
+                "id": "dbf3935",
+                "name": "Foreign Trade: Structure and Direction, BOP, Flow of Foreign Capital, Trade Policies"
+            },
+            {
+                "id": "d2eff63",
+                "name": "Infrastructure Development: Physical and Social; Public-Private Partnerships"
+            },
+            {
+                "id": "d35addf",
+                "name": "Reforms in Land, Labour and Capital Markets"
+            },
+            {
+                "id": "dfc30d0",
+                "name": "Centre-State Financial Relations and Finance Commissions of India; FRBM"
+            },
+            {
+                "id": "d74b4cf",
+                "name": "Poverty, Inequality & Unemployment"
+            }
+        ]
+    }
+}
