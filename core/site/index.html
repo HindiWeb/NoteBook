@@ -43,8 +43,8 @@
 
         <div  id="login-form"></div>
 
-        <div class="top-button position-fixed top-0 z-1">
-            <button id="toggle-sidebar" class="border"> <i class="fa fa-list-ul"></i> 
+        <div class="top-button position-fixed top-0 z-1 p-1">
+            <button id="toggle-sidebar" class="border fs-5 w3-cyan border-grey "> <i class="fa fa-list-ul p-1"></i> 
             </button>
         </div>
         <div id="sidebar" class="sidebar z-2">
@@ -66,7 +66,31 @@
         </div>
 
         <div class="sy-outer my-5 mx-1">
+            <div class="topic sy-core border-0 border-bottom m-1 " data-id="sem3en" id="sem3en" >
+                <!-- 3rd semester syllabus thing -->
+                 <div class="text-end  m-auto">
+                    <span class="note btn border-black border w3-button  fs-6 p-0 w3-light-blue w3-center rounded-0 px-2 m-1 "><span>3<sup>rd</sup> semester </span></span>
+                 </div>
+                <div class="notewall-outer">
+                    <div class="notewall"> 
+                        <div class="text-end">
+                        </div>
+                        <div class="editor mb-2 fs-6">
+                            <div class="text-center">
+                                <div class="text-center m-auto loader sm"></div>
+                            </div>                                
+                        </div>
+                        <div class="btns m-auto text-end mb-3">
+                            <button class="editBtn btn btn-sm btn-outline-primary" style="display: none;">Edit</button>
+                            <button class="saveBtn btn btn-success" style="display: none;">Save</button> 
+                        <button class="btn w3-button m-1 btn-sm border" onclick="$(this).closest('.topic').find('.notewall').removeClass('active')">Hide</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="sy-core">
+                <!-- Syllabus loading and other things -->
+                <h2 class="w3-center m-1 p-3  w3-text-blue border-bottom border-3   mb-5">UGC-NET Economics</h2>
                 <div id="sy" class="sy">
                     <div class="unit" id="">
                         <div class="text-center"><div  class="spinner m-auto text-center"></div></div>

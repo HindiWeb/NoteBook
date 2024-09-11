@@ -2,38 +2,6 @@ $(document).ready(function() {
     document.addEventListener('syLoaded',function(){
 
 
-    // Initialize Quill editor for each notice board
-    // $('.notewall').each(function() {
-    //     var $noticeBoard = $(this);
-    //     var quill = new Quill($noticeBoard.find('.editor')[0], {
-    //         theme: 'snow',
-    //         readOnly: true // Initially make it read-only
-    //     });
-
-    //     // Sample notice text
-    //     topic = $noticeBoard.closest('.topic').data('id');
-    //     note = 'j'//getNote(topic) || "Welcome! write a note or save links about <strong>" + getName(topic) + '.</strong>';
-    //     quill.clipboard.dangerouslyPasteHTML(note);
-
-    //     // Toggle edit mode
-    //     $noticeBoard.find('.editBtn').on('click', function() {
-    //         quill.enable(true); // Enable editing
-    //         $noticeBoard.find('.ql-toolbar').show(); // Show toolbar
-    //         $noticeBoard.find('.editBtn').hide(); // Hide edit button
-    //         $noticeBoard.find('.saveBtn').show(); // Show save button
-    //     });
-
-    //     // Save the edited content
-    //     $noticeBoard.find('.saveBtn').on('click', function() {
-    //         quill.enable(false); // Disable editing
-    //         $noticeBoard.find('.ql-toolbar').hide(); //  toolbar
-    //         $noticeBoard.find('.editBtn').show(); // Show edit button
-    //         $noticeBoard.find('.saveBtn').hide(); // Hide save button
-    //         // You can save the content to a database here
-    //         var content = quill.root.innerHTML;
-    //         console.log("Saved content: ", content);
-    //     });
-    // });
 
     window.prepaireNotewall  = function(id){
         $.ajax({
@@ -58,33 +26,54 @@ $(document).ready(function() {
 
     function addQuill(id,note){
         if(!note) note = "Welcome! write a note or save links about <strong>" + getName(id) + '.</strong>';
-        var $noticeBoard = $('#'+id+' .notewall');
-        var quill = new Quill($noticeBoard.find('.editor')[0], {
-            theme: 'snow',
-            readOnly: true // Initially make it read-only
-        });
+        var $notewall = $('#'+id+' .notewall');
+
+        if(id=='sem3en'){
+            var quill = new Quill($notewall.find('.editor')[0], {
+                theme: 'snow',
+                readOnly: true, // Initially make it read-only
+                modules: {
+                    toolbar: [
+                        [{ 'header': [1, 2, 3, 4, false] }],
+                        ['bold', 'italic', 'underline', 'strike'],
+                        // [{ 'color': [] }, { 'background': [] }],
+                        ['link',],//'image'
+                        ['blockquote', ],//'code-block'
+                        [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                        [{ 'indent': '-1'}, { 'indent': '+1' }],
+                        ['clean']
+                    ]
+                }
+
+            });
+        } else {
+            var quill = new Quill($notewall.find('.editor')[0], {
+                theme: 'snow',
+                readOnly: true // Initially make it read-only
+            });
+        }
 
         // Sample notice text
-        topic = $noticeBoard.closest('.topic');
+        topic = $notewall.closest('.topic');
         $(topic).find('.editBtn').show();
 
         // note = 'j'//getNote(topic) || "Welcome! write a note or save links about <strong>" + getName(topic) + '.</strong>';
         quill.clipboard.dangerouslyPasteHTML(note);
 
         // Toggle edit mode
-        $noticeBoard.find('.editBtn').on('click', function() {
+        $notewall.find('.editBtn').on('click', function() {
             quill.enable(true); // Enable editing
-            $noticeBoard.find('.ql-toolbar').show(); // Show toolbar
-            $noticeBoard.find('.editBtn').hide(); // Hide edit button
-            $noticeBoard.find('.saveBtn').show(); // Show save button
+            $notewall.find('.ql-toolbar').show(); // Show toolbar
+            $notewall.find('.editBtn').hide(); // Hide edit button
+            $notewall.find('.saveBtn').show(); // Show save button
         });
 
         // Save the edited content
-        $noticeBoard.find('.saveBtn').on('click', function() {
+        $notewall.find('.saveBtn').on('click', function() {
             quill.enable(false); // Disable editing
-            $noticeBoard.find('.ql-toolbar').hide(); //  toolbar
-            $noticeBoard.find('.editBtn').show(); // Show edit button
-            $noticeBoard.find('.saveBtn').hide(); // Hide save button
+            $notewall.find('.ql-toolbar').hide(); //  toolbar
+            $notewall.find('.editBtn').show(); // Show edit button
+            $notewall.find('.saveBtn').hide(); // Hide save button
             // You can save the content to a database here
             var content = quill.root.innerHTML;
             saveNote(id,content);
