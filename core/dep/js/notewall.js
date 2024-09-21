@@ -18,6 +18,9 @@ $(document).ready(function() {
             },
             success : (data)=> {
                 if (loggingOn) console.log(data);
+                if(data.status === 'server_disconnected'){
+                    data.note = '<p style="color:red;font-weight:bold">Alert: </p><p>please refresh the page. server is dissconected.</p>';
+                }
                 addQuill(id,data.note);
             }
         })
