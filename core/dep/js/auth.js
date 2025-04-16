@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    window.serverUrl = 'https://neetiindia.org/wp-content/plugins/HindiWeb/protrac/core/';
-    // Function to handle AJAX responses
+    window.serverUrl = 'https://darkcyan-lyrebird-254340.hostingersite.com/public/econet/';
+    // Function to handle AJAX responseshttps://neetiindia.org/wp-content/plugins/HindiWeb/protrac/core/
     function handleResponse(response) {
         response = JSON.stringify(response)
         const result = JSON.parse(response);
