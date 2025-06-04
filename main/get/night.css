@@ -1,0 +1,8 @@
+
+body.night {
+    background-color: #282020;
+    color: #fff3fc;
+}
+body.night a {
+    color: skyblue;
+}
