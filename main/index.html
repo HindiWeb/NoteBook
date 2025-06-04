@@ -2534,9 +2534,9 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(event) {
             // Prevent default link behavior
             event.preventDefault();
-            searchUrl = this.getAttribute('href');
-            pauseBodyScroll();
-            $.ajax({
+            //searchUrl = this.getAttribute('href');
+            //pauseBodyScroll();
+            /*$.ajax({
               //url:'https://neetiindia.org/wp-content/plugins/HindiWeb/Demo/proxy.php?url='+searchUrl,//../proxy.php
 	      url: searchUrl,
               method :'GET',
@@ -2579,13 +2579,14 @@ document.addEventListener('DOMContentLoaded', function() {
             //   }
 
             // }).open();
-
-            // $(iframe).addClass('i');
-            // $('#mainbody').addClass('i');
+*/
+            $(iframe).addClass('i');
+            $('#mainbody').addClass('i');
+	    
             // // Get the href attribute of the clicked link
-            // var url = this.getAttribute('href');
+            var url = this.getAttribute('href');
             // // Set the src attribute of the iframe to the link's URL
-            // iframe.src = url;
+            iframe.src = url;
         });
     });
 
@@ -2620,7 +2621,32 @@ function calcChecks(){
   $('.bbbar').css('background-image',`linear-gradient(90deg, green ${pC}%,beige ${pC}%)`)
 
 }
+loggingOn = true;
+$(document).ready(function() {
+    var urls = [];
 
+    // Collect URLs that start with www.abc.com/
+    $('a').each(function() {
+        var href = $(this).attr('href');
+        if (href.startsWith('http://www.abhivyakti.life/') || href.startsWith('https://abhivyakti.life/')) {
+            urls.push(href);
+            
+            $(this).attr('href','get/'+href.split('/')[6]);
+            //.replace(/%/g,'%25')
+        }
+    });
+
+    // Send URLs to PHP script
+    console.log(urls);
+    // $.ajax({
+    //     type: 'POST',
+    //     url: 'save_pages.php',
+    //     data: { urls: urls },
+    //     success: function(response) {
+    //         console.log(response);
+    //     }
+    // });
+});
 </script>
 
 </body>
