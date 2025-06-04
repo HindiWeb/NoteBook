@@ -2537,7 +2537,8 @@ document.addEventListener('DOMContentLoaded', function() {
             searchUrl = this.getAttribute('href');
             pauseBodyScroll();
             $.ajax({
-              url:'https://neetiindia.org/wp-content/plugins/HindiWeb/Demo/proxy.php?url='+searchUrl,//../proxy.php
+              //url:'https://neetiindia.org/wp-content/plugins/HindiWeb/Demo/proxy.php?url='+searchUrl,//../proxy.php
+	      url: searchUrl,
               method :'GET',
               success:function(response){
                 console.log(response);
