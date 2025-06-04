@@ -7,15 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/Ex/css/fonts/mukta/v14/iJWKBXyXfDDVXbnArXyi0A.woff2">
+  <!-- <script src="C:\Users\Dev\AppData\Local\Programs\Python\Python311-32\Scripts\HTML folder\dep\jquery.min.js"></script> -->
   <script src="/Ex/jquery-3.7.1.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src='https://hindiweb.github.io/lib/Upopup/2.2/popup.min.js'></script>
-  <!-- <script src="/Ex/Upopup-2.2.3.min.js"></script> -->
-  <link rel="stylesheet" href="https://s0.wp.com/wp-content/plugins/gutenberg-core/v18.1.1/build/block-library/style.css?m=1713289937i&cssminify=yes">
-
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css'>
-  <link rel="manifest" href="manifest.json">
-  <link rel="shortcut icon" href="dep/logo.png" type="image/png">  
+  <script src="/Ex/Upopup-2.5.0.js"></script>
+  <link rel="shortcut icon" href="/Start/Check/main/dep/logo.png" type="image/png">
+  <link rel="stylesheet" href="/Ex/css/all.min.css">
+  <!-- <link rel="stylesheet" href="pages/style.css">/ -->
+  
   <!-- <script src="/GitHub/dep/Upopup.js"></script> -->
 
   <meta name="description" content="Read Hindi literature Quick notes. Important for UGC-NET.
@@ -191,7 +190,7 @@
     @media (max-width:600px)
         {.w3-col.s4 {font-weight:bold;border-radius:10px;overflow:hidden;}}
     @media (min-width:800px){
-        #h1 { font-size: 8vw; float:left; width: 4vw;position:fixed;
+        h1 { font-size: 8vw; float:left; width: 4vw;position:fixed;
            z-index:5; padding-left:4% ; }
         #header { margin-top: 5%;}
     } 
@@ -214,26 +213,28 @@
       position: fixed;
       top:0;
       right: 0;
-      width: 65vw;height: 100vh;
+      width: 70vw;height: 100vh;
     }
     body {
       background-color: khaki;
-      background-color: #e9e8a5;
     }
     #mainbody.i {
-      width: 35%;
+      width: 30vw;
       margin-left:0%;
       padding: 6px;
       height: 100vh;
       overflow: auto;
-      position: relative;
+      position: fixed;
+      z-index: 9;
     }
     .bbbar {
       display: none;
     }
 
-    #mainbody.i p,#sidebar p { font-size: 1em;}
-     
+    #mainbody.i p,#sidebar p { font-size: 1em;line-height: 1.7;}
+    iframe {
+      background-color: #303030;
+    }
 
   </style>
   <style>
@@ -265,100 +266,37 @@
     .wiki-tBtn:hover {
       background-color: rgba(222, 184, 135, 0.834);
     }
-    .wiki-w, .link-w {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-    }
+  .wiki-w {
+      display: flex;
+      flex-direction: column;
+      height: 99vh;
+  }
       
-    .wiki-d , .link-d{
+    .wiki-d {
       flex:1;
     }
     .z9 {
-      z-index: 1009;
-    }
-    .link-d {
-      overflow: auto;
-      text-align: left;
-      background-color: inherit;
-      padding: 18px;
-      font-family: Mukta;
-      border: 1px solid crimson;
-    }
-    
-    .hw-d-box.link-w {
-      background-color: inherit;
-    }
-    .hw-d-overlay.link-ow {
-      background-color: inherit;
-    }
-    #sidebar {
-      background-color: inherit;
-    }
-    a  {
-      color: inherit;
-    }
-    * {
-      box-sizing: border-box;
-    }
-
-  </style>
-  <style>
-    /* Syllabus style */
-    #syllabus {
-        font-size: 20px;
-        line-height: 1.5;
-        margin: auto;
-        max-width: 888px;
-        font-family:  'Mukta','Hind';
-        text-align: left;
-    }
-    .ikai-wrap {
-        margin:6px 0 ;
-    }
-    .ikai-content {
-        padding: 8px;
-        border:1px solid grey;
-        border-radius: 8px;
-    }
-    .ikai-head {
-        margin:5px;
-    }
-    .ikai-number,.ikai-title {
-        font-family: 'Noto Serif Devanagari';
-        text-align: center;
-        font-size: 120%;
-    }
-    .ikai-cnts {
-        margin:8px 0;
-        padding:3px 12px;
-        position: relative;
-    }
-    .opacity50 {
-        opacity: .5;
-        font-size: 80%;
-    }
-    i.fontB {
-        font-family: monospace;
-        font-style: normal;
+      z-index: 9;
     }
 
   </style>
 </head>
 <body>
-<picture id="pic" style="width:100%;top: 0px;left: 0px;position:fixed;z-index:-5;" hidden>
+  
+<picture id="pic" style="width:100%;top: 0px;left: 0px;position:fixed;z-index:-5;">
   <source media="(min-aspect-ratio: 4/3)" srcset="dep/Pink_flowers.jpg">
   <source media="(min-aspect-ratio: 1/1)" srcset="dep/fool_and_sky.jpg"> 
   <img src="dep/fool.jpg" style="width: 100%;">
 </picture>
 <div id="anim" ></div>
 <div id="antisidebar" onclick="antisidebar()" ></div>
-  <div class="w3-container">
-    <h1 id="h1" ><span lang="hi" > हिंदी झटपट </span></h1>
-  <!--  <p>Using images to indicate how many slides there are in the slideshow, and highlight the image the user is currently viewing.</p>-->
-  </div>  
+<div class="w3-container">
+  <h1 id="h1" ><span lang="hi" > हिंदी झटपट </span></h1>
+<!--  <p>Using images to indicate how many slides there are in the slideshow, and highlight the image the user is currently viewing.</p>-->
+</div>
+
   <div id="sidebar"  class="w3-row-padding w3-section" style="left:-200px;" >
-  <input id="readCheck" title="Reading progress" type="checkbox" style="position: absolute;right:0px;top:25px;cursor:pointer;" hidden>
+  <input id="readCheck" title="Reading progress" type="checkbox" style="position: absolute;right:0px;top:25px;cursor:pointer;">
     <img id="pin" onclick="pin()" src="https://img.icons8.com/?size=2x&id=AfpSfD7cu5Sq&format=png"
            style="width:19px;position:absolute;right:2px;" >
 
@@ -399,20 +337,15 @@
     </div>
      
     <div id="dateBox" onclick="nightmode2()"></div>
-    <div style="margin:1rem 0">
-      <input type="color" oninput="bgc1()" value="#c97600"  id="bgc1">
-      <input type="color" oninput="bc1()" value="#000011" id="bc1">
-    </div>
 
   </div>
-<div class="w3-content" id="mainbody" style="border-radius:5px;border-bottom: 2px solid rgb(193, 90, 107);margin-bottom: 7px;"> <!--style="max-width:1200px;"-->
+<div class="w3-content" id="mainbody" style="border-bottom:2px solid green;border-radius:5px;"> <!--style="max-width:1200px;"-->
   <div class="bbbar" style="position: absolute;top:0;left:0;width: 100%;height: 3px;background-color:aliceblue;"></div>
 
   <img onclick="nightmode()" id="nightmode" src="https://img.icons8.com/?size=151&id=sx3VmTOVeYFg&format=png"
-    style="position:fixed;right:5px;top:5px;z-index:999;width:25px" >
-<!-- <div style="background-image: url(dep/fool.jpg);background-size: cover;padding-top: 10px;height: 100vh;overflow: auto;background-color: black;"> -->
+         style="position:absolute;right:5px;top:5px;z-index:999;width:25px">
 
-  <div id="header"  class="w3-row-padding w3-section"   >
+  <div id="header" class="w3-row-padding w3-section"   >
     <div class="w3-col s4" onclick="currentDiv(1)">
       <p class="demo w3-opacity w3-hover-opacity-off"  style="cursor:pointer;" >
       Keys </p>
@@ -442,7 +375,6 @@
       Syllabus</p>
     </div>
   </div>
-<!-- </div> -->
   <div id="main" style="display:none;">
   <div class="mySlides" style="width:100%;display:none">
     <h2 style="margin-top:0px;"   >
@@ -480,7 +412,7 @@
 
 	<div id="AGV"  >	
 
-    <p id="hint" style="font-size:15px;text-align:center;max-width:110px;margin:auto;margin-top:0px;border:1px dotted grey;border-radius:10px;opacity: .7;font-family: 'Utsaah', 'mukta', 'Times New Roman'" ;>अन्य गद्य विधाएँ </p>
+    <p id="hint" style="font-size:15px;text-align:center;max-width:110px;margin:auto;margin-top:0px;border:1px dotted grey;border-radius:10px;color:grey;font-family: 'Utsaah', 'mukta', 'Times New Roman'" ;>अन्य गद्य विधाएँ </p>
 
 
     <p class=MsoNormal><a target="_blank" class="article-link" 
@@ -1881,8 +1813,8 @@
                   <div class="ikai-cnts"><span id="spani20">रीतिकाल के प्रमुख कवि और उनका काव्य</span></div>
                   <div class="ikai-cnts"><span id="spani21">आधुनिक काल</span></div>
                   <div class="ikai-cnts"><span id="spani22">हिन्दी गद्य का उद्धूव और विकास।</span></div>
-                  <div class="ikai-cnts"><span id="spani23">भारतेन्दु पूर्व हिन्दी गद्य, 1857 की क्रान्ति और सांस्कृतिक पुनर्जागरण, भारतेन्दु और उनका युग, पत्रकारिता का आरम्भ और 19वीं शताब्दी की हिन्दी पत्रकारिता, </span></div>
-                  <div class="ikai-cnts"><span id="spani24">आधुनिकता की अवधारणा।</span></div>
+                  <div class="ikai-cnts"><span id="spani23">भारतेन्दु पूर्व हिन्दी गद्य, 1857 की क्रान्ति और सांस्कृतिक पुनर्जागरण, भारतेन्दु और उनका युग, पत्रकारिता का आरम्भ और 19वीं शताब्दी की हिन्दी</span></div>
+                  <div class="ikai-cnts"><span id="spani24">पत्रकारिता, आधुनिकता की अवधारणा।</span></div>
                   <div class="ikai-cnts"><span id="spani25">द्विवेदी युग : महावीर प्रसाद द्विवेदी और उनका युग, हिन्दी नवजागरण और सरस्वती, राष्ट्रीय काव्य धारा के प्रमुख कवि, स्वछन्दतावाद और उसके प्रमुख कवि।</span></div>
                   <div class="ikai-cnts"><span id="spani26">छायावाद : छायावादी काव्य की प्रमुख विशेषताएं, छायावाद के प्रमुख कवि, प्रगतिवाद की अवधारणा, प्रगतिवादी काव्य और उसके प्रमुख कवि, प्रयोगवाद और नई कविता, नई कविता के कवि, समकालीन कविता (वर्ष 2000 तक) समकालीन साहित्यिक पत्रकारिता।</span></div>
               </div>
@@ -1940,26 +1872,26 @@
               <div class="ikai-content">
                   <div class="ikai-cnts"><span id="spani50">पृथ्वीराज रासो - रेवा तट</span></div>
                   <div class="ikai-cnts"><span id="spani51">अमीरखुसरो - खुसरों की पहेलियाँ और मुकरियाँ</span></div>
-                  <div class="ikai-cnts"><span id="spani52">विद्यापति - की पदावली (संपादक - डॉ. नरेन्द्र झा) - पद संख्या 1 -25</span></div>
+                  <div class="ikai-cnts"><span id="spani52">विद्यापति की पदावली (संपादक - डॉ. नरेन्द्र झा) - पद संख्या 1 -25</span></div>
                   <div class="ikai-cnts"><span id="spani53">कबीर - (सं .- हजारी प्रसाद द्विवेदी) - पद संख्या - 160 -209</span></div>
                   <div class="ikai-cnts"><span id="spani54">जायसी ग्रंथावली - (सं. राम चन्द्र शुक्ल) - नागमती वियोग खण्ड</span></div>
                   <div class="ikai-cnts"><span id="spani55">सूरदास - भ्रमरगीत सार - (सं .- राम चन्द्र शुक्ल) - पद संख्या 21 से 70</span></div>
                   <div class="ikai-cnts"><span id="spani56">तुलसीदास - रामचरितमानस, उत्तर काण्ड</span></div>
                   <div class="ikai-cnts"><span id="spani57">बिहारी सतसई - (सं .- जगन्नाथ दास रत्नाकर) - दोहा संख्या 1-50</span></div>
-                  <div class="ikai-cnts"><span id="spani58">घनानन्द - कवित्त - (सं .- विश्वनाथ मिश्र) - कवित्त संख्या 1 -30</span></div>
+                  <div class="ikai-cnts"><span id="spani58">घनानन्द कवित्त - (सं .- विश्वनाथ मिश्र) - कवित्त संख्या 1 -30</span></div>
                   <div class="ikai-cnts"><span id="spani59">मीरा - (सं .- विश्वनाथ त्रिपाठी) - प्रारम्भ से 20 पद</span></div>
                   <div class="ikai-cnts"><span id="spani60">अयोध्या सिंह उपाध्याय हरिऔध - प्रियप्रवास</span></div>
                   <div class="ikai-cnts"><span id="spani61">मैथिलीशरण गुप्त - भारत भारती, साकेत (नवम् सर्ग)</span></div>
                   <div class="ikai-cnts"><span id="spani62">जयशंकर प्रसाद - आंसू, कामायनी (श्रद्धा, लज्जा, इड़ा)</span></div>
                   <div class="ikai-cnts"><span id="spani63">निराला - जुही की कली, जागो फिर एक बार, सरोजस्मृति, राम की शक्तिपूजा, कुकरमुत्ता, बाँधो न नाव इस ठाँव बंधु।</span></div>
-                  <div class="ikai-cnts"><span id="spani64">सुमित्रानंदन पंत - परिवर्तन, प्रथम रश्मि, द्रुत झरो जगत के जीर्ण पत्र</span></div>
-                  <div class="ikai-cnts"><span id="spani65">महादेवी वर्मा - बीन भी हूँ मैं तुम्हारी रागिनी भी हूँ, मै नीर भरी दुख की बदली, फिर विकल है प्राण मेरे, यह मन्दिर का दीप इसे नीरव जलने दो</span></div>
+                  <div class="ikai-cnts"><span id="spani64">सुमित्रानंदन पंत - परिवर्तन, प्रथम रश्मि</span></div>
+                  <div class="ikai-cnts"><span id="spani65">महादेवी वर्मा - बीन भी हूँ मैं तुम्हारी रागिनी भी हूँ, मै नीर भरी दुख की बदली, फिर विकल है प्राण मेरे, यह मन्दिर का दीप इसे नीरव जलने दो, द्रुत झरो जगत के जीर्ण पत्र</span></div>
                   <div class="ikai-cnts"><span id="spani66" class="level0">रामधारी सिंह दिनकर - उर्वशी (तृतीय अंक), रश्मिरथी</span></div>
                   <div class="ikai-cnts"><span id="spani67" class="level0">नागार्जुन - कालिदास, बादल को घिरते देखा है, अकाल और उसके बाद, खुरदरे पैर, शासन की बंदूक, मनुष्य हूँ।</span></div>
-                  <div class="ikai-cnts"><span id="spani68">अज्ञेय - कलगी बाजरे की, यह दीप अकेला, हरी घास पर क्षण भर, असाध्यवीणा, कितनी नावों में कितनी बार</span></div>
+                  <div class="ikai-cnts"><span id="spani68">सच्चिदानंद हीरानन्द वात्स्यायन अज्ञेय - कलगी बाजरे की, यह दीप अकेला, हरी घास पर क्षण भर, असाध्यवीणा, कितनी नावों में कितनी बार</span></div>
                   <div class="ikai-cnts"><span id="spani69">भवानीप्रसाद मिश्र - गीत फरोश, सतपुड़ा के जगल</span></div>
                   <div class="ikai-cnts"><span id="spani70">मुक्तिबोध - भूल गलती, ब्रह्मराक्षस, अंधेरे में</span></div>
-                  <div class="ikai-cnts"><span id="spani71">सुदामा पांडेय 'धूमिल' - नक्सलवाड़ी, मोचीराम, अकाल दर्शन, रोटी और संसद</span></div>
+                  <div class="ikai-cnts"><span id="spani71">धूमिल - नक्सलवाड़ी, मोचीराम, अकाल दर्शन, रोटी और संसद</span></div>
               </div>
           </div>
       </div>
@@ -1970,19 +1902,19 @@
                   <div class="ikai-title">हिन्दी उपन्यास</div>
               </div>
               <div class="ikai-content">
-                  <div class="ikai-cnts"><span id="spani72" class="level0"> गौरीदत्त - देवरानी जेठानी की कहानी (1870)</span></div>
-                  <div class="ikai-cnts"><span id="spani73">लाला श्रीनिवास दास - परीक्षा गुरू (1882)</span></div>
-                  <div class="ikai-cnts"><span id="spani74">प्रेमचन्द - गोदान 36'</span></div>
-                  <div class="ikai-cnts"><span id="spani75">अज्ञेय - शेखर एक जीवनी (भाग - 1) 41'</span></div>
-                  <div class="ikai-cnts"><span id="spani76">हजारी प्रसाद द्विवेदी - बाणभट्ट की आत्मकथा 46'</span></div>
-                  <div class="ikai-cnts"><span id="spani77">फणीश्वर नाथ रेणु - मैला आंचल 54'</span></div>
-                  <div class="ikai-cnts"><span id="spani78">यशपाल - झूठा सच 58'-60'</span></div>
-                  <div class="ikai-cnts"><span id="spani81">श्रीलाल शुक्ल - राग दरबारी 69'</span></div>
-                  <div class="ikai-cnts"><span id="spani79">अमृत लाल नागर - मानस का हंस 72'</span></div>
-                  <div class="ikai-cnts"><span id="spani83">मन्नू भंडारी - आपका बंटी 72'</span></div>
-                  <div class="ikai-cnts"><span id="spani84">जगदीशचन्द्र - धरती धन न अपना 72'</span></div>
-                  <div class="ikai-cnts"><span id="spani80">भीष्म साहनी - तमस 73'</span></div>
-                  <div class="ikai-cnts"><span id="spani82">कृष्णा सोबती - जिन्दगी नामा 79'</span></div>
+                  <div class="ikai-cnts"><span id="spani72" class="level0">पं. गौरीदत्त - देवरानी जेठानी की कहानी</span></div>
+                  <div class="ikai-cnts"><span id="spani73">लाला श्रीनिवास दास - परीक्षा गुरू</span></div>
+                  <div class="ikai-cnts"><span id="spani74">प्रेमचन्द - गोदान</span></div>
+                  <div class="ikai-cnts"><span id="spani75">अज्ञेय - शेखर एक जीवनी (भाग - 1)</span></div>
+                  <div class="ikai-cnts"><span id="spani76">हजारी प्रसाद द्विवेदी - बाणभट्ट की आत्मकथा</span></div>
+                  <div class="ikai-cnts"><span id="spani77">फणीश्वर नाथ रेणु - मैला आंचल</span></div>
+                  <div class="ikai-cnts"><span id="spani78">यशपाल - झूठा सच</span></div>
+                  <div class="ikai-cnts"><span id="spani79">अमृत लाल नागर - मानस का हंस</span></div>
+                  <div class="ikai-cnts"><span id="spani80">भीष्म साहनी - तमस</span></div>
+                  <div class="ikai-cnts"><span id="spani81">श्रीलाल शुक्ल - राग दरबारी</span></div>
+                  <div class="ikai-cnts"><span id="spani82">कृष्णा सोबती - जिन्दगी नामा</span></div>
+                  <div class="ikai-cnts"><span id="spani83">मन्नू भंडारी - आपका बंटी</span></div>
+                  <div class="ikai-cnts"><span id="spani84">जगदीश चन्द्र - धरती धन न अपना</span></div>
               </div>
           </div>
       </div>
@@ -1993,23 +1925,23 @@
                   <div class="ikai-title">हिन्दी कहानी</div>
               </div>
               <div class="ikai-content">
-                  <div class="ikai-cnts"><span id="spani85">राजेन्द्र बाला घोष (बंग महिला) - चन्द्रदेव से मेरी बातें 04', दुलाईवाली 07'</span></div>
-                  <div class="ikai-cnts"><span id="spani86">माधवराव सप्रे - एक टोकरी भर मिट्टी 01'</span></div>
+                  <div class="ikai-cnts"><span id="spani85">राजेन्द्र बाला घोष (बंग महिला) - चन्द्रदेव से मेरी बातें, दुलाईवाली</span></div>
+                  <div class="ikai-cnts"><span id="spani86">माधवराव सप्रे - एक टोकरी भर मिट्टी</span></div>
                   <div class="ikai-cnts"><span id="spani87">सुभद्रा कुमारी चौहान - राही</span></div>
-                  <div class="ikai-cnts"><span id="spani88">प्रेमचंद - ईदगाह 33', दुनिया का अनमोल रतन 07'</span></div>
-                  <div class="ikai-cnts"><span id="spani89">राजा राधिकारमण प्रसाद सिंह - कानों में कंगना 13'</span></div>
-                  <div class="ikai-cnts"><span id="spani90">चन्द्रधर शर्मा गुलेरी - उसने कहा था 15'</span></div>
-                  <div class="ikai-cnts"><span id="spani91">जयशंकर प्रसाद - आकाशदीप 29'</span></div>
-                  <div class="ikai-cnts"><span id="spani92">जैनेन्द्र - अपना-अपना भाग्य 29'</span></div>
-                  <div class="ikai-cnts"><span id="spani93">फणीश्वरनाथ रेणु - तीसरी कसम 56', लाल पान की बेगम 57'</span></div>
+                  <div class="ikai-cnts"><span id="spani88">प्रेमचंद - ईदगाह, दुनिया का अनमोल रतन</span></div>
+                  <div class="ikai-cnts"><span id="spani89">राजा राधिकारमण प्रसाद सिंह - कानों में कंगना</span></div>
+                  <div class="ikai-cnts"><span id="spani90">चन्द्रधर शर्मा गुलेरी - उसने कहा था</span></div>
+                  <div class="ikai-cnts"><span id="spani91">जयशंकर प्रसाद - आकाशदीप</span></div>
+                  <div class="ikai-cnts"><span id="spani92">जैनेन्द्र - अपना-अपना भाग्य</span></div>
+                  <div class="ikai-cnts"><span id="spani93">फणीश्वरनाथ रेणु - तीसरी कसम, लाल पान की बेगम</span></div>
                   <div class="ikai-cnts"><span id="spani94">अज्ञेय - गैंग्रीन</span></div>
                   <div class="ikai-cnts"><span id="spani95">शेखर जोशी - कोसी का घटवार</span></div>
-                  <div class="ikai-cnts"><span id="spani96">भीष्म साहनी - अमृतसर आ गया है 73', चीफ की दावत</span></div>
-                  <div class="ikai-cnts"><span id="spani97">कृष्णा सोबती - सिक्का बदल गया 48'</span></div>
+                  <div class="ikai-cnts"><span id="spani96">भीष्म साहनी - अमृतसर आ गया है, चीफ की दावत</span></div>
+                  <div class="ikai-cnts"><span id="spani97">कृष्णा सोबती - सिक्का बदल गया</span></div>
                   <div class="ikai-cnts"><span id="spani98">हरिशंकर परसाई - इस्पेक्टर मातादीन चांद पर</span></div>
                   <div class="ikai-cnts"><span id="spani99">ज्ञानरंजन - पिता</span></div>
-                  <div class="ikai-cnts"><span id="spani100">कमलेश्वर - राजा निरबंसिया 57'</span></div>
-                  <div class="ikai-cnts"><span id="spani101">निर्मल वर्मा - परिंदे 60'</span></div>
+                  <div class="ikai-cnts"><span id="spani100">कमलेश्वर - राजा निरबंसिया</span></div>
+                  <div class="ikai-cnts"><span id="spani101">निर्मल वर्मा - परिंदे</span></div>
               </div>
           </div>
       </div>
@@ -2020,16 +1952,16 @@
                   <div class="ikai-title">हिन्दी नाटक</div>
               </div>
               <div class="ikai-content">
-                  <div class="ikai-cnts"><span id="spani102">भारतेन्दु - अंधेर नगरी (1881), भारत दुर्दशा (1880)</span></div>
-                  <div class="ikai-cnts"><span id="spani103">जयशंकर प्रसाद - चन्द्रगुप्त 28', स्कंदगुप्त 31', ध्रुवस्वामिनी 33'</span></div>
-                  <div class="ikai-cnts"><span id="spani105">लक्ष्मीनारायण मिश्र - सिंदूर की होली 34'</span></div>
-                  <div class="ikai-cnts"><span id="spani107">हबीब तनवीर - आगरा बाज़ार 54'</span></div>
-                  <div class="ikai-cnts"><span id="spani104">धर्मवीर भारती - अंधायुग 55'</span></div>
-                  <div class="ikai-cnts"><span id="spani110">उपेन्द्रनाथ अश्क - अंजो दीदी 55'</span></div>
-                  <div class="ikai-cnts"><span id="spani106">मोहन राकेश - आधे-अधूरे 69', आषाढ़ का एक दिन 58'</span></div>
-                  <div class="ikai-cnts"><span id="spani108">सर्वेश्वरदयाल सक्सेना - बकरी 74'</span></div>
-                  <div class="ikai-cnts"><span id="spani109">शंकर शेष - एक और द्रोणाचार्य 77'</span></div>
-                  <div class="ikai-cnts"><span id="spani111">मन्नू भंडारी - महाभोज 82'</span></div>
+                  <div class="ikai-cnts"><span id="spani102">भारतेन्दु - अंधेर नगरी, भारत दुर्दशा</span></div>
+                  <div class="ikai-cnts"><span id="spani103">जयशंकर प्रसाद - चन्द्रगुप्त, स्कंदगुप्त, ध्रुवस्वामिनी</span></div>
+                  <div class="ikai-cnts"><span id="spani104">धर्मवीरभारती - अंधायुग</span></div>
+                  <div class="ikai-cnts"><span id="spani105">लक्ष्मीनारायण लाल - सिंदूर की होली</span></div>
+                  <div class="ikai-cnts"><span id="spani106">मोहन राकेश - आधे-अधूरे, आषाढ़ का एक दिन</span></div>
+                  <div class="ikai-cnts"><span id="spani107">हबीब तनवीर - आगरा बाज़ार</span></div>
+                  <div class="ikai-cnts"><span id="spani108">सर्वेश्वरदयाल सक्सेना - बकरी</span></div>
+                  <div class="ikai-cnts"><span id="spani109">शंकरशेष - एक और द्रोणाचार्य</span></div>
+                  <div class="ikai-cnts"><span id="spani110">उपेन्द्रनाथ अश्क - अंजो दीदी</span></div>
+                  <div class="ikai-cnts"><span id="spani111">मन्नू भंडारी - महाभोज</span></div>
               </div>
           </div>
       </div>
@@ -2062,84 +1994,22 @@
               <div class="ikai-content">
                   <div class="ikai-cnts"><span id="spani122">रामवृक्ष बेनीपुरी - माटी की मूरतें</span></div>
                   <div class="ikai-cnts"><span id="spani123">महादेवी वर्मा - ठकुरी बाबा</span></div>
-                  <div class="ikai-cnts"><span id="spani124">तुलसीराम - मुर्दहिया (2010)</span></div>
-                  <div class="ikai-cnts"><span id="spani125">शिवरानी देबी - प्रेमचन्द घर में 44'</span></div>
+                  <div class="ikai-cnts"><span id="spani124">तुलसीराम - मुर्दहिया</span></div>
+                  <div class="ikai-cnts"><span id="spani125">शिवरानी देबी - प्रेमचन्द घर में</span></div>
                   <div class="ikai-cnts"><span id="spani126">मन्नू भंडारी - एक कहानी यह भी</span></div>
-                  <div class="ikai-cnts"><span id="spani127">विष्णु प्रभाकर - आवारा मसीहा 74'</span></div>
-                  <div class="ikai-cnts"><span id="spani128">हरिवंशराय बच्चन - क्या भूलूँ क्या याद करूँ 69'</span></div>
+                  <div class="ikai-cnts"><span id="spani127">विष्णु प्रभाकर - आवारा मसीहा</span></div>
+                  <div class="ikai-cnts"><span id="spani128">हरिवंशराय बच्चन - क्या भूलूँ क्या याद करूँ</span></div>
                   <div class="ikai-cnts"><span id="spani129">रमणिका गुप्ता - आपहुदरी</span></div>
                   <div class="ikai-cnts"><span id="spani130">हरिशंकर परसाई - भोलाराम का जीव</span></div>
-                  <div class="ikai-cnts"><span id="spani131">कृष्ण चंदर - जामुन का पेड़</span></div>
-                  <div class="ikai-cnts"><span id="spani132">दिनकर - संस्कृति के चार अध्याय 56'</span></div>
-                  <div class="ikai-cnts"><span id="spani133">मुक्तिबोध - एक लेखक की डायरी 64'</span></div>
-                  <div class="ikai-cnts"><span id="spani134" class="level0">राहुल सांकृत्यायन - मेरी तिब्बत यात्रा 37'</span></div>
-                  <div class="ikai-cnts"><span id="spani135" class="level0">अज्ञेय - अरे यायावर रहेगा याद 53'</span></div>
+                  <div class="ikai-cnts"><span id="spani131">कृष्ण चन्दर - जामुन का पेड़</span></div>
+                  <div class="ikai-cnts"><span id="spani132">दिनकर - संस्कृति के चार अध्याय</span></div>
+                  <div class="ikai-cnts"><span id="spani133">मुक्तिबोध - एक लेखक की डायरी</span></div>
+                  <div class="ikai-cnts"><span id="spani134" class="level0">राहुल सांकृत्यायन - मेरी तिब्बत यात्रा</span></div>
+                  <div class="ikai-cnts"><span id="spani135" class="level0">अज्ञेय - अरे यायावर रहेगा याद</span></div>
               </div>
           </div>
       </div>
     </div>
-  
-    <link rel="stylesheet" href="dep/wiki_preview.css">
-    <script src="dep/simple-wp.js"></script>
-    <script>
-    
-    $(document).ready(function() {
-        $('.ikai-cnts span').each(function() {
-            var text = $(this).text().trim();
-            var matches = text.match(/(?:\(\d+\)|\d+['\-]\d*|\d+['\-]?\d*['\-]\d+)|\d+(?=['\)-]|['\-]\d+)/g);
-            matches = text.match(/(?:\(\d+\)|\d+'(?:-\d*[']*){1,2}|\d+['\-]\d*['\-]\d+)|\d+(?:'(?!\d)|'(?=-\d))/g);
-    
-            if (matches) {
-                matches.forEach(function(match) {
-                    text = text.replace(match, '<i class="opacity50 fontB">' + match + '</i>');
-                });
-                $(this).html(text);
-            }
-        });
-    
-        // Loop through each div with IDs ikai5, ikai6, ..., ikai10
-        for (let i = 5; i <= 10; i++) {
-            // Select the current div
-            let div = $(`#ikai${i}`);
-            
-            // Get all span tags within the selected div
-            div.find('span').each(function() {
-                let span = $(this);
-                let text = span.html();
-                
-                // Check if the span's text contains ' - '
-                if (text.includes('-')) {
-                    // Split the text content at ' - '
-                    let parts = text.split('-');
-                    let firstPart = parts[0].trim();parts.shift();
-                    let secondPart = parts.join('-').trim();
-    
-                    // Create a new anchor (a) element
-                    let a = $('<a></a>').attr({
-                        href: 'https://hi.wikipedia.org/wiki/'+ firstPart.replace(/ /g, '_'),
-                        target: '_blank'
-                    }).text(firstPart);
-    
-                    // Clear the original span's content
-                    span.empty();
-    
-                    // Append the anchor element and the remaining text to the span
-                    span.append(a).append(` - ${secondPart}`);
-                }
-            });
-        }
-
-      // $('.ikai span').on('click', function() {
-      //   if ($(window).width() < 600) {
-      //     // Trigger mouseenter event if window width is less than 600
-      //     $(this).find('a').trigger('mouseenter');
-      //   }
-      // }); 
-    
-    });
-    </script>
-  </div>
-  <div class="mySlides"  style="width:100%;display:none">
   </div>
 
   <div class="wiki-tBtn z9" id="wikiTBtn"></div>
@@ -2164,16 +2034,6 @@
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
 <iframe id="iframe" name="iframe" style="border-left: 2px solid;" frameborder="0" class="iframe"></iframe>
 <script>
-// Function to pause body scrolling
-function pauseBodyScroll() {
-    $('body').css('overflow', 'hidden');
-}
-
-// Function to resume body scrolling
-function resumeBodyScroll() {
-    $('body').css('overflow', 'visible');
-}
-
 $(document).ready(function(){
   $('.wiki-tBtn').on('click',function(){
       $('.wiki-search').slideToggle(100);
@@ -2196,7 +2056,6 @@ $(document).ready(function(){
         if (searchTerm.trim() !== "") {
           var searchUrl = "https://hi.wikipedia.org/w/index.php?search=" + encodeURI(searchTerm) + "&title=%E0%A4%B5%E0%A4%BF%E0%A4%B6%E0%A5%87%E0%A4%B7%3A%E0%A4%96%E0%A5%8B%E0%A4%9C&ns0=1";
             // window.open(searchUrl, "_blank");
-            pauseBodyScroll();
             var xD = new HwDialog({
               title:'Wikipedia',
               message:`<iframe style="width:100%;height:100%" src="${searchUrl}"></iframe>`,
@@ -2204,10 +2063,7 @@ $(document).ready(function(){
               Class:'wiki-w',
               msgClass : 'wiki-d',
               callback:i=>{
-                setTimeout(() => {
-                  xD.close();                 
-                }, 200);
-                resumeBodyScroll();
+                xD.close()
               }
 
             }).open();
@@ -2253,7 +2109,7 @@ function showDivs(n) {
 
   document.getElementById("main").style.clear = "both";
   document.getElementById("main").style.display = "block";
-  // $('.bbbar').css('display','block');
+  $('.bbbar').css('display','block');
   antib.style.zIndex = -1;
   if ( pinned == false ) {
   document.getElementById("tl").style.display = "block"; }
@@ -2268,7 +2124,7 @@ function showDivs(n) {
   he.style.width = "100%";
   he.style.marginLeft = "-2.5%";
   he.style.transition = "all 0.3s ease-in-out";
-  //nbtn.style.display = 'initial'; night mode button Earlier
+  nbtn.style.display = 'initial';
 
   window.scrollTo(0,0);
   const boxes = document.querySelectorAll('.s4');
@@ -2372,13 +2228,16 @@ setInterval( function () {
 <!-- <p id="DP">DP</p> -->
 <style>
 p a.checked {
-  color:green;
+  color:#303030;
   text-decoration: none;
 }
 p input[type="checkbox"] {
   display: none;
   opacity: .15;
   margin-left:5px;
+}
+p.active {
+  border: solid;
 }
 p input[type="checkbox"]:hover {
   opacity: .7;
@@ -2404,78 +2263,10 @@ $(document).ready(function(){
     var index = $cbs.index(this);
     var keyname = 'HWq_key' + index;
     var storedData = localStorage.getItem('HWq_key');
-    if (!storedData){ storedData = {
-    "HWq_key151": true,
-    "HWq_key152": true,
-    "HWq_key153": true,
-    "HWq_key154": true,
-    "HWq_key155": true,
-    "HWq_key156": true,
-    "HWq_key157": true,
-    "HWq_key158": true,
-    "HWq_key159": true,
-    "HWq_key160": true,
-    "HWq_key161": true,
-    "HWq_key162": true,
-    "HWq_key163": true,
-    "HWq_key164": true,
-    "HWq_key165": true,
-    "HWq_key166": true,
-    "HWq_key167": true,
-    "HWq_key168": true,
-    "HWq_key169": true,
-    "HWq_key138": true,
-    "HWq_key185": true,
-    "HWq_key186": true,
-    "HWq_key40": true,
-    "HWq_key87": true,
-    "HWq_key95": true,
-    "HWq_key96": true,
-    "HWq_key97": true,
-    "HWq_key187": true,
-    "HWq_key145": true,
-    "HWq_key172": true,
-    "HWq_key171": true,
-    "HWq_key170": true,
-    "HWq_key177": true,
-    "HWq_key178": true,
-    "HWq_key176": true,
-    "HWq_key175": true,
-    "HWq_key179": true,
-    "HWq_key197": false,
-    "HWq_key188": true,
-    "HWq_key192": true,
-    "HWq_key193": true,
-    "HWq_key190": true,
-    "HWq_key147": true,
-    "HWq_key0": false,
-    "HWq_key189": true,
-    "HWq_key191": true,
-    "HWq_key181": true,
-    "HWq_key149": true,
-    "HWq_key150": true,
-    "HWq_key139": true,
-    "HWq_key144": true,
-    "HWq_key146": true,
-    "HWq_key148": true,
-    "HWq_key137": true,
-    "HWq_key83": true,
-    "HWq_key82": true,
-    "HWq_key19": true,
-    "HWq_key142": true,
-    "HWq_key140": true,
-    "HWq_key184": true,
-    "HWq_key183": true,
-    "HWq_key98": true,
-    "HWq_key94": true,
-    "HWq_key93": true,
-    "HWq_key92": true,
-    "HWq_key84": true,
-    "HWq_key80": true,
-    "HWq_key81": true
-  };}
+    if (!storedData){ storedData = {};}
     else {storedData = JSON.parse(storedData)}
     storedData[keyname] = $(this).is(":checked");
+
 
     localStorage.setItem('HWq_key', JSON.stringify(storedData));//keyname
     sendHwqkeysToServer(storedData);
@@ -2493,31 +2284,27 @@ $(document).ready(function(){
     //showpopup(2,dones + '/' + all );
   });
 
-
-  /***
-
   var hwkeys = localStorage.getItem('HWq_key'); // keyname
   hwkeys = JSON.parse(hwkeys)
 
   $cbs.each(function(){
     var keyname = 'HWq_key' + $cbs.index(this);
     if (hwkeys)valueForThis = hwkeys[keyname];
-    console.log(valueForThis);
+    // console.log(valueForThis);
     if (valueForThis) {
       $(this).prop('checked',true);
       $(this).parent().find('a').addClass('checked');
     }
   });
-  ***/
   calcChecks()
 });
 
 function sendHwqkeysToServer(data){
-  // $.ajax({
-  //   url:'../progress.php',
-  //   method : 'POST',
-  //   data : {HWqkeys : JSON.stringify(data)}
-  // });
+  $.ajax({
+    url:'../progress.php',
+    method : 'POST',
+    data : {HWqkeys : JSON.stringify(data)}
+  });
 }
 
 
@@ -2534,71 +2321,21 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(event) {
             // Prevent default link behavior
             event.preventDefault();
-            searchUrl = this.getAttribute('href');
-            pauseBodyScroll();
-            $.ajax({
-              //url:'https://neetiindia.org/wp-content/plugins/HindiWeb/Demo/proxy.php?url='+searchUrl,//../proxy.php
-	      url: searchUrl,
-              method :'GET',
-              success:function(response){
-                console.log(response);
-                var xL = new HwDialog({
-                  title:'',//response$(response).not('#jp-post-flair').html()
-                  message:`<div style="overflow:auto">${$(response).find('#comments,#jp-post-flair').remove().end().html()}</div>`,
-                  buttons: ['Close'],
-                  Class:'link-w',
-                  msgClass : 'link-d',
-                  overlayClass : 'link-ow',
-                  callback:i=>{
-                    setTimeout(() => {
-                      xL.close();                 
-                    }, 200);
-                    
-                    resumeBodyScroll();
-                  }
-                }).open();
-                wait.close();
-              }
+            $(iframe).addClass('i');
+            $('#mainbody').addClass('i');
+            
+            // remove active from all p and add active to parent p of the clicked link
+            $('p').removeClass('active');
+            $(this).closest('p').addClass('active');
 
-            });
-            var wait = new HwAlert({
-              title:'Please wait...',
-              callback : i => {
-                resumeBodyScroll();
-              }
-            }).open()
-            // var xL = new HwDialog({
-            //   title:'',
-            //   message:`<iframe style="width:100%;max-width:100vw;height:100%;border:0" src="${searchUrl}"></iframe>`,
-            //   buttons: ['Close'],
-            //   Class:'link-w',
-            //   msgClass : 'link-d',
-            //   callback:i=>{
-            //     xL.close();
-            //     resumeBodyScroll();
-            //   }
+            // Get the href attribute of the clicked link
+            var url = this.getAttribute('href');
 
-            // }).open();
-
-            // $(iframe).addClass('i');
-            // $('#mainbody').addClass('i');
-            // // Get the href attribute of the clicked link
-            // var url = this.getAttribute('href');
-            // // Set the src attribute of the iframe to the link's URL
-            // iframe.src = url;
+            // Set the src attribute of the iframe to the link's URL
+            iframe.src = url;
         });
     });
-
-
 });
-
-function bgc1() {
-  $('body').css('background-color',$('#bgc1').val())
-}
-function bc1(){
-  $('body').css('color',$('#bc1').val());
-}
-
 $(document).keydown(function(e) {
   if(e.ctrlKey && e.code ==='ArrowLeft'){
     // window.history.back() 
@@ -2620,6 +2357,34 @@ function calcChecks(){
   $('.bbbar').css('background-image',`linear-gradient(90deg, green ${pC}%,beige ${pC}%)`)
 
 }
+
+loggingOn = true;
+$(document).ready(function() {
+    var urls = [];
+
+    // Collect URLs that start with www.abc.com/
+    $('a').each(function() {
+        var href = $(this).attr('href');
+        if (href.startsWith('http://www.abhivyakti.life/') || href.startsWith('https://abhivyakti.life/')) {
+            urls.push(href);
+            
+            $(this).attr('href','get/?q='+href.split('/')[6]);
+            //.replace(/%/g,'%25')
+        }
+    });
+
+    // Send URLs to PHP script
+    console.log(urls);
+    // $.ajax({
+    //     type: 'POST',
+    //     url: 'save_pages.php',
+    //     data: { urls: urls },
+    //     success: function(response) {
+    //         console.log(response);
+    //     }
+    // });
+});
+
 
 </script>
 
