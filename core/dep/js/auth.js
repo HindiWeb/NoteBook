@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    window.serverUrl = 'https://darkcyan-lyrebird-254340.hostingersite.com/public/econet/';
+    window.serverUrl = 'https://devsweb.duckdns.org/econet/';
     // Function to handle AJAX responseshttps://neetiindia.org/wp-content/plugins/HindiWeb/protrac/core/
     function handleResponse(response) {
         response = JSON.stringify(response)
