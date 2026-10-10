@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://neetiindia.org/wp-content/plugins/HindiWeb/factoryHTML.css">
     <link rel="stylesheet" href="https://hindiweb.github.io/dep/factory.css">
-    <link rel="stylesheet" href="https://neetiindia.org/wp-content/plugins/HindiWeb/basic.css">
+    <link rel="stylesheet" href="https://devsweb.duckdns.org/HindiWeb/basic.css">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari&display=swap" rel="stylesheet">
 	<title>Note Book 2.0 - HindiWeb</title>
     <link rel="icon" href="dep/favicon.ico">
@@ -121,7 +121,7 @@ window.addEventListener('DOMContentLoaded',function () {
             // Make an AJAX request to the PHP server
             $.ajax({
                 type: "POST",
-                url: "https://neetiindia.org/wp-content/plugins/HindiWeb/validate_pin.php?index",
+                url: "https://devsweb.duckdns.org/HindiWeb/validate_pin.php?index",//https://neetiindia.org/wp-content/plugins/HindiWeb/
                 data: { pin: pin }, // Send PIN as data
                 dataType: "json", // Expect JSON response
                 success: function (response) {
