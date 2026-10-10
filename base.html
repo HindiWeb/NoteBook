@@ -7,7 +7,7 @@
     <script src="https://hindiweb.github.io/lib/Upopup/2.2/popup.min.js"></script>
     <link href="https://hindiweb.github.io/dep/loading.png"/>
     <link rel="icon" href="https://hindiweb.github.io/dep/favicon.ico">
-    <link rel="stylesheet" href="https://neetiindia.org/wp-content/plugins/HindiWeb/basic.css">
+    <link rel="stylesheet" href="https://devsweb.duckdns.org/HindiWeb/basic.css">
 	<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 	<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -128,7 +128,8 @@ body {
 
       $.ajax({
         type: "POST",
-        url: "https://neetiindia.org/wp-content/plugins/HindiWeb/AdminAccess.php",
+        // url: "https://neetiindia.org/wp-content/plugins/HindiWeb/AdminAccess.php",
+        url: "https://devsweb.duckdns.org/HindiWeb/AdminAccess.php",
         data: { id:id,pass:pass,key:key}, 
         success: function (response) {
             if (response.success){
